@@ -6,27 +6,22 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
-     * Run the migrations.
-     */
     public function up(): void
     {
-        Schema::create('basket_item_details', function (Blueprint $table) {
-            //this table represents every single item stored in the users basket
-            $table->id('basket_item_id');
-            $table->timestamps();
-            $table->integer('quantity');
+        Schema::create('basket_items', function (Blueprint $table) {
+            $table->id();
+            $table->integer('quantity')->default(1);
 
-            $table->foreignId('basket_id')->constrained('basket','basket_id');
-            $table->foreignId('product_id')->constrained('products','product_id');
+            $table->foreignId('basket_id')->constrained('baskets')->onDelete('cascade');
+            
+            $table->foreignId('product_id')->constrained('products')->onDelete('cascade');
+            
+            $table->timestamps();
         });
     }
 
-    /**
-     * Reverse the migrations.
-     */
     public function down(): void
     {
-        Schema::dropIfExists('basket_item_details');
+        Schema::dropIfExists('basket_items');
     }
 };

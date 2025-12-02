@@ -6,25 +6,20 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
-     * Run the migrations.
-     */
     public function up(): void
     {
-        Schema::create('basket', function (Blueprint $table) {
-            //this table represents the users basket
-            $table->id('basket_id');
+        Schema::create('baskets', function (Blueprint $table) {
+            $table->id(); 
+            
+            
+            $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
+            
             $table->timestamps();
-
-            $table->foreignId('customer_id')->constrained('customers', 'customer_id');
         });
     }
 
-    /**
-     * Reverse the migrations.
-     */
     public function down(): void
     {
-        Schema::dropIfExists('basket');
+        Schema::dropIfExists('baskets');
     }
 };

@@ -13,8 +13,7 @@ return new class extends Migration
     {
         Schema::create('products', function (Blueprint $table) {
             //this table stores every product with relevant information
-            $table->id('product_id');
-            $table->timestamps();
+            $table->id();
             $table->string('product_name');
             $table->string('product_model')->nullable();
             $table->integer('product_price');
@@ -24,9 +23,7 @@ return new class extends Migration
             $table->dateTime('product_createdate');
             $table->integer('product_stock')->default(0);
 
-            $table->foreignId('category_id')->constrained('product_category','category_id');
-
-        });
+            $table->foreignId('category_id')->constrained('product_category')->onDelete('cascade');        });
     }
 
     /**

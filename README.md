@@ -19,8 +19,8 @@
 ## 💻 Tech Stack
 
 * **Backend:** [**Laravel**](https://laravel.com/) - A robust PHP framework used for a secure structure and rapid development.
-* [cite_start]**Frontend:** [**Vue.js**](https://vuejs.org/) - A component-based JavaScript framework for creating a dynamic and maintainable user interface.
-* [cite_start]**Styling:** [**Tailwind CSS**](https://tailwindcss.com/) - A utility-first CSS framework for quickly prototyping and building responsive designs.
+* **Frontend:** [**Vue.js**](https://vuejs.org/) - A component-based JavaScript framework for creating a dynamic and maintainable user interface.
+* **Styling:** [**Tailwind CSS**](https://tailwindcss.com/) - A utility-first CSS framework for quickly prototyping and building responsive designs.
 
 ---
 
@@ -28,10 +28,10 @@
 
 The project was planned extensively before development, including a site map, database schema, and full UI mockups.
 
-### [cite_start]Site Map [cite: 150]
+### Site Map
 The site map outlines the page hierarchy and user flow, starting from the central "HOME" page and branching into main categories like "Store," "Account," and "Other Pages."
 
-### [cite_start]Database Schema [cite: 155]
+### Database Schema
 Our database schema defines all entities (like `products`, `customer`, `orders`), their attributes, and the relationships between them.
 
 ### Wireframes & Mockups
@@ -49,7 +49,7 @@ This project is managed using the **Kanban (Agile)** methodology, chosen for its
 
 ---
 
-## [cite_start]👥 The Team (Group 27) [cite: 2, 40]
+## 👥 The Team (Group 27)
 
 | Name | Role |
 | :--- | :--- |

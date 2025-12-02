@@ -5,7 +5,7 @@
     <div class="grid grid-cols-1 md:grid-cols-2 bg-gray-200 mb-12">
 
 
-    <div class="h-96 overflow-hidden">
+    <div class="h-67 overflow-hidden">
         <img src="/images/cool_pc.jpg" alt="Cool PC" class="w-full h-full object-cover">
     </div>
 
@@ -23,7 +23,7 @@
         <a href="/store" class="bg-gray-900 text-white px-6 py-3 rounded hover:bg-gray-700">
             Shop Now
         </a>
-        <a href="/cc" class="bg-gray-700 text-white px-6 py-3 rounded hover:bg-gray-600">
+        <a href="/cc" class="bg-gray-900 text-white px-6 py-3 rounded hover:bg-gray-600">
             Computer Configurator
         </a>
     </div>
@@ -50,7 +50,7 @@
                 <h3 class="text-lg font-semibold">Save with Bundles</h3>
             </a>
 
-            <a href="/cc" class="block group">
+            <a href="/store" class="block group">
                 <div class="h-48 bg-gray-300 rounded-lg mb-3 flex items-center justify-center group-hover:bg-gray-400 transition">
                     <span class="text-gray-500 font-bold text-xl">Pre-Builts</span>
                 </div>
@@ -72,18 +72,21 @@
                     title="Popular Pre-Built"
                     description="Ready to game straight out the box."
                     price="£1300"
+                    image="null"
                     />
 
                 <x-product-card
                     title="Popular CPU"
                     description="High pefformance CPU for gaming and productivity."
                     price="£300"
+                    image="null"
                     />
 
                 <x-product-card
                     title="Popular GPU"
                     description="Next-gen graphics power."
                     price="£600"
+                    image="null"
                     />
 
             </div>

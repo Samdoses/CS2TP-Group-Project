@@ -14,7 +14,6 @@ return new class extends Migration
         Schema::create('admins', function (Blueprint $table) {
             //this table stores every admins personal details and account information
             $table->id('admin_id');
-            $table->timestamps();
             $table->string('FirstName');
             $table->string('LastName');
             $table->string('email')->unique();

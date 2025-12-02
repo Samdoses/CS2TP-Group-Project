@@ -6,26 +6,22 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
-     * Run the migrations.
-     */
     public function up(): void
     {
         Schema::create('payments', function (Blueprint $table) {
-            //this table stores the users payment details for the order
-            $table->id('payment_id');
-            $table->timestamps();
+            $table->id(); 
+            
             $table->string('payment_method');
             $table->string('payment_status');
             $table->dateTime('payment_date');
 
-            $table->foreignId('order_id')->constrained('orders','order_id');
+
+            $table->foreignId('order_id')->constrained('orders')->onDelete('cascade');
+            
+            $table->timestamps();
         });
     }
 
-    /**
-     * Reverse the migrations.
-     */
     public function down(): void
     {
         Schema::dropIfExists('payments');

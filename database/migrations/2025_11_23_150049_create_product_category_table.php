@@ -13,10 +13,10 @@ return new class extends Migration
     {
         Schema::create('product_category', function (Blueprint $table) {
             //this is a table that list and describes each category
-            $table->id('category_id');
-            $table->timestamps();
+            $table->id();
             $table->string('category_name');
             $table->text('category_description')->nullable();
+            $table->timestamps();
         });
     }
 
