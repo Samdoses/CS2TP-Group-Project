@@ -71,21 +71,21 @@
                 <x-product-card
                     title="Popular Pre-Built"
                     description="Ready to game straight out the box."
-                    price="£1300"
+                    price="1300"
                     image="null"
                     />
 
                 <x-product-card
                     title="Popular CPU"
                     description="High pefformance CPU for gaming and productivity."
-                    price="£300"
+                    price="300"
                     image="null"
                     />
 
                 <x-product-card
                     title="Popular GPU"
                     description="Next-gen graphics power."
-                    price="£600"
+                    price="600"
                     image="null"
                     />
 

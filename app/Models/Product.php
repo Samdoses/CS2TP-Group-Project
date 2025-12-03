@@ -6,18 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Product extends Model
 {
-<<<<<<< HEAD
-    protected $primaryKey = 'product_id';
-    
-    protected $fillable = [
-        'product_name',
-        'product_description',
-        'product_price',
-        'product_stock',
-        'category_id',
-        'product_image'
-    ];
-=======
     public $timestamps = false;
 
     protected $fillable  = ['product_name',
@@ -29,5 +17,4 @@ class Product extends Model
     public function category() {
         return $this->belongsTo(Category::class);
     }
->>>>>>> main
 }
