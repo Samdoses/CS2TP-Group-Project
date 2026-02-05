@@ -30,7 +30,7 @@
                             Custom PC building can be intimidating. Complex jargon, compatibility issues, and rising costs make it hard to start.
                         </p>
                         <p class="mt-4 text-lg text-gray-500">
-                            We differentiate ourselves by providing a <strong>welcoming UI and comprehensive support</strong>. From our intuitive Parts Picker to our AI Chatbot, we ensure you can build your first PC with confidence. [cite: 47]
+                            We differentiate ourselves by providing a <strong>welcoming UI and comprehensive support</strong>. From our intuitive Parts Picker to our AI Chatbot, we ensure you can build your first PC with confidence.
                         </p>
                         <div class="mt-8">
                             <a href="#" class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gray-800 hover:bg-gray-700">
