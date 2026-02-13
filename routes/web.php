@@ -64,6 +64,8 @@ Route::get('/checkout/success', [CheckoutController::class, 'success'])->name('c
 
 Route::middleware(['auth'])->group(function () {
 
+    Route::view('/dashboard', 'dashboard')->name('dashboard');
+
     Route::redirect('settings', 'settings/profile');
 
     // Profile Dashboard & Tabs
@@ -96,11 +98,11 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/basket/update', [StoreController::class, 'updateQuantity'])->name('basket.update');
 
     // Settings (Volt Components)
-    Volt::route('settings/profile', 'initial views.livewire.settings.profile')->name('profile.edit');
-    Volt::route('settings/password', 'initial views.livewire.settings.password')->name('user-password.edit');
-    Volt::route('settings/appearance', 'initial views.livewire.settings.appearance')->name('appearance.edit');
+Volt::route('settings/profile', 'settings.profile')->name('profile.edit');
+Volt::route('settings/password', 'settings.password')->name('user-password.edit');
+Volt::route('settings/appearance', 'settings.appearance')->name('appearance.edit');
 
-    Volt::route('settings/two-factor', 'initial views.livewire.settings.two-factor')
-        ->middleware(['password.confirm'])
-        ->name('two-factor.show');
+Volt::route('settings/two-factor', 'settings.two-factor')
+    ->middleware(['password.confirm'])
+    ->name('two-factor.show');
 });

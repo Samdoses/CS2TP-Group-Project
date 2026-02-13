@@ -7,34 +7,29 @@ use Illuminate\Validation\Rule;
 use Livewire\Volt\Component;
 
 new class extends Component {
-    public string $name = '';
+// 1. Change $name to $first_name and $last_name
+    public string $first_name = '';
+    public string $last_name = '';
     public string $email = '';
 
-    /**
-     * Mount the component.
-     */
     public function mount(): void
     {
-        $this->name = Auth::user()->name;
+        // 2. Update mount to grab both names
+        $this->first_name = Auth::user()->first_name;
+        $this->last_name = Auth::user()->last_name;
         $this->email = Auth::user()->email;
     }
 
-    /**
-     * Update the profile information for the currently authenticated user.
-     */
     public function updateProfileInformation(): void
     {
         $user = Auth::user();
 
+        // 3. Update validation to check both names
         $validated = $this->validate([
-            'name' => ['required', 'string', 'max:255'],
-
+            'first_name' => ['required', 'string', 'max:255'],
+            'last_name' => ['required', 'string', 'max:255'],
             'email' => [
-                'required',
-                'string',
-                'lowercase',
-                'email',
-                'max:255',
+                'required', 'string', 'lowercase', 'email', 'max:255',
                 Rule::unique(User::class)->ignore($user->id)
             ],
         ]);
@@ -47,7 +42,8 @@ new class extends Component {
 
         $user->save();
 
-        $this->dispatch('profile-updated', name: $user->name);
+        // 4. Dispatch with combined name if needed, or just first_name
+        $this->dispatch('profile-updated', name: $user->first_name);
     }
 
     /**
@@ -74,10 +70,15 @@ new class extends Component {
 
     <x-settings.layout :heading="__('Profile')" :subheading="__('Update your name and email address')">
         <form wire:submit="updateProfileInformation" class="my-6 w-full space-y-6">
-            <flux:input wire:model="name" :label="__('Name')" type="text" required autofocus autocomplete="name" />
 
-            <div>
-                <flux:input wire:model="email" :label="__('Email')" type="email" required autocomplete="email" />
+    <div class="flex gap-4">
+        <flux:input wire:model="first_name" :label="__('First Name')" type="text" required autofocus autocomplete="given-name" class="w-full" />
+        <flux:input wire:model="last_name" :label="__('Last Name')" type="text" required autocomplete="family-name" class="w-full" />
+    </div>
+
+    <div>
+        <flux:input wire:model="email" :label="__('Email')" type="email" required autocomplete="email" />
+        ```
 
                 @if (auth()->user() instanceof \Illuminate\Contracts\Auth\MustVerifyEmail &&! auth()->user()->hasVerifiedEmail())
                     <div>
