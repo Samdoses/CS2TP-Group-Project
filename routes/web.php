@@ -64,6 +64,9 @@ Route::get('/checkout/success', [CheckoutController::class, 'success'])->name('c
 
 Route::middleware(['auth'])->group(function () {
 
+    //redirects a new user to the dashboard
+    Route::view('/dashboard', 'dashboard')->name('dashboard');
+
     Route::redirect('settings', 'settings/profile');
 
     // Profile Dashboard & Tabs
