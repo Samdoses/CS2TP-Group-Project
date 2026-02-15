@@ -25,7 +25,7 @@ return new class extends Migration
             $table->integer('product_stock')->default(0);
             $table->string('product_colour');
 
-            $table->foreignId('category_id')->constrained('product_category')->onDelete('cascade');        });
+            $table->foreignId('category_id')->constrained('product_category')->onDelete('cascade');});
     }
 
     /**

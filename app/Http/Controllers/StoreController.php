@@ -52,8 +52,8 @@ class StoreController extends Controller
                 }
                 else {
                     //if the quantity now exceeds stock limit
-                    return redirect()->route('basket.view')->with('error', 'There is only'.$basketItem->product->product_stock.'available');
-                    //doesnt show error message, but it doesnt delete the basket item now
+                    return redirect()->route('basket.view')->with('error', 'There are only '.$basketItem->product->product_stock.' available '. $basketItem->product->product_name . 's');
+
                 }
 
             } else {
@@ -73,8 +73,10 @@ class StoreController extends Controller
     {
         $products = Product::all();
         $categories = Category::all();
+        $colours = Product::select('product_colour')->distinct()->pluck('product_colour');
+        $pcParts = Product::select('product_part')->distinct()->pluck('product_part');
 
-        return view('store-page', compact('products', 'categories'));
+        return view('store-page', compact('products', 'categories', 'colours', 'pcParts'));
 
     }
 

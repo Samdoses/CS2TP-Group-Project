@@ -10,13 +10,17 @@
                 <div class="mb-4">
                     <label class="block font-bold text-x1 mb-4">Quantity</label>
                     <div class="flex items-center gap-6 text-4xl font-light select-none">
-                        <button type="button" id="minus_quantity" class= "hover:text-gray-600 pb-1 cursor-pointer"> - </button>
+
                         @if($stock != 0)
-                        <input id="quantity" name="quantity" type="number" value="1" min="1" max={{$stock}} class="mx-2 w-12 text-center bg-transparent border-none appearance-none focus:outline-none" />
+                        <button type="button" id="minus_quantity"> - </button>
+                        <input id="quantity" name="quantity" type="number" value="1" min="1" max="{{$stock}}" class="mx-2 w-12 text-center bg-transparent border-none appearance-none focus:outline-none" />
+                        <button type="button" id="plus_quantity"> + </button>
                         @else
+                        <button type="button" id="static_minus" class= "opacity-50"> - </button>
                         <span id="quantity" name="quantity" type="number" value="0" class="mx-2 w-12 text-center bg-transparent border-none appearance-none focus:outline-none"> 0 </span>
+                        <button type="button" id="static_plus" class= "opacity-50"> + </button>
                         @endif
-                        <button type="button" id="plus_quantity" class= "hover:text-gray-600 pb-1 cursor-pointer"> + </button>
+
 
                     </div>
                     <br>
@@ -44,4 +48,21 @@
         Add to basket
     </button>
 </div>
+
+<script>
+    const quantityInput = document.getElementById('quantity');
+    const maximumStock = {{ $stock }};
+
+    document.getElementById('plus_quantity').onclick = () => {
+        let currentVal = parseInt(quantityInput.value);
+        if (currentVal < maximumStock)
+            quantityInput.value = currentVal + 1;
+    };
+
+    document.getElementById('minus_quantity').onclick = () => {
+        let currentVal = parseInt(quantityInput.value);
+        if (currentVal > 1)
+            quantityInput.value = currentVal - 1;
+    };
+</script>
 

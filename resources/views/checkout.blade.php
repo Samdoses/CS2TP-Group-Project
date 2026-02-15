@@ -13,9 +13,9 @@
             Complete Your Order
         </h1>
 
-        {{-- 
-            KEY CHANGE: The <form> now wraps the entire Grid system. 
-            This allows the inputs to be on the left, and the submit button 
+        {{--
+            KEY CHANGE: The <form> now wraps the entire Grid system.
+            This allows the inputs to be on the left, and the submit button
             to be in the sidebar on the right.
         --}}
         <form action="{{ route('checkout.process') }}" method="POST">
@@ -25,13 +25,13 @@
 
                 {{-- LEFT COLUMN: SHIPPING INFO --}}
                 <div class="lg:col-span-2 space-y-6">
-                    
+
                     {{-- Card: Customer Details --}}
                     <div class="bg-white rounded-xl shadow-lg p-6 border border-gray-200">
                         <h2 class="text-2xl font-bold text-gray-800 mb-6 border-b pb-2">1. Shipping Information</h2>
 
                         <div class="grid grid-cols-1 gap-6">
-                            
+
                             {{-- Full Name --}}
                             <div>
                                 <label for="full_name" class="block text-sm font-medium text-gray-700 mb-1">Full Name *</label>
@@ -82,10 +82,10 @@
                     {{-- Card: Shipping Method --}}
                     <div class="bg-white rounded-xl shadow-lg p-6 border border-gray-200">
                         <h2 class="text-2xl font-bold text-gray-800 mb-6 border-b pb-2">2. Delivery Method</h2>
-                        
+
                         <div class="space-y-4">
                             <div class="flex items-center p-4 border border-gray-200 rounded-lg hover:bg-gray-50 cursor-pointer transition">
-                                <input type="radio" id="standard" name="shipping_cost" value="3.95" required checked
+                                <input type="radio" id="standard" name="delivery_method" value="standard" required checked
                                     class="h-5 w-5 text-indigo-600 border-gray-300 focus:ring-indigo-500">
                                 <label for="standard" class="ml-3 flex flex-col cursor-pointer w-full">
                                     <span class="block text-sm font-bold text-gray-900">Standard Delivery (£3.95)</span>
@@ -94,7 +94,7 @@
                             </div>
 
                             <div class="flex items-center p-4 border border-gray-200 rounded-lg hover:bg-gray-50 cursor-pointer transition">
-                                <input type="radio" id="express" name="shipping_cost" value="6.95"
+                                <input type="radio" id="express" name="delivery_method" value="express"
                                     class="h-5 w-5 text-indigo-600 border-gray-300 focus:ring-indigo-500">
                                 <label for="express" class="ml-3 flex flex-col cursor-pointer w-full">
                                     <span class="block text-sm font-bold text-gray-900">Express Delivery (£6.95)</span>
@@ -126,7 +126,7 @@
                                 <p class="text-sm text-gray-500">Your cart is empty.</p>
                             @endforelse
                         </div>
-                        
+
                         <hr class="border-gray-200 mb-4">
 
                         {{-- Totals Calculation --}}
@@ -151,14 +151,14 @@
                                 class="w-full text-center bg-indigo-600 text-white text-lg p-3 rounded-lg shadow-lg hover:bg-indigo-700 transition duration-200 font-bold">
                                 Confirm & Pay
                             </button>
-                            
+
                             <p class="text-xs text-center text-gray-500 mt-3">
                                 By clicking Confirm, you agree to our Terms & Conditions.
                             </p>
                         </div>
-                    </div>                    
+                    </div>
                         <a href="/basket"
-                        class="block w-full ...">    
+                        class="block w-full ...">
                     </a>
                 </aside>
 
@@ -170,24 +170,31 @@
     {{-- Script remains mostly the same, just targeting the existing IDs --}}
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            const shippingRadios = document.querySelectorAll('input[name="shipping_cost"]');
+            const shippingRadios = document.querySelectorAll('input[name="delivery_method"]');
             const subtotalElement = document.getElementById('subtotal');
             const shippingDisplayElement = document.getElementById('shipping-display');
             const finalTotalElement = document.getElementById('final-total');
-            
+
             // Get subtotal from the rendered PHP value (removing commas if present)
             const initialSubtotal = parseFloat(subtotalElement.textContent.replace(/[£,]/g, ''));
 
             function updateTotals() {
                 // Get the cost of the currently selected shipping radio button
-                const selectedRadio = document.querySelector('input[name="shipping_cost"]:checked');
+                const selectedRadio = document.querySelector('input[name="delivery_method"]:checked');
                 if(!selectedRadio) return;
 
-                let selectedShippingCost = parseFloat(selectedRadio.value);
-                
+                //made a delivery price map that assigns the value of the delivery method chosen
+                const deliveryPrices = {
+                    standard: 3.95,
+                    express: 6.95
+                };
+
+                let selectedShippingCost = deliveryPrices[selectedRadio.value];
+
+
                 // Update display values
                 shippingDisplayElement.textContent = selectedShippingCost.toFixed(2);
-                
+
                 // Calculate Final Total
                 const newTotal = initialSubtotal + selectedShippingCost;
                 finalTotalElement.textContent = newTotal.toFixed(2);

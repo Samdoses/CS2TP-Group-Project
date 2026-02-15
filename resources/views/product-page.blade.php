@@ -41,6 +41,7 @@
                         $description = !empty($product->product_description) ? $product->product_description : 'This item is still in development.';
                         $price = $product->product_price;
                         $stock = $product->product_stock;
+                        $colour = $product->product_colour;
                     @endphp
 
                     <x-product-page-gallery
@@ -57,8 +58,8 @@
                         <p class="text-gray-700 text-lg mb-10">{{$description}}</p>
 
                         <x-product-page-variant-selecter
-                        variant1="Black"
-                        variant2="White" />
+                        variant1={{$colour}}
+                        />
 
                         <x-product-page-purchase-actions
                         :stock=$stock
@@ -70,3 +71,5 @@
     </x-layout>
 
     <x-footer></x-footer>
+
+

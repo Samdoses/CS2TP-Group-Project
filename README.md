@@ -51,16 +51,16 @@ This project is managed using the **Kanban (Agile)** methodology, chosen for its
 
 ## 👥 The Team (Group 27)
 
-| Name | Role |
-| :--- | :--- |
-| Aisha Jama | Frontend Development  |
-| Aishah Hussain | Backend Development  |
-| Samuel D'Souza | Frontend Development / UI  |
-| Zain Khan | Frontend Development  |
-| Mohamoud Mohamoud | Backend Development  |
-| Harjot Singh | Backend Development / UI  |
-| Thomas Thackham | Frontend Development  |
-| Yusuf Saif | Backend Development  |
+| Username | Name | Role |
+| :--- | :--- | :--- |
+|aishajama1| Aisha Jama | Frontend Development  |
+|happychocolatecake| Aishah Hussain | Backend Development  |
+|Samdoses| Samuel D'Souza | Frontend Development / UI  |
+|ZainKhan-19| Zain Khan | Frontend Development  |
+|mnm-hbtl| Mohamoud Mohamoud | Backend Development  |
+|Jot17| Harjot Singh | Backend Development / UI  |
+|TomThackham| Thomas Thackham | Frontend Development  |
+|yusuf19-saif| Yusuf Saif | Backend Development  |
 
 ---
 

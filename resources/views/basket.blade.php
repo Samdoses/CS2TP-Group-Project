@@ -12,6 +12,16 @@
             Your Shopping Basket
         </h1>
 
+        @if (session('error'))
+            <div class="container mx-auto px-6 mt-4">
+                <div class="bg-red-100 border-l-4 border-red-500 text-red-700 p-4 rounded shadow-sm" role="alert">
+                    <p class="font-bold">Error</p>
+                    <p>{{ session('error') }}</p>
+                </div>
+            </div>
+            <br>
+        @endif
+
         @if (!$basket || $basket->items->isEmpty())
             <div class="bg-blue-50 border-l-4 border-blue-500 text-blue-700 p-6 rounded-lg shadow-inner" role="alert">
                 <p class="font-bold text-xl mb-2">Your Basket is Empty!</p>
@@ -77,9 +87,16 @@
                                         @csrf
                                         <input type="hidden" name="basket_item_id" value="{{ $item->id }}">
                                         <input type="hidden" name="action" value="increment">
+
+                                        @if ($item->quantity >= $item->product->product_stock)
+                                        <button disabled class="px-3 py-1 text-base bg-gray-200 opacity-50 leading-none h-full">
+                                            +
+                                        </button>
+                                        @else
                                         <button type="submit" class="px-3 py-1 text-base bg-gray-50 hover:bg-gray-200 transition leading-none h-full">
                                             +
                                         </button>
+                                        @endif
                                     </form>
 
                                 </div>

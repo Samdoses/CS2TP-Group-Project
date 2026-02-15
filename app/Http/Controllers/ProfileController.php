@@ -4,9 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Hash;      
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Cache;
-use Illuminate\Support\Facades\Mail;    
+use Illuminate\Support\Facades\Mail;
+use App\Models\Order;
 
 class ProfileController extends Controller
 {
@@ -28,12 +29,19 @@ class ProfileController extends Controller
     public function orders()
     {
         $orders = Auth::user()->orders()->latest()->paginate(10);
-        
+
         return view('profile.edit', [
             'user' => Auth::user(),
             'orders' => $orders
         ]);
     }
+
+    public function viewOrder($orderId) {
+
+        $order = Order::with('orderDetails.product')->findOrFail($orderId);
+        return view('profile.partials.view-past-order-details', compact('order'));
+    }
+
 
     public function security()
     {
@@ -62,7 +70,7 @@ class ProfileController extends Controller
 
         // 3. Check if Email is being changed
         if ($validated['email'] !== $user->email) {
-            
+
             // Generate a 6-digit code
             $code = rand(100000, 999999);
 
@@ -89,7 +97,7 @@ class ProfileController extends Controller
     // Show the OTP Entry Form
     public function verifyEmailPage()
     {
-        return view('profile.partials.verify-email');  
+        return view('profile.partials.verify-email');
     }
 
     // Process the OTP
@@ -118,7 +126,7 @@ class ProfileController extends Controller
 
         return redirect()->route('profile.security')->with('status', 'Email updated successfully!');
     }
-    
+
     public function editPassword()
     {
         return view('profile.change-password');
@@ -128,19 +136,19 @@ class ProfileController extends Controller
     public function updatePassword(Request $request)
     {
         $validated = $request->validateWithBag('password_update', [
-            'current_password' => ['required', 'current_password'], 
-            'password' => ['required', 'confirmed', 'min:8'], 
+            'current_password' => ['required', 'current_password'],
+            'password' => ['required', 'confirmed', 'min:8'],
         ], [
             'current_password.current_password' => 'The provided password does not match your current password.',
             'password.confirmed' => 'The new password confirmation does not match.',
         ]);
 
-        
+
         $request->user()->update([
             'password' => Hash::make($validated['password']),
         ]);
 
-        
+
         return back()->with('status', 'password-updated');
     }
 

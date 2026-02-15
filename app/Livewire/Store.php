@@ -15,6 +15,12 @@ class Store extends Component
     public $selectedMaxPrice;
     public $categories;
 
+    public $selectedColours = [];
+    public $colours;
+
+    public $selectedPCParts = [];
+    public $pcParts;
+
     public $sortField = 'product_name';
     public $sortDirection = 'asc';
     public $showSort = false;
@@ -25,6 +31,8 @@ class Store extends Component
         $this->minPrice = Product::min('product_price');
         $this->maxPrice = Product::max('product_price');
         $this->selectedMaxPrice = $this->maxPrice;
+        $this->colours = Product::select('product_colour')->distinct()->pluck('product_colour');
+        $this->pcParts = Product::select('product_part')->distinct()->pluck('product_part');
     }
 
     public function toggleSort() {
@@ -37,6 +45,24 @@ class Store extends Component
         }
         else {
             $this->selectedCategories = array_diff($this->selectedCategories, [$categoryId]);
+        }
+    }
+
+    public function toggleColours($colourName) {
+        if (!in_array($colourName, $this->selectedColours)) {
+            $this->selectedColours[] = $colourName;
+        }
+        else {
+            $this->selectedColours = array_diff($this->selectedColours, [$colourName]);
+        }
+    }
+
+    public function togglePcParts($pcName) {
+         if (!in_array($pcName, $this->selectedPCParts)) {
+            $this->selectedPCParts[] = $pcName;
+        }
+        else {
+            $this->selectedPCParts = array_diff($this->selectedPCParts, [$pcName]);
         }
     }
 
@@ -63,8 +89,18 @@ class Store extends Component
              $query->whereIn('category_id', $this->selectedCategories);
         }
 
-        $query->whereBetween('product_price', [$this->minPrice, $this->selectedMaxPrice]);
+        if (!empty($this->selectedColours)) {
+            $query->whereIn('product_colour', $this->selectedColours);
+        }
 
+        if (!empty($this->selectedPCParts)) {
+            $query->whereIn('product_part', $this->selectedPCParts);
+        }
+
+        $query->when($this->minPrice !== null && $this->selectedMaxPrice !== null, function ($q) {
+            $q->whereBetween('product_price', [$this->minPrice, $this->selectedMaxPrice]);
+        }
+        );
 
         return view('livewire.store', [
             'products' => $query->orderBy($this->sortField, $this->sortDirection)->get(),

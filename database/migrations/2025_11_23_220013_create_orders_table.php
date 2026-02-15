@@ -10,17 +10,19 @@ return new class extends Migration
     {
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
-            
-            $table->string('order_address'); 
-            
-            $table->decimal('total_price', 10, 2); 
-            
+
+            $table->string('order_address');
+
+            $table->decimal('total_price', 10, 2);
+
+            $table->string('delivery_method');
+
             $table->dateTime('order_date')->useCurrent();
-            
+
             $table->string('order_status')->default('Pending');
 
             $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
-            
+
             $table->timestamps();
         });
     }

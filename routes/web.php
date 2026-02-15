@@ -55,9 +55,7 @@ Route::post('/contact', function (Request $request) {
 Route::get('/temp-pp', [ProductController::class, 'index'])->name('product.temp');
 
 // past order details route
-Route::get('/view-past-order-details', function () {
-    return view('profile.partials.view-past-order-details');
-})->name('view-past-order-details');
+Route::get('orders/{order}', [ProfileController::class,'viewOrder'])->middleware('auth')->name('profile.orders.show');
 
 // Checkout Routes
 Route::get('/checkout', [CheckoutController::class, 'index'])->name('checkout.index');

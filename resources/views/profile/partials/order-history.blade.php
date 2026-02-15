@@ -12,7 +12,8 @@
                 <tr class="bg-gray-50 border-b border-gray-200 text-xs uppercase text-gray-500 font-semibold">
                     <th class="py-3 px-4">Order ID</th>
                     <th class="py-3 px-4">Date</th>
-                    <th class="py-3 px-4">Status</th>
+                    <th class="py-3 px-4">Time</th>
+                    <th class="py-3 px-8">Status</th>
                     <th class="py-3 px-4 text-right">Total</th>
                     <th class="py-3 px-4 text-right">Action</th>
                 </tr>
@@ -21,16 +22,17 @@
                 @foreach($orders as $order)
                     <tr class="border-b border-gray-100 hover:bg-gray-50">
                         <td class="py-3 px-4 font-medium text-gray-900">#{{ $order->id }}</td>
-                        <td class="py-3 px-4 text-gray-600">{{ $order->created_at->format('M d, Y') }}</td>
-                        <td class="py-3 px-4">
-                            <span class="px-2 py-1 rounded-full text-xs font-semibold 
+                        <td class="py-3 px-4 text-gray-600">{{ $order->order_date->format('M d, Y') }}</td>
+                        <td class="py-3 px-4 text-gray-600">{{ $order->order_date->format('H:i') }}</td>
+                        <td class="py-3 px-7">
+                            <span class="px-1.5 py-1 rounded-full text-xs font-semibold
                                 {{ $order->status === 'completed' ? 'bg-green-100 text-green-800' : 'bg-yellow-100 text-yellow-800' }}">
-                                {{ ucfirst($order->status) }}
+                                {{ $order->order_status }}
                             </span>
                         </td>
                         <td class="py-3 px-4 text-right font-medium">£{{ number_format($order->total_price, 2) }}</td>
                         <td class="py-3 px-4 text-right">
-                            <a href="/view-past-order-details" class="text-indigo-600 hover:text-indigo-900 font-medium">View</a>
+                            <a href="{{ route('profile.orders.show', $order->id)}}" class="text-indigo-600 hover:text-indigo-900 font-medium">View</a>
                         </td>
                     </tr>
                 @endforeach

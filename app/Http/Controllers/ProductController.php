@@ -12,7 +12,6 @@ class ProductController extends Controller
 
     public function show(Product $product)
     {
-
         return view('product-page', compact('product'));
     }
 

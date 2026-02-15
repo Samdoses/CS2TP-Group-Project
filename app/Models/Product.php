@@ -11,7 +11,7 @@ class Product extends Model
     protected $fillable  = ['product_name',
     'product_model', 'product_price', 'product_description',
     'product_thumbnail', 'product_image', 'product_createdate',
-    'product_createdate', 'product_stock', 'category_id'];
+    'product_stock', 'category_id'];
 
     //this is for the foreign keys (many to one)
     public function category() {

@@ -43,6 +43,7 @@ class CheckoutController extends Controller
     //handles orders
     public function processOrder(Request $request)
     {
+
         // Valid data
         $validatedData = $request->validate([
             'full_name' => 'required|string|max:255',
@@ -51,7 +52,7 @@ class CheckoutController extends Controller
             'city' => 'required|string|max:100',
             'postcode' => 'required|string|max:20',
             'email' => 'required|email|max:255',
-            'shipping_cost' => 'required|numeric|in:3.95,6.95',
+            'delivery_method' => 'required|in:standard,express',
         ]);
 
         // Get users basket from database
@@ -62,10 +63,13 @@ class CheckoutController extends Controller
             return redirect()->route('store.index')->withErrors(['cart' => 'Your cart is empty.']);
         }
 
-                //checks stock is validated
+            //checks stock is validated
         foreach ($basket->items as $item) {
+            if ($item->product->product_stock == 0){
+                return redirect()->route('basket.view')->with('error','The '.$item->product->product_name. 'is out of stock.');
+            }
             if ($item->product->product_stock < $item->quantity) {
-                return redirect()->route('store.index')->withErrors(['cart' => 'Some of your products are out of stock.']);
+                return redirect()->route('basket.view')->with('error','There are only '.$item->product->product_stock.' available '. $item->product->product_name . 's');
             }
         }
 
@@ -75,7 +79,8 @@ class CheckoutController extends Controller
             $subtotal += $item->product->product_price * $item->quantity;
         }
 
-        $shippingCost = $validatedData['shipping_cost'];
+        //calculate shipping cost based on method picked
+        $shippingCost = $validatedData['delivery_method'] === 'express' ? 6.95 : 3.95;
         $grandTotal = $subtotal + $shippingCost;
 
         // Create order in database
@@ -83,6 +88,7 @@ class CheckoutController extends Controller
         $order->user_id = $user->id;
         $order->order_date = now();
         $order->order_status = 'Placed';
+        $order->delivery_method = $validatedData['delivery_method'];
 
         $fullAddress = $validatedData['address_line_1'] . ', ';
         if (!empty($validatedData['address_line_2'])) {
