@@ -41,7 +41,7 @@ class ProductSeeder extends Seeder
                 'product_image' =>'https://media.very.co.uk/i/very/W1HGC_SQ1_0000000099_N_A_SLf?$pdp_576x768_x2$&fmt=webp'
             ],
             [
-                'product_name' => 'AMD Ryzen 9 7950X',
+                'product_name' => 'Ryzen 9 7950X',
                 'product_model' => 'Ryzen9-7950X',
                 'product_part' => 'CPU',
                 'product_colour' => 'Silver',

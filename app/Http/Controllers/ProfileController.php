@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Mail;
 use App\Models\Order;
+use App\Models\Review;
 
 class ProfileController extends Controller
 {
@@ -40,6 +41,19 @@ class ProfileController extends Controller
 
         $order = Order::with('orderDetails.product')->findOrFail($orderId);
         return view('profile.partials.view-past-order-details', compact('order'));
+    }
+
+    public function reviews() {
+
+        $user = Auth::user();
+
+        //Fetch user reviews with the product relationship so we can show what they reviewed
+        $reviews = Review::where('user_id', $user->id)->with('product')->latest()->paginate(4);
+
+        return view('profile.edit', [
+            'user' => $user,
+            'reviews' => $reviews
+    ]);
     }
 
 

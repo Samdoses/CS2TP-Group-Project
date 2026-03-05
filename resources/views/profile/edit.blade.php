@@ -36,6 +36,10 @@
                             <i class="fas fa-box-open mr-2"></i> Order History
                         </a>
 
+                        <a href="{{ route('profile.reviews') }}"
+                            class="{{ request()->routeIs('profile.reviews') ? 'bg-indigo-50 text-indigo-700 border-l-4 border-indigo-600' : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900 border-l-4 border-transparent' }} text-left px-6 py-4 font-medium transition-colors duration-200 focus:outline-none">
+                            <i class="fas fa-box-open mr-2"></i> Reviews
+                        </a>
                     </nav>
                 </div>
 
@@ -62,6 +66,12 @@
                     </div>
                 @endif
 
+                @if(request()->routeIs('profile.reviews'))
+                    <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+                        @include('profile.partials.my-reviews')
+                    </div>
+                @endif
+
             </main>
         </div>
         <div>
@@ -73,8 +83,8 @@
                             <i class="fas fa-sign-out-alt mr-2"></i> Log Out
                         </button>
                     </form>
-                </div>
             </div>
+        </div>
     </div>
 
 </div>

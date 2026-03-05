@@ -3,11 +3,15 @@
 namespace App\Livewire;
 
 use Livewire\Component;
+use Livewire\WithPagination;
 use App\Models\Product;
 use App\Models\Category;
 
 class Store extends Component
 {
+
+    use WithPagination;
+
     public $search = '';
     public $selectedCategories = [];
     public $minPrice;
@@ -36,10 +40,12 @@ class Store extends Component
     }
 
     public function toggleSort() {
+        $this->resetPage();
         $this->showSort = !$this->showSort;
     }
 
     public function toggleCategory($categoryId) {
+        $this->resetPage();
         if (!in_array($categoryId, $this->selectedCategories)) {
             $this->selectedCategories[] = $categoryId;
         }
@@ -49,6 +55,7 @@ class Store extends Component
     }
 
     public function toggleColours($colourName) {
+        $this->resetPage();
         if (!in_array($colourName, $this->selectedColours)) {
             $this->selectedColours[] = $colourName;
         }
@@ -58,6 +65,7 @@ class Store extends Component
     }
 
     public function togglePcParts($pcName) {
+        $this->resetPage();
          if (!in_array($pcName, $this->selectedPCParts)) {
             $this->selectedPCParts[] = $pcName;
         }
@@ -67,9 +75,17 @@ class Store extends Component
     }
 
     public function sortBy($field, $direction) {
+        $this->resetPage();
         $this->sortField = $field;
         $this->sortDirection = $direction;
     }
+
+    //automatically resets pagination when the variables change
+    public function updatingSearch() { $this->resetPage(); }
+    public function updatingSelectedCategories() { $this->resetPage(); }
+    public function updatingSelectedColours() { $this->resetPage(); }
+    public function updatingSelectedPCParts() { $this->resetPage(); }
+    public function updatingSelectedMaxPrice() { $this->resetPage(); }
 
 
     public function render()
@@ -103,7 +119,7 @@ class Store extends Component
         );
 
         return view('livewire.store', [
-            'products' => $query->orderBy($this->sortField, $this->sortDirection)->get(),
+            'products' => $query->orderBy($this->sortField, $this->sortDirection)->paginate(9),
         ]);
     }
 }

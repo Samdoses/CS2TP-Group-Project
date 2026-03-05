@@ -16,13 +16,13 @@ class UserAccountSeeder extends Seeder
         DB::table('users')->insert([
             [
                 'first_name' => 'Edward',
-                'last_name' => 'Lindapple',
+                'last_name' => 'Forest',
                 'email' => 'lavender@gmail.com',
                 'password'=>'$2y$12$i72J2cDpphmrXcrcAwxkfeBYgM5yeS5wLuArma1H8YV4M0fOfbc6q'
             ],
             [
                 'first_name' => 'Linda',
-                'last_name' => 'Edwapple',
+                'last_name' => 'Forest',
                 'email' => 'malteser@gmail.com',
                 'password'=>'$2y$12$i72J2cDpphmrXcrcAwxkfeBYgM5yeS5wLuArma1H8YV4M0fOfbc6q'
             ]

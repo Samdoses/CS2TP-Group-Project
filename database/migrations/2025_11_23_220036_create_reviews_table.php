@@ -9,13 +9,13 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('reviews', function (Blueprint $table) {
-            $table->id(); 
-            
+            $table->id();
+            $table->string('review_status')->default('Pending');
             $table->integer('rating');
             $table->string('review_image')->nullable();
             $table->text('review_text')->nullable();
-            
-            $table->dateTime('review_date')->useCurrent(); 
+
+            $table->dateTime('review_date')->useCurrent();
 
             $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
 

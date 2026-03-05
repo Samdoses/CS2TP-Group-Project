@@ -26,7 +26,7 @@
                         <td class="py-3 px-4 text-gray-600">{{ $order->order_date->format('H:i') }}</td>
                         <td class="py-3 px-7">
                             <span class="px-1.5 py-1 rounded-full text-xs font-semibold
-                                {{ $order->status === 'completed' ? 'bg-green-100 text-green-800' : 'bg-yellow-100 text-yellow-800' }}">
+                                {{ $order->getColourStatus() }}">
                                 {{ $order->order_status }}
                             </span>
                         </td>
@@ -38,5 +38,8 @@
                 @endforeach
             </tbody>
         </table>
+        <div class="mt-4">
+            {{ $orders->links() }}
+        </div>
     </div>
 @endif

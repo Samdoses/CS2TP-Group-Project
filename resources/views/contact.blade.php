@@ -1,6 +1,7 @@
 <x-header></x-header>
 <x-layout>
     <div class="max-w-2xl mx-auto px-4 py-12">
+        <div class="bg-white p8 md:p-12 rounded-xl border border-gray-100 shadow-2xl">
         <h1 class="text-3xl font-bold mb-6 text-gray-900">Contact Us</h1>
         <p class="text-gray-600 mb-8">
             Have a question or need help with a build? Send us a message below!
@@ -8,13 +9,13 @@
 
         <form action="/contact" method="POST" class="space-y-6">
             @csrf
-            
+
             <div>
                 <label for="subject" class="block text-sm font-medium text-gray-700 mb-1">Subject</label>
-                <input 
-                    type="text" 
-                    name="subject" 
-                    id="subject" 
+                <input
+                    type="text"
+                    name="subject"
+                    id="subject"
                     required
                     class="w-full rounded-md border-gray-300 shadow-sm focus:border-gray-500 focus:ring-gray-500 p-2 border"
                     placeholder="What is this regarding?"
@@ -23,10 +24,10 @@
 
             <div>
                 <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
-                <textarea 
-                    name="message" 
-                    id="message" 
-                    rows="5" 
+                <textarea
+                    name="message"
+                    id="message"
+                    rows="5"
                     required
                     class="w-full rounded-md border-gray-300 shadow-sm focus:border-gray-500 focus:ring-gray-500 p-2 border"
                     placeholder="How can we help you today?"
@@ -45,7 +46,7 @@
                 </div>
             @endif
         </form>
-    </div>
+    </div> </div>
 </x-layout>
 
 <x-footer></x-footer>

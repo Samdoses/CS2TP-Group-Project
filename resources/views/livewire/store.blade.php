@@ -157,7 +157,7 @@
                                 @php
                                     $title = $item->product_name;
                                     $image = $item->product_image;
-                                    $price = $item->product_price;
+                                    $price = number_format($item->product_price, 2);
                                     $tagline = !empty($item->product_tagline) ? $item->product_tagline : 'This item is still in development.';
                                 @endphp
 
@@ -176,6 +176,9 @@
 
                             </form>
                         @endforeach
+                    </div>
+                     <div class="mt-4">
+                            {{ $products->links() }}
                     </div>
                 @else
                     <div class="text-center py-12">
