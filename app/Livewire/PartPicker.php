@@ -40,4 +40,5 @@ class PartPicker extends Component
     {
         return view('livewire.part-picker')->layout;
     }
+
 }
