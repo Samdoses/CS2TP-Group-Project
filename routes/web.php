@@ -9,12 +9,13 @@ use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ReviewController;
 use App\Http\Controllers\GoogleAuthController;
+use App\Livewire\PartPicker;
 
 // Public Routes
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('index');
-})->name('home');
+})->name('home');*/ //removed this duplicate route, its already linked to index in store controller bestseller
 
 Route::get('/', [StoreController::class, 'bestSeller'])->name('home');
 
@@ -50,6 +51,11 @@ Route::get('/contact', function () {
 Route::get('/build-guide', function () {
     return view('build-guide');
 })->name('build-guide');
+
+Route::get('/part-picker', function () {
+    return view('partpicker-link'); // This points to your partpicker-link.blade.php file
+})->name('part-picker');
+
 
 Route::get('/faq', function () {
     return view('faq');
