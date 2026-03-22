@@ -28,7 +28,7 @@ class DashboardController extends Controller
         $totalMessages = ContactMessage::query()->count();
         $averageOrderValue = (float) Order::query()->avg('total_price');
         $openDeliveryItems = OrderDetail::query()
-            ->whereIn('delivery_status', ['Pending', 'Packed', 'Shipped', 'Out for Delivery'])
+            ->whereIn('delivery_status', ['Pending', 'Placed', 'Shipped'])
             ->count();
 
         $salesChart = $this->salesChart();
@@ -72,8 +72,9 @@ class DashboardController extends Controller
         ])->orderBy('id')->paginate(10);
 
         $deliveryStatuses = $this->deliveryStatuses();
+        $orderDeliveryStatuses = $this->orderDeliveryStatuses();
 
-        return view('admin.users', compact('users', 'deliveryStatuses'));
+        return view('admin.users', compact('users', 'deliveryStatuses', 'orderDeliveryStatuses'));
     }
 
     public function messages(): View
@@ -123,22 +124,66 @@ class DashboardController extends Controller
         return redirect()->route('admin.products.index')->with('success', 'Product removed successfully.');
     }
 
-    public function updateDeliveryStatus(Request $request, OrderDetail $orderDetail): RedirectResponse
+    public function updateOrderStatus(Request $request, Order $order): RedirectResponse
     {
         $validated = $request->validate([
-            'delivery_status' => ['required', 'string', 'in:' . implode(',', $this->deliveryStatuses())],
+        'status' => ['required', 'string', 'in:' . implode(',', $this->orderDeliveryStatuses())],
         ]);
 
-        $orderDetail->update([
-            'delivery_status' => $validated['delivery_status'],
-        ]);
+        $newStatus = $validated['status'];
+        //updates the main order with the new status
+        $order->update(['order_status' => $newStatus]);
 
-        return back()->with('success', 'Delivery status updated.');
+        //only sync items if its a standard order status (everything except the return statuses)
+        //so if you mark an order as shipped all items become shipped but if you mark an order as Fully Returned all items become Returned.
+        $standardStatuses = ['Pending', 'Placed', 'Shipped', 'Delivered', 'Cancelled'];
+
+        if (in_array($newStatus, $standardStatuses)) {
+            $order->orderDetails()->update([
+                'delivery_status' => $newStatus
+            ]);
+        }
+
+        return back()->with('success', 'Order #' . $order->id . ' status updated successfully.');
     }
 
+    public function updateItemStatus(Request $request, OrderDetail $orderItem): RedirectResponse
+    {
+        //have seperate logic to make sure u cant set an item to pending return without return requests
+        $status = $request->input('delivery_status');
+
+        //checks for returning incase its bypassed
+        if (in_array($status, ['Pending Return', 'Returned'])) {
+            //checks if a return record exists for this specific item
+            $hasReturnRequest = \App\Models\ReturnOrder::where('order_id', $orderItem->order_id)->where('product_id', $orderItem->product_id)->exists();
+
+            if (!$hasReturnRequest) {
+                return back()->with('error', "Cannot set status to '{$status}' because no actual return request exists for this item.");
+            }
+        }
+        $orderItem->update($request->validate([
+            'delivery_status' => ['required', 'in:' . implode(',', $this->deliveryStatuses())],
+        ]));
+
+        $order = $orderItem->order;
+        if ($order) {
+            $newStatus = $orderItem->order->updateStatusBasedOnItems();
+            return back()->with('success', "Item updated. Order status: {$newStatus}");
+        }
+
+        dd($orderItem->order);
+        return back()->with('error', "Order not found.");
+    }
+
+    //there are different statuses depending on if an order is being handled or an order item
     private function deliveryStatuses(): array
     {
-        return ['Pending', 'Packed', 'Shipped', 'Out for Delivery', 'Delivered', 'Cancelled'];
+        return ['Pending', 'Placed', 'Shipped', 'Delivered', 'Cancelled', 'Pending Return', 'Returned'];
+    }
+
+    private function orderDeliveryStatuses(): array
+    {
+        return ['Pending', 'Placed', 'Shipped', 'Delivered', 'Cancelled', 'Pending Full Return', 'Pending Partial Return', 'Fully Returned', 'Partially Returned'];
     }
 
     private function salesChart(): array

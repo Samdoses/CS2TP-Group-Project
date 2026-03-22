@@ -46,6 +46,10 @@
                                                 <span>Total: &pound;{{ number_format($order->total_price, 2) }}</span>
                                                 <span>Method: {{ ucfirst($order->delivery_method) }}</span>
                                                 <span>Date: {{ optional($order->order_date)->format('d M Y H:i') }}</span>
+                                                <span class="rounded-md bg-blue-100 px-2 py-0.5 text-xs font-bold {{ $order->getColourStatus() }}">
+                                                    {{ $order->order_status ?? 'Processing' }}
+                                                </span>
+
                                                 <span class="text-gray-400 transition group-open:rotate-180">
                                                     <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24">
                                                         <path d="M6 9l6 6 6-6"></path>
@@ -53,6 +57,22 @@
                                                 </span>
                                             </div>
                                         </summary>
+
+                                        <div class="flex items-center justify-between border-gray-200 pb-4 dark:border-gray-800">
+                                            <h4 class="font-medium text-gray-900 dark:text-white">Update Order Status</h4>
+                                            <form method="POST" action="{{ route('admin.order.order-status', $order) }}" class="flex items-center gap-2">
+                                                @csrf
+                                                @method('PATCH')
+                                                <select name="status" class="rounded-xl border border-gray-300 px-3 py-1.5 text-xs dark:border-gray-700 dark:bg-slate-950 dark:text-white">
+                                                    @foreach ($orderDeliveryStatuses as $status)
+                                                        <option value="{{ $status }}" @selected(($order->order_status ?? 'Pending') === $status)>{{ $status }}</option>
+                                                    @endforeach
+                                                </select>
+                                                <button type="submit" class="rounded-full bg-gray-900 px-4 py-1.5 text-xs font-medium text-white transition hover:bg-gray-700 dark:bg-white dark:text-gray-900">
+                                                    Update Order
+                                                </button>
+                                            </form>
+                                        </div>
 
                                         <div class="mt-4 overflow-x-auto">
                                             <table class="min-w-full text-sm">
@@ -74,15 +94,37 @@
                                                             <td class="py-3 pr-4 text-gray-600 dark:text-gray-300">&pound;{{ number_format($item->order_price, 2) }}</td>
                                                             <td class="py-3 pr-4 font-medium text-gray-800 dark:text-gray-200">{{ $currentStatus }}</td>
                                                             <td class="py-3 pr-4">
+                                                            <!--only display selection of changing the item status if its pending return or being returned-->
+                                                            @php
+                                                                $isReturnStatus = in_array($currentStatus, ['Pending Return', 'Returned']);
+                                                                $hasRequest = $item->hasReturnRequest();
+                                                            @endphp
+
+                                                            @if($hasRequest || $isReturnStatus)
+                                                                <!-- show the form only if a request exists or if it's already pending/has been returned -->
                                                                 <form method="POST" action="{{ route('admin.order-items.delivery-status', $item) }}" class="flex flex-wrap items-center gap-2">
                                                                     @csrf
                                                                     @method('PATCH')
                                                                     <select name="delivery_status" class="rounded-xl border border-gray-300 px-2 py-1 text-xs dark:border-gray-700 dark:bg-slate-950 dark:text-white">
-                                                                        @foreach ($deliveryStatuses as $status)
-                                                                            <option value="{{ $status }}" @selected($currentStatus === $status)>{{ $status }}</option>
+                                                                        @foreach ($deliveryStatuses as $statusOption)
+                                                                            <!-- check if the request exists and if it does show the option to change its item status -->
+                                                                            @if(!in_array($statusOption, ['Pending Return', 'Returned']) || $hasRequest)
+                                                                                <option value="{{ $statusOption }}" @selected($currentStatus === $statusOption)>
+                                                                                    {{ $statusOption }}
+                                                                                </option>
+                                                                            @endif
                                                                         @endforeach
                                                                     </select>
-                                                                    <button type="submit" class="rounded-full bg-gray-900 px-3 py-1 text-xs font-medium text-white transition hover:bg-gray-700 dark:bg-white dark:text-gray-900">Save</button>
+                                                                    <button type="submit" class="rounded-full bg-gray-900 px-3 py-1 text-xs font-medium text-white transition hover:bg-gray-700 dark:bg-white dark:text-gray-900">
+                                                                        Save
+                                                                    </button>
+                                                                </form>
+                                                            @else
+                                                                {{-- Show a simple span if no return request exists yet --}}
+                                                                <span class="text-xs font-medium text-gray-400 italic">
+                                                                    No return request
+                                                                </span>
+                                                            @endif
                                                                 </form>
                                                             </td>
                                                         </tr>

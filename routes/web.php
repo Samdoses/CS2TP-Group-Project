@@ -26,7 +26,8 @@ Route::prefix('admin')->name('admin.')->group(function () {
         Route::get('/messages', [AdminDashboardController::class, 'messages'])->name('messages.index');
         Route::post('/products', [AdminDashboardController::class, 'storeProduct'])->name('products.store');
         Route::delete('/products/{product}', [AdminDashboardController::class, 'destroyProduct'])->name('products.destroy');
-        Route::patch('/order-items/{orderDetail}/delivery-status', [AdminDashboardController::class, 'updateDeliveryStatus'])->name('order-items.delivery-status');
+        Route::patch('/order-items/{order}/order_status', [AdminDashboardController::class, 'updateOrderStatus'])->name('order.order-status');
+         Route::patch('/order-items/{orderDetail}/delivery_status', [AdminDashboardController::class, 'updateItemStatus'])->name('order-items.delivery-status');
         Route::post('/logout', [AdminAuthController::class, 'logout'])->name('logout');
     });
 });

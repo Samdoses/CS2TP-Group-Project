@@ -65,4 +65,26 @@ class Order extends Model
         };
     }
 
+    public function updateStatusBasedOnItems()
+    {
+        $items = $this->orderDetails;
+        $totalCount = $items->count();
+        $returnedCount = $items->where('delivery_status', 'Returned')->count();
+        $pendingReturnCount = $items->where('delivery_status', 'Pending Return')->count();
+
+        if ($returnedCount === $totalCount) {
+            $status = 'Fully Returned';
+        } elseif ($pendingReturnCount === $totalCount) {
+            $status = 'Pending Full Return';
+        } elseif ($returnedCount > 0 || $pendingReturnCount > 0) {
+            //if there is a mix of returned/pending and normal items
+            $status = ($pendingReturnCount > 0) ? 'Pending Partial Return' : 'Partially Returned';
+        } else {
+            $status = $this->order_status;
+        }
+
+        $this->update(['order_status' => $status]);
+        return $status;
+    }
+
 }

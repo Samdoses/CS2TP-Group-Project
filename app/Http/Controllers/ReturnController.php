@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Product;
 use App\Models\Order;
+use App\Models\OrderDetail;
 use App\Models\ReturnOrder;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -67,6 +68,9 @@ class ReturnController extends Controller
             'updated_at' => now(),
         ]);
 
+        //update the items delivery status to pending return
+        $item->update(['delivery_status' => 'Pending Return']);
+
         //because its only one item, we dont update order status until all items are return requested
         //sum of everything originally bought
         $totalUnitsOrdered = $order->orderDetails->sum('quantity');
@@ -122,6 +126,8 @@ class ReturnController extends Controller
                     'created_at' => now(),
                     'updated_at' => now(),
                 ]);
+            //update each item to pending return
+            $item->update(['delivery_status' => 'Pending Return']);
             $createdAny = true;
         }
         }
@@ -193,6 +199,12 @@ class ReturnController extends Controller
             return back()->with('error', 'This return has already been processed and cannot be cancelled.');
         }
 
+        $orderItem = OrderDetail::where('order_id', $return->order_id)->where('product_id', $return->product_id)->first();
+
+        if ($orderItem) {
+            $orderItem->update(['delivery_status' => 'Delivered']);
+        }
+
         $return->delete();
 
         $remainingReturnsCount = \App\Models\ReturnOrder::where('order_id', $return->order->id)->count();
@@ -211,6 +223,12 @@ class ReturnController extends Controller
     {
         DB::transaction(function () use ($returnOrder) {
             $returnOrder->update(['return_status' => 'Returned']);
+
+            $orderItem = OrderDetail::where('order_id', $returnOrder->order_id)->where('product_id', $returnOrder->product_id)->first();
+
+            if ($orderItem) {
+                $orderItem->update(['delivery_status' => 'Returned']);
+            }
 
             //put the specific returned quantity back into stock
             $returnOrder->product->increment('product_stock', $returnOrder->return_quantity);

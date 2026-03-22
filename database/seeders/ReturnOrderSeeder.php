@@ -29,6 +29,7 @@ class ReturnOrderSeeder extends Seeder
             'created_at' => now(),
             'updated_at'=>now()
         ]);
+        OrderDetail::where('order_id', 3)->where('product_id', 3)->update(['delivery_status' => 'Pending Return']);
 
         $order->update(['order_status' => 'Pending Full Return']);
 
@@ -50,6 +51,8 @@ class ReturnOrderSeeder extends Seeder
                 'stock_restored'  => false,
                 'created_at'     => now(),
             ]);
+
+            $item->update(['delivery_status' => 'Pending Return']);
         }
         $order->update(['order_status' => 'Pending Full Return']);
 
@@ -68,6 +71,7 @@ class ReturnOrderSeeder extends Seeder
                 'stock_restored'  => false,
                 'created_at'     => now(),
             ]);
+            $item->update(['delivery_status' => 'Returned']);
         }
         $order->update(['order_status' => 'Fully Returned']);
 
@@ -95,6 +99,8 @@ class ReturnOrderSeeder extends Seeder
             'created_at'      => now(),
         ]);
 
+        $itemToReturn->update(['delivery_status' => 'Returned']);
+
         $partialOrder->update(['order_status' => $status]);
 
         $partialOrder = Order::with('orderDetails')->findOrFail(8);
@@ -117,6 +123,8 @@ class ReturnOrderSeeder extends Seeder
             'stock_restored'  => true,
             'created_at'      => now(),
         ]);
+
+        $itemToReturn->update(['delivery_status' => 'Returned']);
 
         $partialOrder->update(['order_status' => $status]);
 
