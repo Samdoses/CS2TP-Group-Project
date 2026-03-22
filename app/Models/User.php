@@ -14,16 +14,14 @@ class User extends Authenticatable
 {
     /** @use HasFactory<\Database\Factories\UserFactory> */
     use HasFactory, Notifiable, TwoFactorAuthenticatable;
-    public $timestamps = false;
 
     protected $fillable = [
-
         'first_name',
         'last_name',
         'email',
         'password',
+        'google_id',
     ];
-
 
     protected $hidden = [
         'password',
@@ -31,7 +29,6 @@ class User extends Authenticatable
         'two_factor_recovery_codes',
         'remember_token',
     ];
-
 
     protected function casts(): array
     {
@@ -41,9 +38,6 @@ class User extends Authenticatable
         ];
     }
 
-    /**
-     * Get the user's initials
-     */
     public function initials(): string
     {
         $source = $this->first_name . ' ' . $this->last_name;
@@ -55,9 +49,23 @@ class User extends Authenticatable
             ->implode('');
     }
 
+    public function orders()
+    {
+        return $this->hasMany(Order::class);
+    }
 
     public function basket()
     {
         return $this->hasOne(Basket::class);
+    }
+
+    public function reviews()
+    {
+        return $this->hasMany(Review::class);
+    }
+
+    public function contactMessages()
+    {
+        return $this->hasMany(ContactMessage::class);
     }
 }

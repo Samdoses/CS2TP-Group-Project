@@ -17,13 +17,15 @@ return new class extends Migration
             $table->string('product_name');
             $table->string('product_model')->nullable();
             $table->integer('product_price');
+            $table->string('product_part');
             $table->text('product_description');
-            $table->string('product_thumbnail')->nullable();
+            $table->string('product_tagline');
             $table->string('product_image')->nullable();
             $table->dateTime('product_createdate');
             $table->integer('product_stock')->default(0);
+            $table->string('product_colour');
 
-            $table->foreignId('category_id')->constrained('product_category')->onDelete('cascade');        });
+            $table->foreignId('category_id')->constrained('product_category')->onDelete('cascade');});
     }
 
     /**

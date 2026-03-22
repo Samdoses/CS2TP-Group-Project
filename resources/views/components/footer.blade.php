@@ -1,52 +1,54 @@
-<!--The footer-->
-    <footer class="bg-gray-800 text-white border-t border-gray-700">
-        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                
-                <div>
-                    <div class="h-10 w-10 bg-white text-gray-800 flex items-center justify-center rounded font-bold mb-4">Logo</div>
-                    <p class="text-gray-400 text-sm">Let's stay in touch! Sign up to our newsletter and get the best deals!</p>
-                    <div class="flex space-x-4 mt-4">
-                        <a href="#" class="text-gray-400 hover:text-white">Instagram</a>
-                        <a href="#" class="text-gray-400 hover:text-white">Facebook</a>
-                    </div>
-                </div>
+<footer class="bg-gray-800 text-white bg-gradient-to-b from-gray-800 to-gray-900 rounded-t-3xl transition-colors duration-300">
+    <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
 
-                <div>
-                    <h3 class="text-sm font-semibold text-gray-300 tracking-wider uppercase">Subscribe</h3>
-                    <form class="mt-4 sm:flex">
-                        <label for="email-address" class="sr-only">Email address</label>
-                        <input type="email" name="email-address" id="email-address" autocomplete="email" required class="appearance-none min-w-0 w-full bg-white border border-transparent rounded-md py-2 px-4 text-base text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white" placeholder="Insert your email address here">
-                        <div class="mt-3 rounded-md sm:mt-0 sm:ml-3 sm:flex-shrink-0">
-                            <button type="submit" class="w-full bg-gray-600 border border-transparent rounded-md py-2 px-4 flex items-center justify-center text-base font-medium text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-indigo-500">
-                                Subscribe now
-                            </button>
-                        </div>
-                    </form>
-                </div>
+        <div class="flex flex-col sm:flex-row justify-center gap-12 sm:gap-24 sm:gap-40 text-center sm:text-left">
+            <div class="px-4">
+                <h2 class="text-xl font-semibold text-white"> Happy Hardware </h2>
+                <p class="text-gray-400 text-sm mt-2"> Quality hardware at the best prices. </p>
+</div>
 
-                <div class="grid grid-cols-2 gap-8">
-                    <div>
-                        <h3 class="text-sm font-semibold text-gray-300 tracking-wider uppercase">Help</h3>
-                        <ul role="list" class="mt-4 space-y-4">
-                            <li><a href="#" class="text-base text-gray-400 hover:text-white">FAQ</a></li>
-                            <li><a href="#" class="text-base text-gray-400 hover:text-white">Customer Service</a></li>
-                            <li><a href="#" class="text-base text-gray-400 hover:text-white">How-to Guides</a></li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h3 class="text-sm font-semibold text-gray-300 tracking-wider uppercase">Other</h3>
-                        <ul role="list" class="mt-4 space-y-4">
-                            <li><a href="#" class="text-base text-gray-400 hover:text-white">Privacy Policy</a></li>
-                            <li><a href="#" class="text-base text-gray-400 hover:text-white">Sitemap</a></li>
-                            <li><a href="#" class="text-base text-gray-400 hover:text-white">Subscriptions</a></li>
-                        </ul>
-                    </div>
-                </div>
+            <div class="w-auto">
+                <h3 class="text-sm font-semibold text-gray-100 tracking-wider uppercase dark:text-gray-100">
+                    <strong>HELP</strong>
+                </h3>
+                <ul role="list" class="mt-4 space-y-4">
+                    <li>
+                        <a href="faq" class="text-base text-gray-300 hover:text-white transition-colors duration-200 dark:text-gray-400 dark:hover:text-white">
+                            FAQ
+                        </a>
+                    </li>
+                    <li>
+                        <a href="build-guide" class="text-base text-gray-300 hover:text-white transition-colors duration-200 dark:text-gray-400 dark:hover:text-white">
+                            How-to Guides
+                        </a>
+                    </li>
+                </ul>
             </div>
-            <div class="mt-8 border-t border-gray-700 pt-8 md:flex md:items-center md:justify-between">
-                <p class="text-base text-gray-400">&copy; 2024 Happy Hardware. Group 27.</p>
+
+            <div class="w-auto">
+                <h3 class="text-sm font-semibold text-gray-100 tracking-wider uppercase dark:text-gray-100">
+                    <strong>OTHER</strong>
+                </h3>
+                <ul role="list" class="mt-4 space-y-4">
+                    <li>
+                        <a href="privacy" class="text-base text-gray-400 hover:text-white transition-colors duration-200 dark:text-gray-400 dark:hover:text-white">
+                            Privacy Policy
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/sitemap" class="text-base text-gray-400 hover:text-white transition-colors duration-200 dark:text-gray-400 dark:hover:text-white">
+                            Sitemap
+                        </a>
+                    </li>
+                </ul>
             </div>
+
         </div>
-    </footer>
-</html>
+
+        <div class="mt-12 border-t border-gray-700 pt-8 text-center">
+            <p class="text-sm text-gray-400">
+                &copy; 2026 Happy Hardware. Group 27.
+            </p>
+        </div>
+    </div>
+</footer>

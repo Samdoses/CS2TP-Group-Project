@@ -1,9 +1,9 @@
 <!--The border, clickable titles, the rotating arrow-->
 @props(['title'])
 
-<div class="border border-gray-300 rounded mb-4">
+<div class="border bg-gray-50 border-gray-300 rounded mb-4">
     <details {{ $attributes->merge(['class' => 'group p-4']) }}>
-        
+
         <summary class="flex justify-between items-center font-medium cursor-pointer list-none">
             <span>{{ $title }}</span>
             <span class="transition group-open:rotate-180">
@@ -16,6 +16,6 @@
         <div class="text-gray-600 mt-3 text-sm">
             {{ $slot }}
         </div>
-        
+
     </details>
 </div>

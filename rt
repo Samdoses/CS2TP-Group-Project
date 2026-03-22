@@ -1,0 +1,2108 @@
+[33mcommit dbae46105142397306282fcae06a0f8fd8049cd7[m[33m ([m[1;31morigin/parts-picker[m[33m, [m[1;32mparts-picker[m[33m)[m
+Author: Samuel D'souza <samuel_dsouza@outlook.com>
+Date:   Sun Mar 22 12:56:21 2026 +0000
+
+    added basket functionality to partspicker blade, and made popup error when guest user try to add items to basket
+
+[33mcommit 6978925113c54c2dcc1fb84e739bcf241cda6668[m
+Author: Samuel D'souza <samuel_dsouza@outlook.com>
+Date:   Sun Mar 22 12:46:22 2026 +0000
+
+    add to basket funcionality in PartsPicker.php
+
+[33mcommit 8ba396b86a26a89921d73fd3985a1a5112d22ff4[m
+Author: Samuel D'souza <samuel_dsouza@outlook.com>
+Date:   Sun Mar 22 12:15:57 2026 +0000
+
+    improved the parts picker to look for memory type (DDR5) instead of (memory_type_DDR5)
+
+[33mcommit 151c5284b4e85cc2eddea692128c3246c16614df[m
+Author: Samuel D'souza <samuel_dsouza@outlook.com>
+Date:   Sun Mar 22 12:03:14 2026 +0000
+
+    fixed the parts picker front end
+
+[33mcommit af849fbe167d6c18acd4d65ae27c6adda162af39[m
+Author: Samuel D'souza <samuel_dsouza@outlook.com>
+Date:   Sun Mar 22 11:53:31 2026 +0000
+
+    updated the parts picker blade to show the specification of the selected part, explaining why the part was selected
+
+[33mcommit a8fcd1613727e3d87797a3e4ea83eec8b7bca426[m
+Author: Samuel D'souza <samuel_dsouza@outlook.com>
+Date:   Sun Mar 22 11:46:00 2026 +0000
+
+    retrives the spects of a selected parts and stores in an selected array
+
+[33mcommit b0cf6865689db73337da742380fc26d083f04dd0[m
+Author: Samuel D'souza <samuel_dsouza@outlook.com>
+Date:   Sun Mar 22 11:43:31 2026 +0000
+
+    included the spec database in the products databas
+
+[33mcommit 9e341e1d8322525bd54957e0e0a5c87b59fe6196[m
+Author: Samuel D'souza <samuel_dsouza@outlook.com>
+Date:   Sun Mar 22 11:42:14 2026 +0000
+
+    created a database to hold information for the parts picker
+
+[33mcommit a4074c1ac62a7cf5a7985e2874a0917b7bf5e5ee[m[33m ([m[1;31morigin/fixing-footer-and-build-guide[m[33m)[m
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Sun Mar 22 04:15:10 2026 +0000
+
+    added some text back and adjusted design of build guide page
+
+[33mcommit a5a0e584bc8c543a9c2b6268959c9930d8177855[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Sun Mar 22 03:13:12 2026 +0000
+
+    synced orderdetail delivery status to its order status only when it is seeded into the database
+
+[33mcommit 4579a7e95e104119812dcb6328f9b18a81c39b25[m
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Sun Mar 22 03:08:15 2026 +0000
+
+    Fixed the ReturnOrderSeeder and linked return requests to item delivery status
+
+[33mcommit 4d22a696b81e12601183dedac4feec552b664a6a[m[33m ([m[1;31morigin/returning-orders[m[33m)[m
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Sun Mar 22 01:57:42 2026 +0000
+
+    working on return order updates, but it is bugged right now
+
+[33mcommit dc271fcf3f568ac25191167d64a455a434d1dfa3[m
+Merge: d5eb10d ad52829
+Author: Samdoses <106073273+Samdoses@users.noreply.github.com>
+Date:   Sat Mar 21 23:37:19 2026 +0000
+
+    Merge pull request #46 from Samdoses/gen-ai-bot
+    
+    made the text more readable
+
+[33mcommit ad52829e582516661f11f538e916308f92f328e4[m[33m ([m[1;31morigin/gen-ai-bot[m[33m, [m[1;32mgen-ai-bot[m[33m)[m
+Author: Samuel D'souza <samuel_dsouza@outlook.com>
+Date:   Sat Mar 21 23:36:13 2026 +0000
+
+    made the text more readable
+
+[33mcommit d5eb10d0c627274553183de6715e995018bf8836[m
+Merge: ef64450 e198c08
+Author: Samdoses <106073273+Samdoses@users.noreply.github.com>
+Date:   Sat Mar 21 23:06:56 2026 +0000
+
+    Merge pull request #45 from Samdoses/gen-ai-bot
+    
+    Gen ai bot
+
+[33mcommit e198c0838495d873123e620b2a0164e4a0a3b34d[m
+Author: Samuel D'souza <samuel_dsouza@outlook.com>
+Date:   Sat Mar 21 23:05:46 2026 +0000
+
+    the bot gives a subtotal when mentioning a product
+
+[33mcommit 1e08acc6ed1ebfce881f8e2bc8c2a7e3c9b2cd5c[m
+Author: Samuel D'souza <samuel_dsouza@outlook.com>
+Date:   Sat Mar 21 22:57:26 2026 +0000
+
+    included category keywords, to allow broader search terms
+
+[33mcommit 9032f4d6375b3fdcefcc31fe1422ead13699909b[m
+Author: Samuel D'souza <samuel_dsouza@outlook.com>
+Date:   Sat Mar 21 22:48:03 2026 +0000
+
+    connected the database to the chatbot
+
+[33mcommit ef64450e533aec47e224a506195aa0737722dfd9[m
+Merge: e451c74 95461d3
+Author: Jot17 <harjotsingh4167@gmail.com>
+Date:   Sat Mar 21 20:56:27 2026 +0000
+
+    Merge branch 'bugFixes'
+
+[33mcommit 95461d309a25a870fef0c08e6f0571519eb7d8e5[m
+Author: Jot17 <harjotsingh4167@gmail.com>
+Date:   Sat Mar 21 20:56:17 2026 +0000
+
+    Added admin order management, customer messaging, and support workflow improvements
+    
+    - added admin tools for managing order statuses and monitoring customer activity
+    - improved customer messaging with contact reasons, linked orders, and admin replies
+    - expanded support workflows for returns, refunds, and customer issue handling
+    - updated profile and admin views to surface messages, returns, and support actions more clearly
+
+[33mcommit e451c74c7e62dab6ed07978b503238bcb404ea53[m
+Merge: 07ef4cf ecf6cf0
+Author: Samdoses <106073273+Samdoses@users.noreply.github.com>
+Date:   Sat Mar 21 19:35:21 2026 +0000
+
+    Merge pull request #44 from Samdoses/gen-ai-bot
+    
+    Gen ai bot
+
+[33mcommit 07ef4cfef5617b6ab88774b9bfe839bfdaffe77b[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m
+Merge: fdf9777 b60baae
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Fri Mar 20 01:33:35 2026 +0000
+
+    resolving merge errors
+
+[33mcommit fdf977779ba3ff1cdce01037d99b8362e6801150[m
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Fri Mar 20 01:32:53 2026 +0000
+
+    fixed video background gradient
+
+[33mcommit b60baaee44abc6e12f17df6f38b19c2aa16bb2f9[m
+Merge: 4a95569 68ee898
+Author: Jot17 <harjotsingh4167@gmail.com>
+Date:   Fri Mar 20 01:20:19 2026 +0000
+
+    Merge branch 'main' of https://github.com/Samdoses/CS2TP-Group-Project
+
+[33mcommit 4a95569c4c5d24bd9bd0f3108227ce7f8b9f08be[m
+Author: Jot17 <harjotsingh4167@gmail.com>
+Date:   Fri Mar 20 01:19:58 2026 +0000
+
+    Fix navbar active state on auth and utility pages
+
+[33mcommit 68ee898553d41e013650f5f1aa71ed946cb6f69e[m
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Fri Mar 20 01:18:59 2026 +0000
+
+    added gradient to background and fixed search bar on store page
+
+[33mcommit 6945510adcf06fbc11c9151f792cd0837e90be44[m
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Fri Mar 20 01:12:57 2026 +0000
+
+    fixed background for about page
+
+[33mcommit fcf5dfb3170847fb610f123ecc40fb6e3af89928[m
+Author: Jot17 <harjotsingh4167@gmail.com>
+Date:   Fri Mar 20 01:09:55 2026 +0000
+
+    decreased opacity and increase size of background image
+
+[33mcommit aa0120c447a993f4ccb45c42131c279ad0f22685[m
+Author: Jot17 <harjotsingh4167@gmail.com>
+Date:   Fri Mar 20 00:58:27 2026 +0000
+
+    added background animation to pages
+
+[33mcommit 62339b434e75d894b419d92bd87eace51cb9f2c5[m
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Thu Mar 19 15:40:52 2026 +0000
+
+    fixed merge errors part 2
+
+[33mcommit e96d0d75843ae8aefccf9ede5a089ee4f37620e2[m
+Merge: 89a31d4 d816e29
+Author: Jot17 <harjotsingh4167@gmail.com>
+Date:   Thu Mar 19 15:06:30 2026 +0000
+
+    Merge branch 'main' of https://github.com/Samdoses/CS2TP-Group-Project
+
+[33mcommit 89a31d42fde7d9913a3599b46df187f86c371658[m
+Author: Jot17 <harjotsingh4167@gmail.com>
+Date:   Thu Mar 19 15:06:16 2026 +0000
+
+    Resolve contact page merge cleanup
+
+[33mcommit 6c733926f194ab83e1c2c77d40c1306d60b7cb0f[m
+Merge: 2ed31a9 84f6298
+Author: Jot17 <harjotsingh4167@gmail.com>
+Date:   Thu Mar 19 15:05:42 2026 +0000
+
+    Merge AdminNavBar: split admin pages, analytics, and contact inbox
+
+[33mcommit d816e29e7538a8d5d8168e8d8c637ba9e2c43245[m
+Merge: f91ff72 2ed31a9
+Author: Zain Khan <zainkhan24681@gmail.com>
+Date:   Thu Mar 19 15:04:57 2026 +0000
+
+    fixed merge errors
+
+[33mcommit 84f6298269dd0a28dc3c25b02dfaf8736b4a67aa[m
+Author: Jot17 <harjotsingh4167@gmail.com>
+Date:   Thu Mar 19 15:04:25 2026 +0000
+
+    Add multi-page admin portal with analytics and messages
+
+[33mcommit f91ff729279cad7636da30023f4ad6899b490ae6[m
+Author: Zain Khan <zainkhan24681@gmail.com>
+Date:   Thu Mar 19 15:00:49 2026 +0000
+
+    Fixed FAQ page
+
+[33mcommit 731521ff21cf8ae4c5502ca07972cd589d4a60ae[m
+Merge: 0660102 fc6c737
+Author: Zain Khan <zainkhan24681@gmail.com>
+Date:   Thu Mar 19 14:58:25 2026 +0000
+
+    Fixed the faq page
+
+[33mcommit 2ed31a9b061224a12171b28451799a9cc219535c[m
+Merge: 0660102 fc6c737
+Author: Zain Khan <zainkhan24681@gmail.com>
+Date:   Thu Mar 19 14:58:25 2026 +0000
+
+    Fixed FAQ page
+
+[33mcommit 06601020d633f03a9d021d818ec8dd46bc2ae89d[m
+Author: Zain Khan <zainkhan24681@gmail.com>
+Date:   Thu Mar 19 14:53:25 2026 +0000
+
+    Fixed the faq page
+
+[33mcommit fc6c73754012045c4b56da711edd4d3fc1467209[m
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Thu Mar 19 14:55:21 2026 +0000
+
+    resolved merge errors
+
+[33mcommit 58784b89a3243f37d5222834348421d7b280a11f[m
+Author: Yusuf Saif <yusufsaif4321@gmail.com>
+Date:   Thu Mar 19 14:36:17 2026 +0000
+
+    mobile changes
+
+[33mcommit cca9e76284f5b4b64bb303e5f8d8e0500fc2a30d[m
+Merge: b785705 920e5c0
+Author: Jot17 <harjotsingh4167@gmail.com>
+Date:   Thu Mar 19 14:32:21 2026 +0000
+
+    Merge branch 'fix-auth-layout'
+
+[33mcommit 920e5c0f18f6065eade7008ab93f083895f0ad8c[m
+Author: Jot17 <harjotsingh4167@gmail.com>
+Date:   Thu Mar 19 14:31:52 2026 +0000
+
+    Fix auth page layout and dark mode text
+
+[33mcommit b78570503259c5ab669a9fa3dd497d1f004e4c09[m
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Thu Mar 19 12:24:52 2026 +0000
+
+    removed background of mouse image
+
+[33mcommit 6086480fc3c20f0c765c55b32f3eabd4bcb4dd57[m
+Merge: 9872dff c6b816c
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Wed Mar 18 23:51:15 2026 +0000
+
+    Merge branch 'main' of github.com:Samdoses/CS2TP-Group-Project
+
+[33mcommit 9872dffc53a0fee335659ac263fccbfcdb9e4dfe[m
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Wed Mar 18 23:50:50 2026 +0000
+
+    added some validation for adding a product, fixed the pound signs and made a dropdown for the users and orders in the admin page
+
+[33mcommit c6b816ca734cbf03dbee4893d772a54119e393a7[m
+Author: Aisha <85460366+aishajama1@users.noreply.github.com>
+Date:   Wed Mar 18 22:59:54 2026 +0000
+
+    Fixed the expiry date in checkout
+
+[33mcommit 1a2e95a36759731e5135537c68988af40d9d93b9[m
+Author: Aisha <85460366+aishajama1@users.noreply.github.com>
+Date:   Wed Mar 18 22:29:59 2026 +0000
+
+    Improved on the footer
+
+[33mcommit 16c36ca064c18535bbc397130f9699bcd2b1cfd7[m
+Merge: 50bf085 b2ad317
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Wed Mar 18 22:28:26 2026 +0000
+
+    Merge branch 'main' of github.com:Samdoses/CS2TP-Group-Project
+
+[33mcommit 50bf085a3c11ed13940718669e0b514a51419e7f[m
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Wed Mar 18 22:25:37 2026 +0000
+
+    added message for product card with no rating yet
+
+[33mcommit b2ad317f081408d2d3c986bcbf8e9798c91804cc[m
+Merge: b7821fa 20f7a30
+Author: Jot17 <harjotsingh4167@gmail.com>
+Date:   Wed Mar 18 18:01:43 2026 +0000
+
+    Merge branch 'main' of https://github.com/Samdoses/CS2TP-Group-Project
+    
+    # Conflicts:
+    #       app/Models/Product.php
+    #       database/seeders/DatabaseSeeder.php
+    #       routes/web.php
+
+[33mcommit b7821fa506baf76bc5d66480c3485472797d631f[m
+Merge: 48f0b7c eef32a8
+Author: Jot17 <harjotsingh4167@gmail.com>
+Date:   Wed Mar 18 17:58:40 2026 +0000
+
+    Merge admin portal, product management, and basket analytics
+    
+    Adds a separate admin login and dashboard with product creation/removal,
+    user and order visibility, per-item delivery status updates, refreshed
+    admin seeding/session support, and a live bar chart showing the most
+    popular items currently in user baskets.
+
+[33mcommit eef32a890f21acdd50b9718dd5c4ea73844a92e7[m
+Author: Jot17 <harjotsingh4167@gmail.com>
+Date:   Wed Mar 18 17:53:44 2026 +0000
+
+    Added a graph to show items users currently have in their basket
+
+[33mcommit 20f7a30642971789557169c77745031011c94295[m
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Wed Mar 18 17:01:00 2026 +0000
+
+    added the video background as a seperate component and added it to the faq, privacy, contact, index, partpicker and storage pages
+
+[33mcommit 46c00873ea2c3f3ee9397bb85e8ffddfee3b0deb[m
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Wed Mar 18 13:40:41 2026 +0000
+
+    linked partspicker to the database and updated the name of the case product part
+
+[33mcommit 2943abc0227798257ff634cea5b0f1f13ec4d87c[m
+Author: Aisha <85460366+aishajama1@users.noreply.github.com>
+Date:   Wed Mar 18 00:58:22 2026 +0000
+
+    Improved the checkout layout and styling
+
+[33mcommit 974afef3577be4c014a8a4223c4ba62633b15909[m
+Author: Aisha <85460366+aishajama1@users.noreply.github.com>
+Date:   Wed Mar 18 00:42:00 2026 +0000
+
+    Updated the card details form and validation
+
+[33mcommit be38e91ca39b8c024ad260883cae7615ef97bea8[m
+Author: Aisha <85460366+aishajama1@users.noreply.github.com>
+Date:   Tue Mar 17 23:53:30 2026 +0000
+
+    added card details information to the checkout page
+
+[33mcommit ecf6cf071421b8f723633d05e4d7eb84a40fb89a[m
+Author: Samuel D'souza <samuel_dsouza@outlook.com>
+Date:   Tue Mar 17 22:07:00 2026 +0000
+
+    implemented streaming response
+
+[33mcommit 9c77b2d4a26e29aac3649d526dace1e5753b430f[m
+Author: Samuel D'souza <samuel_dsouza@outlook.com>
+Date:   Tue Mar 17 21:34:08 2026 +0000
+
+    made the chatbot persistant across different pages
+
+[33mcommit 8d6e720112bfa8500aadc68d2a783cc24709054c[m
+Author: Samuel D'souza <samuel_dsouza@outlook.com>
+Date:   Tue Mar 17 21:25:51 2026 +0000
+
+    made the bubbles scrollable (with a nice looking scroll bar), to be able to add more bubbles
+
+[33mcommit 82e88e28d6320da66cc09d3a09ee955346402a0d[m
+Author: Samuel D'souza <samuel_dsouza@outlook.com>
+Date:   Tue Mar 17 21:08:06 2026 +0000
+
+    removes bubbles after first message, to give the chat more space and encourage the user to use the AI feature
+
+[33mcommit 57695d2cebf351473b47452edeea2f3570656c34[m
+Author: Samuel D'souza <samuel_dsouza@outlook.com>
+Date:   Tue Mar 17 20:44:51 2026 +0000
+
+    implemented a hybrid chatbot layout / functionality
+
+[33mcommit f8670438c2401554afa2347551a8e59df6bcb2e6[m
+Author: Zain Khan <zainkhan24681@gmail.com>
+Date:   Tue Mar 17 11:56:21 2026 +0000
+
+    Fixed Home Page Bundles button and Pre-built button
+
+[33mcommit cfa06af75b15472c1ec741b83c61f76971368270[m
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Tue Mar 17 01:24:13 2026 +0000
+
+    linked reviews backend to the index page
+
+[33mcommit 378a2b766b1292b5afffa53b8c0f4333bc657a57[m
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Tue Mar 17 01:18:48 2026 +0000
+
+    linked reviews backend to the store page
+
+[33mcommit 608c2b52dd2e4ac8287565e94b1e877a07782a0a[m
+Merge: 6819508 fa1da20
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Tue Mar 17 00:46:30 2026 +0000
+
+    merge
+
+[33mcommit 6819508e9ea9095192fb9991022b0787a9ea3d44[m
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Tue Mar 17 00:44:09 2026 +0000
+
+    did the backend for the basket icon counter
+
+[33mcommit fa1da20eaad229449448030717f4efadad646930[m
+Author: Aisha <85460366+aishajama1@users.noreply.github.com>
+Date:   Tue Mar 17 00:38:31 2026 +0000
+
+    added stars and rating to the store page products
+
+[33mcommit 1c1c3de93feddd5fa003a6023a9d5c13d8ca7604[m
+Merge: 7294346 92bad49
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Mon Mar 16 23:48:07 2026 +0000
+
+    Merge branch 'main' of github.com:Samdoses/CS2TP-Group-Project
+
+[33mcommit 7294346cfa2430a5987f11ea7a4031827292665d[m
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Mon Mar 16 23:47:32 2026 +0000
+
+    added 4 returnOrder seeders, updated return status logic, the colours of order statuses and fixed some broken return logic
+
+[33mcommit 92bad496f9054ce68b4444ca118342b5aa00b18c[m
+Author: Aisha <85460366+aishajama1@users.noreply.github.com>
+Date:   Mon Mar 16 23:36:28 2026 +0000
+
+    added basket item count to the navbar
+
+[33mcommit 6c76e1d878f86e24ed9563cf6a09423248daf7ad[m
+Merge: 7ee429d 806b98c
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Mon Mar 16 21:52:33 2026 +0000
+
+    Merge branch 'main' of github.com:Samdoses/CS2TP-Group-Project
+
+[33mcommit 7ee429dbbca7e5e103a47d749aa2d0eb5b05f9ca[m
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Mon Mar 16 21:51:04 2026 +0000
+
+    created more accounts, and more reviews with images, fixed the factorygenerating reviews as well and the appearance of the specific review page
+
+[33mcommit 806b98ca0ba82d4df86f300b7d988d71abfbe35b[m
+Author: Samuel D'souza <samuel_dsouza@outlook.com>
+Date:   Mon Mar 16 21:17:05 2026 +0000
+
+    implemented the buy now button
+
+[33mcommit d505e37a7670cc06e8d6b6daa639855bfa550e8d[m
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Mon Mar 16 19:48:49 2026 +0000
+
+    fixed profile page darkmode
+
+[33mcommit 78414741bc034598d5dcfbe7ff6a339022ee4bca[m
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Mon Mar 16 19:28:52 2026 +0000
+
+    fixed chatbot darkmode
+
+[33mcommit 0efb7af45af3b6100a9153afacd3bbb0efb382c4[m
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Mon Mar 16 19:24:24 2026 +0000
+
+    fixed footer darkmode
+
+[33mcommit 698aa705ef20da1d014dcca9d0fc9bd1e8de9b70[m
+Merge: 9c90d30 a0dd364
+Author: Samdoses <106073273+Samdoses@users.noreply.github.com>
+Date:   Mon Mar 16 18:11:49 2026 +0000
+
+    Merge pull request #41 from Samdoses/feature/dark-mode
+    
+    Add Dark Mode Toggle to Navbar
+
+[33mcommit 9c90d308a65d2cde632f94e8147199b2019c9453[m
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Mon Mar 16 18:11:25 2026 +0000
+
+    fixed some dark mode bugs and added the animated background to the store, partpicker and about us pages
+
+[33mcommit b634a5b76f0bf7b16ac08174ea4d333074ccd974[m[33m ([m[1;32mfixing-footer-and-build-guide[m[33m)[m
+Author: Tom Thackham <thackhamt@gmail.com>
+Date:   Mon Mar 16 16:21:44 2026 +0000
+
+    build guide changes
+
+[33mcommit a0dd36432799dfed3f522a55bde997920c1d0250[m[33m ([m[1;31morigin/feature/dark-mode[m[33m, [m[1;32mfeature/dark-mode[m[33m)[m
+Merge: 5fb4515 9fa9ef5
+Author: Zain Khan <zainkhan24681@gmail.com>
+Date:   Mon Mar 16 16:21:00 2026 +0000
+
+    Merging main updates into my dark mode branch
+
+[33mcommit 5fb4515e87a998e565f0b4ac4900938b7d8a75bb[m
+Author: Zain Khan <zainkhan24681@gmail.com>
+Date:   Mon Mar 16 16:00:42 2026 +0000
+
+    Updated dark mode toggle to sun and moon icons
+
+[33mcommit 9fa9ef5aa641f0015774a23689995a6d76e28613[m
+Author: Samuel D'souza <samuel_dsouza@outlook.com>
+Date:   Mon Mar 16 09:23:43 2026 +0000
+
+    For the basket, the user can no longer submit negative quantities, extremely large numbers that might exceed database integer limits, or an invalid ID type.
+
+[33mcommit 9b2a9a80e7c0dded2b9c78ed8275408a13817510[m
+Author: Samuel D'souza <samuel_dsouza@outlook.com>
+Date:   Mon Mar 16 09:20:08 2026 +0000
+
+    added checks for minimum lengths, alphanumeric checks for postcodes, and pattern restrictions for names and cities.
+
+[33mcommit c6674b98bd02b6308cf948d9d9c56d0e88a8d4c4[m
+Author: Samuel D'souza <samuel_dsouza@outlook.com>
+Date:   Mon Mar 16 09:08:49 2026 +0000
+
+    enforced a minimum length on names, preventing numbers/symbols in names using regular expressions, and verifying that the email address has a valid DNS record.
+
+[33mcommit d9eb5457c2c456705efb80b58b406a4dc03a8d00[m
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Mon Mar 16 00:11:57 2026 +0000
+
+    experimented with video on contact page
+
+[33mcommit 1db4d2a1df1c3852b6a937081565df15279c96c9[m
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Sun Mar 15 23:35:41 2026 +0000
+
+    changed some colours to fix dark mode on contact page
+
+[33mcommit 685dfccb68f643e898ee116a3d6b51902dd85e72[m
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Sun Mar 15 22:55:55 2026 +0000
+
+    removed that laravel logo in login page
+
+[33mcommit 63dcaff0b837cf30269e7d298cd2ae506106446b[m
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Sun Mar 15 22:08:22 2026 +0000
+
+    added pc part heading to the product page
+
+[33mcommit 441c5723c10b16279e31ba488bc38ae596637578[m
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Sun Mar 15 22:03:20 2026 +0000
+
+    added specifications to the product page and fixed all product page dark mode issues
+
+[33mcommit e9d8916a25eeb9765317cd720f7e003abba96588[m
+Author: Samuel D'souza <samuel_dsouza@outlook.com>
+Date:   Sun Mar 15 21:42:50 2026 +0000
+
+    The last place where the new fit style has not been applied
+
+[33mcommit 1f851eb66f16ece15a28dee34b1e35636d328198[m
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Sun Mar 15 21:24:58 2026 +0000
+
+    added home to the navbar because of visual bugs without it
+
+[33mcommit aa2bf1682e89006be69a549a9ce9c6861becb443[m
+Merge: e7c738b 31ce7fa
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Sun Mar 15 21:10:35 2026 +0000
+
+    Merge branch 'main' of github.com:Samdoses/CS2TP-Group-Project
+
+[33mcommit e7c738be39ca177ef9df595552b7195a754999a5[m
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Sun Mar 15 21:07:29 2026 +0000
+
+    linked breadcrumb and index category links to the filter on store page
+
+[33mcommit 31ce7fa6b3c9a6ada5357c6718801e78ae538a95[m
+Merge: 590285a eb775cb
+Author: Samuel D'souza <samuel_dsouza@outlook.com>
+Date:   Sun Mar 15 20:52:11 2026 +0000
+
+    Merge branch 'main' of github.com:Samdoses/CS2TP-Group-Project
+
+[33mcommit 590285a0997941da627e472920471e016090f483[m
+Author: Samuel D'souza <samuel_dsouza@outlook.com>
+Date:   Sun Mar 15 20:46:33 2026 +0000
+
+    improved image fit to scale down, to ensure entire image is visible if its aspect ratio is wrong
+
+[33mcommit eb775cb9a8329e3bdad4d519cdbbb6027029bbdf[m
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Sun Mar 15 20:34:22 2026 +0000
+
+    fixed how the search bar looks a bit
+
+[33mcommit 74d0148c8a02276a372aac26c0d9fb3edccff3f4[m
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Sun Mar 15 20:20:47 2026 +0000
+
+    fixed visual error with the sliders and included a reset filter button
+
+[33mcommit e02551017300ad7bb3b66c87d9a5a48768a56255[m
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Sun Mar 15 20:03:59 2026 +0000
+
+    made the price filter more accessible and better, also linked selected filters to the url
+
+[33mcommit 13ce8b72149f8a4b5513bf81516385d257f897ff[m
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Sat Mar 14 17:22:54 2026 +0000
+
+    fixed the index page start now div area, added the light mode logo to be togglable and changed the layout of the review area
+
+[33mcommit 93b1a2a8c753b61e69739f3c8ee2ba54c5e784c8[m
+Author: Aisha <85460366+aishajama1@users.noreply.github.com>
+Date:   Sat Mar 14 00:11:56 2026 +0000
+
+    fixed minor issues
+
+[33mcommit c7fc3bc3417535e1317f837a657b924a4694a5b5[m
+Author: Samuel D'souza <samuel_dsouza@outlook.com>
+Date:   Fri Mar 13 13:03:17 2026 +0000
+
+    fixed link to livewire page
+
+[33mcommit 1daa07876ff7906874b814f5039fa7755916e62a[m
+Author: Tom Thackham <thackhamt@gmail.com>
+Date:   Thu Mar 12 15:23:10 2026 +0000
+
+    Removed contact links from footer
+
+[33mcommit a48096c8723745ed2834821490f627075d78fc65[m
+Author: Tom Thackham <thackhamt@gmail.com>
+Date:   Thu Mar 12 14:59:38 2026 +0000
+
+    Fixed the plural of LEGO
+
+[33mcommit 660cd1f493080a91c181a7e9afebf427676f3a2a[m
+Author: Tom Thackham <thackhamt@gmail.com>
+Date:   Thu Mar 12 14:41:45 2026 +0000
+
+    Fixing Footer Coloring
+
+[33mcommit a458df0cdebc041eb3798de1e2b71ce51524c1b5[m[33m ([m[1;31morigin/admin-page[m[33m)[m
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Wed Mar 11 01:08:54 2026 +0000
+
+    created general website reviews and implemented edit and display and delete in index page
+
+[33mcommit b844f2ad56f7af77bac7fd10e2ac57e9559f0488[m
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Mon Mar 9 17:47:16 2026 +0000
+
+    fixed colours of the order statusses
+
+[33mcommit ce6ddcc1e4e4ee3f330f92249193bd69cfc907ed[m
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Mon Mar 9 17:43:27 2026 +0000
+
+    added logic for the admin pages within the return controller
+
+[33mcommit bf028db1f268fbf0fe84e47ac1c4d07e4562e54d[m
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Mon Mar 9 17:36:02 2026 +0000
+
+    fixed the colour of the badge on the returned item not showing, crossed out informtion and added shipped orders as returnable as well
+
+[33mcommit 850f8a16b69a93dd9182f57c393f55e032e29479[m
+Merge: e31d79f 15020a8
+Author: Aishah <anaishahhussain18@gmail.com>
+Date:   Mon Mar 9 00:51:52 2026 +0000
+
+    Merge pull request #39 from Samdoses/returning-orders
+    
+    Returning orders
+
+[33mcommit 15020a8529f4db600f75e83191296dae401b011e[m
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Mon Mar 9 00:48:10 2026 +0000
+
+    stocks increasing and decreasing finalised
+
+[33mcommit 7f73867c1717d9d029c9cc30c7f35fd7e738b51d[m
+Author: Aisha <85460366+aishajama1@users.noreply.github.com>
+Date:   Mon Mar 9 00:40:21 2026 +0000
+
+    fixed minor issues on the return page
+
+[33mcommit eb824e737ed8eb11a20d283c31691aff1a0c760c[m
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Mon Mar 9 00:12:41 2026 +0000
+
+    removed a unused link
+
+[33mcommit 4b3a1896fe2a798343a645f6aebdf5eaa3f35cc7[m
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Mon Mar 9 00:07:04 2026 +0000
+
+    fixed badge not showing on pending full returns
+
+[33mcommit 1f2704b3f33e09d0d8236e87808a8b6f23db9ff0[m
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Sun Mar 8 23:52:22 2026 +0000
+
+    fixed presisng the return entire order button logic and fixed display of returning products
+
+[33mcommit 41f638dfd5ab3ef9f1b2db83ae8b1e5eb85845e0[m
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Sun Mar 8 23:40:05 2026 +0000
+
+    linked the return page and added a view return status as a popup in the view past order history page
+
+[33mcommit e25e34658ebf7459f317026c884d6c0baa579aa0[m
+Merge: 1542b3a e31d79f
+Author: Aishah <anaishahhussain18@gmail.com>
+Date:   Sun Mar 8 21:58:31 2026 +0000
+
+    Merge pull request from Samdoses/main into returning-orders
+    
+    added return request form page
+
+[33mcommit e31d79fae6b2b5c20255077e662d440422bf980c[m
+Author: Aisha <85460366+aishajama1@users.noreply.github.com>
+Date:   Sun Mar 8 21:48:35 2026 +0000
+
+    added return request form page
+
+[33mcommit 1542b3aca47e58a827d940561d0516d18830d06b[m
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Sun Mar 8 21:48:15 2026 +0000
+
+    added quantity selection to returning feature
+
+[33mcommit 5d94e737708275f61346e61aefb8e1151d8bf937[m
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Sun Mar 8 18:42:22 2026 +0000
+
+    started working on return orders logic and linking it to stocks
+
+[33mcommit c5974411c0c957ae5e13206d051ac81c15cab845[m
+Merge: 9404c48 48f0b7c
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Sat Mar 7 23:15:43 2026 +0000
+
+    fixing merge issue
+
+[33mcommit 9404c48e4eb2df2482b1742cb3b49257a1cea02d[m
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Sat Mar 7 23:10:07 2026 +0000
+
+    added backend for return, cancelling orders and made the forgot password page look normal
+
+[33mcommit 73ad9e1e72d6de9770dd43759680e54b8cc79a0e[m
+Merge: fa3d0fe 48f0b7c
+Author: Jot17 <harjotsingh4167@gmail.com>
+Date:   Sat Mar 7 22:39:33 2026 +0000
+
+    Merge origin/main into adminPage and resolve conflicts
+
+[33mcommit fa3d0fed0cef7caa85661b214f6750e1590330fe[m
+Author: Jot17 <harjotsingh4167@gmail.com>
+Date:   Sat Mar 7 22:35:56 2026 +0000
+
+    Add separate admin portal with product and order management
+
+[33mcommit 48f0b7ca59834d6acb0d19bc65d864579006d63b[m
+Author: Aisha <85460366+aishajama1@users.noreply.github.com>
+Date:   Sat Mar 7 20:23:55 2026 +0000
+
+    added a returns page with the footer and header
+
+[33mcommit b919bdd26653e15ff20010e5ac966dcbd49d92e4[m
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Sat Mar 7 20:02:51 2026 +0000
+
+    fixed archusb image not loading and fixed unevenness of each product in the store page
+
+[33mcommit 6da78f5670604e28e9729c3d6e4c7e2452b76e94[m
+Author: Yusuf Saif <yusufsaif4321@gmail.com>
+Date:   Thu Mar 5 15:52:48 2026 +0000
+
+    feat: Add Part Picker link and animated active state to navbar
+
+[33mcommit ccfe2544b358eafd67fd872a5905e796f51131ff[m
+Author: Yusuf Saif <yusufsaif4321@gmail.com>
+Date:   Thu Mar 5 15:43:57 2026 +0000
+
+    feat: Implement full dark mode for basket page
+
+[33mcommit ae8e39fed84915bc1adad930431f15393c25edc4[m[33m ([m[1;31morigin/database[m[33m)[m
+Merge: e8fed13 8fbcadf
+Author: Aishah <anaishahhussain18@gmail.com>
+Date:   Thu Mar 5 15:40:00 2026 +0000
+
+    Merge pull request #36 from Samdoses/main
+    
+    syncing database with main
+
+[33mcommit 8fbcadf4f131d02419387293a1f9803bb2daeafc[m
+Merge: 232bb7e 47a6262
+Author: Zain Khan <zainkhan24681@gmail.com>
+Date:   Thu Mar 5 15:30:50 2026 +0000
+
+    Merge branch 'feature-dark-mode'
+
+[33mcommit 232bb7edb542154957d2437cd3347e9b469797d4[m
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Thu Mar 5 15:02:50 2026 +0000
+
+    added read full review and truncated really long review texts in product page
+
+[33mcommit 7683f497a3e7e8697a71227929f5323c4342be62[m[33m ([m[1;31morigin/rating-review[m[33m)[m
+Merge: 0214a2b 6e1ba23
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Thu Mar 5 14:51:48 2026 +0000
+
+    resolve merge error
+
+[33mcommit 0214a2bbd821f980c130f8d149f5b2cfc9127b96[m
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Thu Mar 5 14:36:48 2026 +0000
+
+    added part picker to this branch
+
+[33mcommit 6e1ba23d65daa1269aa1945c9e3ad7e2c7162f5e[m
+Merge: d6f3ad3 483f604
+Author: Aishah <anaishahhussain18@gmail.com>
+Date:   Thu Mar 5 14:32:57 2026 +0000
+
+    sync main to review
+    
+    test merge
+
+[33mcommit 483f604a8e336363a884fd6b96a8d23d12d02ac7[m
+Merge: 4509e23 d6f3ad3
+Author: Aishah <anaishahhussain18@gmail.com>
+Date:   Thu Mar 5 14:31:03 2026 +0000
+
+    Merge branch 'rating-review' into main
+
+[33mcommit 4509e230f530e8d1eee71a27a50a37c2ea49c333[m
+Author: Aisha <85460366+aishajama1@users.noreply.github.com>
+Date:   Wed Mar 4 21:24:45 2026 +0000
+
+    Updated the order confirmation page
+
+[33mcommit 8946e4ce666bc3f14723683109f19e402d0e9343[m
+Author: Aisha <85460366+aishajama1@users.noreply.github.com>
+Date:   Wed Mar 4 20:16:56 2026 +0000
+
+    Changed the order confirmation page
+
+[33mcommit e50ac9928c7b3095667489430db5374c7c2a32d4[m
+Merge: ec9d8e3 d28a3f2
+Author: Aisha <85460366+aishajama1@users.noreply.github.com>
+Date:   Wed Mar 4 19:27:08 2026 +0000
+
+    Merge branch 'main' of https://github.com/Samdoses/CS2TP-Group-Project
+
+[33mcommit d28a3f2a216efe6765d52c63bc372b4d9c798518[m
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Wed Mar 4 19:16:05 2026 +0000
+
+    linked button to partpicker and added header footer
+
+[33mcommit ecfaef8eee6e9a2839169c0cc4623e68faa174f1[m
+Author: Mohamoud <mohamoud.2020@outlook.com>
+Date:   Wed Mar 4 18:50:49 2026 +0000
+
+    Created Partpicker Livewire component and intitial view
+
+[33mcommit ec9d8e3917f52225ba810acc179870d802f5b1db[m
+Merge: 8c56027 4f0f4fe
+Author: Aisha <85460366+aishajama1@users.noreply.github.com>
+Date:   Wed Mar 4 17:19:55 2026 +0000
+
+    Merge branch 'main' of https://github.com/Samdoses/CS2TP-Group-Project
+
+[33mcommit 8c56027dfb198f519f71a268e917b3aa2c22dabb[m
+Author: Aisha <85460366+aishajama1@users.noreply.github.com>
+Date:   Wed Mar 4 17:18:52 2026 +0000
+
+    added the nav and footer
+
+[33mcommit 4f0f4fe64d65b0e370170b73282f5c7baa7e4aa4[m
+Merge: aee3f75 61e8bf1
+Author: Mohamoud <mohamoud.2020@outlook.com>
+Date:   Wed Mar 4 15:29:39 2026 +0000
+
+    Merge branch 'main' of https://github.com/Samdoses/CS2TP-Group-Project
+
+[33mcommit aee3f75c6879baeb14e044a4f0738f9f51c417a0[m
+Author: Mohamoud <mohamoud.2020@outlook.com>
+Date:   Wed Mar 4 15:19:50 2026 +0000
+
+    Added dashboard and part-picker routes
+
+[33mcommit d6f3ad3abbba006814b9927fca43ed54c78f94a5[m
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Wed Mar 4 01:01:03 2026 +0000
+
+    fixed breadcrumb
+
+[33mcommit 61e8bf19252e6dc8d99382d2013875f6f74aa47e[m
+Author: Aisha <85460366+aishajama1@users.noreply.github.com>
+Date:   Wed Mar 4 00:59:58 2026 +0000
+
+    fixed the inconsistent spacing between register and google button
+
+[33mcommit f1397df72c0f868f08511dc41cece33c9a39dc0c[m
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Wed Mar 4 00:53:21 2026 +0000
+
+    fixed double line issue with product page reviews
+
+[33mcommit be9f298c43790b9d121d403361099ef193dfaeee[m
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Wed Mar 4 00:02:45 2026 +0000
+
+    fixed filter issue part 2 weirdly didnt fix before
+
+[33mcommit dc3de8ab642089e857eabc37d7025fe031a2d856[m
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Tue Mar 3 23:52:38 2026 +0000
+
+    fixed the filters interacting with a different page
+
+[33mcommit e4267c4a954d4d33851cf13c4b2726cff5da45eb[m
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Tue Mar 3 23:43:20 2026 +0000
+
+    seperated the pages in the store page and the reviews inside the product page
+
+[33mcommit 5e3aeaa5a6093135d66108c2bfb62c29e969bb4d[m
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Tue Mar 3 22:25:33 2026 +0000
+
+    created an alternating toggle view/create a review button on the view prev orders page
+
+[33mcommit 86502c597a9fe2aa705d90f5b0f63bf0a83b7f1f[m
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Tue Mar 3 22:12:09 2026 +0000
+
+    fixed the summary review text going past the screen
+
+[33mcommit bdbf95a2b48d2ad6b2d858ca9700374a735cb65c[m
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Tue Mar 3 22:06:40 2026 +0000
+
+    reduced image upload size limit back to 2mb because php loves it more
+
+[33mcommit d7d6e9ffa5b4312dc9972ecdb8ac2af47fc04669[m
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Tue Mar 3 22:00:01 2026 +0000
+
+    increased image upload size limit to 10mb from 2mb
+
+[33mcommit 2f5e76a15c1a02cab86c4fc5ac87fe6782111f07[m
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Tue Mar 3 21:48:42 2026 +0000
+
+    added edit and delete buttons to the view review page
+
+[33mcommit 11f15c7714ad610ccf2ccc2f2d51ca37b3a99d39[m
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Tue Mar 3 20:14:40 2026 +0000
+
+    IMPORTANT: UPDATE UR ENV APP_FAKER_LOCALE=en_GB FOR UK ADDRESSES IN DATABASE
+
+[33mcommit 96a4768b7685212366c8526a2d862f265c27dcc7[m
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Tue Mar 3 20:05:01 2026 +0000
+
+    finished the edit feature, added a way to see the image you upload, added review status to be reviewed by admins and only approved reviews are viewed in product area
+
+[33mcommit 5bd8d02cd70a87d9fef94e55af64425750d12926[m
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Tue Mar 3 16:37:54 2026 +0000
+
+    created a review delete feature
+
+[33mcommit 29757e57e8b0fba8da3d159f5494c3899d45c301[m
+Merge: b7e05a5 1ce92e0
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Tue Mar 3 15:38:05 2026 +0000
+
+    Merge branch 'rating-review' of github.com:Samdoses/CS2TP-Group-Project into rating-review
+
+[33mcommit b7e05a5a896296e9a4ccaaf140104d769d40910f[m
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Tue Mar 3 15:37:53 2026 +0000
+
+    created a show more results at the bottom of the profile order and review lists
+
+[33mcommit 1ce92e04ed7f4b8775a49f66faaa5cc35fbe4a41[m
+Author: Aisha <85460366+aishajama1@users.noreply.github.com>
+Date:   Mon Mar 2 01:09:31 2026 +0000
+
+    fixed the no review
+
+[33mcommit d4dac6a2076fa9f50683dd59fc0e2a0c7d3e86c1[m
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Mon Mar 2 00:38:28 2026 +0000
+
+    put a unique filename for one of the review images
+
+[33mcommit 844c467c9bdd6c84527be760cbbc536cc17fcb4d[m
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Mon Mar 2 00:31:12 2026 +0000
+
+    added two more images to the reviews and reduced the amount of reviews generated
+
+[33mcommit edd9dd41391437d433b3c7691ecd38c46a2d0299[m
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Mon Mar 2 00:21:02 2026 +0000
+
+    created a review factory to generate a lot of reviews for linda and edward
+
+[33mcommit 113f118323e53f16affc52e0477c031c14b908f8[m
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Sun Mar 1 23:08:11 2026 +0000
+
+    added a whole review list in the profile area and fixed validation and appearance
+
+[33mcommit 3b92909df95b7a5b24cc2c5fca7c5bc89239014a[m
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Sun Mar 1 00:52:33 2026 +0000
+
+    allow you to click the name of the product in your past orders to view the product card page
+
+[33mcommit a944660ffeb0180211f8f35f807053ab205e624d[m
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Sun Mar 1 00:37:20 2026 +0000
+
+    created a feature where you can expand the review, and fixed avg star calculation
+
+[33mcommit d40271665501fae843def4ba5db2ace974980153[m
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Sat Feb 28 22:42:43 2026 +0000
+
+    synced the product page review list to the database
+
+[33mcommit 04960ef4e9a8cd98329409a11e83a7ae86e2550b[m
+Author: Aisha <85460366+aishajama1@users.noreply.github.com>
+Date:   Sat Feb 28 21:51:32 2026 +0000
+
+    fixed the review
+
+[33mcommit 77cdccbfdf523cc92741d4fe99a46648d08f8442[m
+Merge: 7d5adbd bbd5472
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Sat Feb 28 21:28:17 2026 +0000
+
+    Resolving a merge issue
+
+[33mcommit 7d5adbd13c0013625cc1e0d04bc31fafedc2ac7f[m
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Sat Feb 28 21:25:06 2026 +0000
+
+    Created a add review page, and can add reviews to the database on delivered orders only
+
+[33mcommit bbd5472e0523b38963675529deefee4de0637cc5[m
+Author: Aisha <85460366+aishajama1@users.noreply.github.com>
+Date:   Sat Feb 28 21:16:30 2026 +0000
+
+    added customers review on the product page
+
+[33mcommit 9be87ba3c982eb54faf7d90cb6d0a7814d8b5dce[m
+Merge: d9578c2 dcb3721
+Author: Aisha <85460366+aishajama1@users.noreply.github.com>
+Date:   Sat Feb 28 21:12:03 2026 +0000
+
+    Merge branch 'rating-review' of https://github.com/Samdoses/CS2TP-Group-Project into rating-review
+
+[33mcommit d9578c2d2bccac622598ad89c0f4cf56fa315a36[m
+Author: Aisha <85460366+aishajama1@users.noreply.github.com>
+Date:   Sat Feb 28 21:11:45 2026 +0000
+
+    added customers review on the product page
+
+[33mcommit dcb3721fd5cec53d42fcecff2db8d184e74a1c8c[m
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Sat Feb 28 19:20:36 2026 +0000
+
+    Created a lot of orders for the linda and edward accounts
+
+[33mcommit f070aa0e49f6cbe0ce6df8cb3d49bf7d3c44a9aa[m
+Author: Aisha <85460366+aishajama1@users.noreply.github.com>
+Date:   Sat Feb 28 19:16:29 2026 +0000
+
+    fix the rating style
+
+[33mcommit d8363babffd4cf103782f9c34ce2b6926df81590[m
+Author: Aisha <85460366+aishajama1@users.noreply.github.com>
+Date:   Sat Feb 28 18:49:51 2026 +0000
+
+    adding ratings
+
+[33mcommit f5d49349778fd91b8ef58aec4ef1c37b764e0d5c[m
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Fri Feb 27 23:29:12 2026 +0000
+
+    modified the order seeder address
+
+[33mcommit d71cad7d69dba556a264d28ae9f5f8eeff23cdda[m
+Merge: 1dd3477 e8fed13
+Author: Aishah <anaishahhussain18@gmail.com>
+Date:   Fri Feb 27 23:28:18 2026 +0000
+
+    syncing database with review branch
+
+[33mcommit 1dd34776a70a3bd0af3aec5c57c6476a53090764[m
+Author: Aisha <85460366+aishajama1@users.noreply.github.com>
+Date:   Fri Feb 27 23:26:31 2026 +0000
+
+    pushing new branch
+
+[33mcommit e8fed13466d849ec19fea5ec74496a00acf8a930[m
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Fri Feb 27 23:19:52 2026 +0000
+
+    Successfully populated the database with accounts, reviews and orders
+
+[33mcommit f2b1d1eca58ec3cf89831b29de7bf2a96d9d34d1[m
+Merge: 999d3b8 2ad660e
+Author: Aishah <anaishahhussain18@gmail.com>
+Date:   Fri Feb 27 22:20:22 2026 +0000
+
+    sync database to main
+    
+    sync database to main
+
+[33mcommit 999d3b8ec75233e3e9dbe991945541e8eb3d8f38[m
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Fri Feb 27 22:18:51 2026 +0000
+
+    Created a model for the review table and some seeders for account and reviews
+
+[33mcommit 47a6262de87b7b6880799479221ac82c0f91560d[m
+Author: Zain Khan <zainkhan24681@gmail.com>
+Date:   Thu Feb 26 15:57:30 2026 +0000
+
+    Fixed dark mode visibility for empty basket and style
+
+[33mcommit 166e29dcbdd95d2da96b6d7a65f279295b2bbbce[m
+Author: Zain Khan <zainkhan24681@gmail.com>
+Date:   Thu Feb 26 15:48:52 2026 +0000
+
+    Added styled card to the contact page
+
+[33mcommit 2ad660eb8cfdf0d118ab14d7eba6b82a41febeac[m
+Merge: 45d6df1 6af7157
+Author: Samdoses <106073273+Samdoses@users.noreply.github.com>
+Date:   Thu Feb 26 15:29:37 2026 +0000
+
+    Merge pull request #29 from Samdoses/feature-tom-new-pages
+    
+    Feature tom new pages
+
+[33mcommit 6af71572929dbd62ee3f700706507ba07e5509ae[m[33m ([m[1;31morigin/feature-tom-new-pages[m[33m)[m
+Merge: 6c39b34 45d6df1
+Author: Samdoses <106073273+Samdoses@users.noreply.github.com>
+Date:   Thu Feb 26 15:29:17 2026 +0000
+
+    Merge branch 'main' into feature-tom-new-pages
+
+[33mcommit 45d6df164cffef7f534134a28c219e39ba6aadec[m
+Merge: 2c53a66 2bf3e83
+Author: Samdoses <106073273+Samdoses@users.noreply.github.com>
+Date:   Thu Feb 26 15:19:37 2026 +0000
+
+    Merge pull request #26 from Samdoses/gen-ai-bot
+    
+    Gen ai bot
+
+[33mcommit 2c53a66d4da1a3ffe83ef804b6dc8f0fdc7ca13f[m
+Author: Yusuf Saif <yusufsaif4321@gmail.com>
+Date:   Thu Feb 26 15:14:29 2026 +0000
+
+    feat: Implement full dark/light mode for auth pages
+
+[33mcommit 2bf3e83b393f3f1e83755047e67e4f3e779b17e0[m
+Author: Samdoses <samuel_dsouza@outlook.com>
+Date:   Thu Feb 26 15:13:46 2026 +0000
+
+    changed the prompt to add security to the merry mouse bot
+
+[33mcommit 6c39b34a8fcc57e8f044d1992e2b8974ecb863fb[m
+Author: Tom Thackham <thackhamt@gmail.com>
+Date:   Thu Feb 26 15:04:19 2026 +0000
+
+    Added more questions to the faq page
+
+[33mcommit 2d9a534f30ede13888961339e5e90bfa4a511032[m
+Author: Tom Thackham <thackhamt@gmail.com>
+Date:   Thu Feb 26 14:57:39 2026 +0000
+
+    FAQ page
+
+[33mcommit 56eb424715487e8623d4b938d509d091ecff350b[m
+Author: Samdoses <samuel_dsouza@outlook.com>
+Date:   Thu Feb 26 13:12:26 2026 +0000
+
+    changed the prompt to add security to the merry mouse bot
+
+[33mcommit d4103044ced0507171aa7fa8c9fa0862e644ed61[m
+Author: Tom Thackham <thackhamt@gmail.com>
+Date:   Thu Feb 26 12:17:10 2026 +0000
+
+    Privacy Page Progress
+
+[33mcommit 2e5af6c062346b333a5a47958246916458a9c077[m
+Author: Tom Thackham <thackhamt@gmail.com>
+Date:   Thu Feb 26 11:28:57 2026 +0000
+
+    FAQ AND PRIVACY POLICY PAGE
+
+[33mcommit 604b8d45f2b29c6d18810e4da78d9fdae924947f[m
+Author: Samuel D'souza <samuel_dsouza@outlook.com>
+Date:   Mon Feb 23 21:27:30 2026 +0000
+
+    changed frontend to allow user to enter input
+
+[33mcommit 8b506631c9193ef8dc2597c3547710e55755d4d1[m
+Author: Samuel D'souza <samuel_dsouza@outlook.com>
+Date:   Mon Feb 23 21:24:11 2026 +0000
+
+    added the deepseek service
+
+[33mcommit 1fd87d3723f1b7ebef2ef2a912c2eb2a0b55c49d[m
+Author: Yusuf Saif <yusufsaif4321@gmail.com>
+Date:   Thu Feb 19 15:42:59 2026 +0000
+
+    Add Build Guide link to navbar
+
+[33mcommit 97c4612f88f73b7d59f1a7b0d59c6af986a137eb[m
+Author: Yusuf Saif <yusufsaif4321@gmail.com>
+Date:   Thu Feb 19 15:22:01 2026 +0000
+
+    Redesign basket page empty-state and slim down footer
+
+[33mcommit 267c92c76e62e8d9b9bc0ec61a75cbdd72d74f55[m[33m ([m[1;31morigin/fixed-login-page[m[33m)[m
+Author: Yusuf Saif <yusufsaif4321@gmail.com>
+Date:   Tue Feb 17 15:39:34 2026 +0000
+
+    Improve navbar styling and enable auth logo icon
+
+[33mcommit 339fe865daca09e7c4708bcb08fd1d41c746bce3[m
+Merge: e3e78a1 d3ca0cd
+Author: Samdoses <106073273+Samdoses@users.noreply.github.com>
+Date:   Mon Feb 16 19:27:11 2026 +0000
+
+    Merge pull request #24 from Samdoses/google-auth
+    
+    Google auth
+
+[33mcommit d3ca0cd3bfe2c39410bed7879492bc50074c61fb[m[33m ([m[1;31morigin/google-auth[m[33m)[m
+Merge: 71a8c7e e3e78a1
+Author: Samdoses <106073273+Samdoses@users.noreply.github.com>
+Date:   Mon Feb 16 19:27:00 2026 +0000
+
+    Merge branch 'main' into google-auth
+
+[33mcommit e3e78a1d00228c335c3778b5d4802f5c8076181c[m
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Sun Feb 15 22:57:16 2026 +0000
+
+    fix archusb image
+
+[33mcommit 6ceb9486d6a8eb74411fd647a5b006c046425ac8[m
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Sun Feb 15 22:43:34 2026 +0000
+
+    fixed issue with homepage not loading
+
+[33mcommit 3425f3150edbd36c0bc697f88b2c34cf4327b670[m
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Sun Feb 15 22:41:02 2026 +0000
+
+    fixed some issues on product seeder
+
+[33mcommit 632ffbb9cdc463a49259c749a313066371be7352[m
+Merge: e318958 3d25513
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Sun Feb 15 22:34:44 2026 +0000
+
+    Merge branch 'main' of github.com:Samdoses/CS2TP-Group-Project
+
+[33mcommit e318958daad4d11dc667c531c5432b5b5728aac4[m
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Sun Feb 15 22:32:43 2026 +0000
+
+    Repushed updated product seeder as it failed to merge before
+
+[33mcommit 3d2551356ed1048a3cc7f9b8906ac1214dadd904[m
+Merge: 056bf1a ff5fa70
+Author: Aishah <anaishahhussain18@gmail.com>
+Date:   Sun Feb 15 22:24:21 2026 +0000
+
+    Merge pull request #23 from Samdoses/database
+    
+    Sync work
+
+[33mcommit ff5fa70cda4a9d708dd42120f41f80a4bbbafc11[m
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Sun Feb 15 22:23:28 2026 +0000
+
+    Added a longer description for each product, fixed taglines and fixed some missing values in the database
+
+[33mcommit 7e768f72957a45b9cf2bb8787f6447b1e5e7d77a[m
+Merge: 4b65031 056bf1a
+Author: Aishah <anaishahhussain18@gmail.com>
+Date:   Sun Feb 15 20:11:51 2026 +0000
+
+    sync database to main
+
+[33mcommit eb26051deeb5138f484fd8c12a1a7c0efdf2e210[m[33m ([m[1;31morigin/view-past-order-details[m[33m)[m
+Merge: a8c93ef 056bf1a
+Author: Aishah <anaishahhussain18@gmail.com>
+Date:   Sun Feb 15 19:13:43 2026 +0000
+
+    Merge pull request #21 from Samdoses/main
+    
+    sync progress of order details page
+
+[33mcommit 056bf1a8c95defa69d59883c8615ecf010963516[m
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Sun Feb 15 19:11:54 2026 +0000
+
+    completed order details page
+
+[33mcommit f97e8fceef872a7093e9b9acd42ecb575382ba79[m
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Sat Feb 14 23:08:54 2026 +0000
+
+    working in progress past orders page
+
+[33mcommit 30205d8e250f4ace0a475b9884495efd66b44fe1[m
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Sat Feb 14 21:54:43 2026 +0000
+
+    fixed error with stock at checkout
+
+[33mcommit 04991c0f035a6220ac06f30fcfa69e735a790041[m
+Merge: 8a60865 4bed29b
+Author: Aishah <anaishahhussain18@gmail.com>
+Date:   Sat Feb 14 21:48:17 2026 +0000
+
+    Merge pull request #20 from Samdoses/filter
+    
+    Add the new filters for pc part and colour to main
+
+[33mcommit 4bed29b72032cdb175ec2e2494273d7920899e90[m[33m ([m[1;31morigin/filter[m[33m)[m
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Sat Feb 14 21:46:00 2026 +0000
+
+    fixed missing items bug
+
+[33mcommit 695ff1b8225f8d18d6ae8b67eea909ca9cd69ab6[m
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Sat Feb 14 21:37:21 2026 +0000
+
+    fixed two of the colours of the items
+
+[33mcommit 8a608653e59b2cfc70dddd6a46542fd98d1600b0[m
+Merge: 47284da a8c93ef
+Author: Aishah <anaishahhussain18@gmail.com>
+Date:   Sat Feb 14 21:30:04 2026 +0000
+
+    Merge pull request #19 from Samdoses/view-past-order-details
+    
+    View past order details
+
+[33mcommit a5ef24a616fa3724cbd7857a292e8ba4daa61dd8[m
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Sat Feb 14 21:24:28 2026 +0000
+
+    added working colour filter and pc part filter
+
+[33mcommit a8c93efedefff0d720c9a2876b39d015e13efcba[m
+Author: Aisha Jama <230186794@aston.ac.uk>
+Date:   Sat Feb 14 21:21:11 2026 +0000
+
+    almost done with the order details page layout with placeholders
+
+[33mcommit 60ee7c24a2ba99d50119808a7db3d1b17ca875d0[m
+Author: Aisha Jama <230186794@aston.ac.uk>
+Date:   Sat Feb 14 20:02:19 2026 +0000
+
+    Added some order details with placeholders
+
+[33mcommit 71a8c7e1b83dd5a2a024631119d4d827f9f03587[m
+Author: Samuel D'souza <samuel_dsouza@outlook.com>
+Date:   Sat Feb 14 18:54:42 2026 +0000
+
+    corrected the google controller redirection
+
+[33mcommit cd3e13839c81c29a551d93da4db120f3951a0019[m
+Author: Samuel D'souza <samuel_dsouza@outlook.com>
+Date:   Sat Feb 14 18:22:01 2026 +0000
+
+    fixed the google auth in web.php
+
+[33mcommit 47284dad61aecbf403d35e1a11c9b730717fae16[m
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Sat Feb 14 18:21:01 2026 +0000
+
+    fixed the quantity button on the product page
+
+[33mcommit 166913141e60ad9e06c12d504e962206cce138f8[m
+Author: Samuel D'souza <samuel_dsouza@outlook.com>
+Date:   Sat Feb 14 17:41:04 2026 +0000
+
+    google auth button on login page
+
+[33mcommit 79146e8327913572811ba2be40f336a66dd9f68c[m
+Author: Samuel D'souza <samuel_dsouza@outlook.com>
+Date:   Sat Feb 14 17:39:35 2026 +0000
+
+    google auth button on register page
+
+[33mcommit 535dfe7c6448b760904d429a0bb4dd5fe0f78999[m
+Author: Samuel D'souza <samuel_dsouza@outlook.com>
+Date:   Sat Feb 14 17:27:17 2026 +0000
+
+    added google auth routes
+
+[33mcommit 4f1e68a2bce291834f51df2b99fb919cb648edbb[m
+Author: Samuel D'souza <samuel_dsouza@outlook.com>
+Date:   Sat Feb 14 17:25:22 2026 +0000
+
+    created google auth controller
+
+[33mcommit 28bcccf58df3d479e4b96353485ba4d1e4c7db86[m
+Author: Samuel D'souza <samuel_dsouza@outlook.com>
+Date:   Sat Feb 14 17:24:43 2026 +0000
+
+    added google_id to Uses.php
+
+[33mcommit 13c30203936e134b7a329a307a0759b05e22e041[m
+Author: Samuel D'souza <samuel_dsouza@outlook.com>
+Date:   Sat Feb 14 17:23:17 2026 +0000
+
+    added the google id table
+
+[33mcommit 77579ae5484efb5681f4e66547657f9d8375f12e[m
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Sat Feb 14 17:22:02 2026 +0000
+
+    fixed stock limit bypass in basket page
+
+[33mcommit 3a9f177a2a9094ea4546fd60bf541a73f7e982e9[m
+Author: Samuel D'souza <samuel_dsouza@outlook.com>
+Date:   Sat Feb 14 17:14:44 2026 +0000
+
+    enabled google auth service
+
+[33mcommit 65133600ae231b08154e158b266a299615c9d3f3[m
+Author: Samuel D'souza <samuel_dsouza@outlook.com>
+Date:   Sat Feb 14 17:12:11 2026 +0000
+
+    added the socialite package
+
+[33mcommit 55fe9a5a2747f582e1a4bd75edd383f7ae4ca2a8[m
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Sat Feb 14 16:55:32 2026 +0000
+
+    fixed archusb image not loading
+
+[33mcommit 4f0d7de04c3fd5541b3ea0bf13085b9a659b7385[m
+Merge: 62a1cc2 8e8c457
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Sat Feb 14 16:48:45 2026 +0000
+
+    merging new validation check on basket and product
+
+[33mcommit 62a1cc266c0d62ed94ef94640ed17618457a558a[m
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Sat Feb 14 16:45:33 2026 +0000
+
+    added archusb to products and fixed error message not displaying on basket for stocks
+
+[33mcommit 8e8c4570ad8f8559abf86ed567c9a27565d43023[m
+Author: Aishah <anaishahhussain18@gmail.com>
+Date:   Sat Feb 14 15:26:14 2026 +0000
+
+    updated the readme file to have our usernames beside our names
+
+[33mcommit 6762b802d00f465b3a597066fa7a3d652bc3d572[m
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Fri Feb 13 23:03:04 2026 +0000
+
+    populated the product spec table and linked it to the database
+
+[33mcommit 8c2f1ffa1da2329bf3d15a991d20cfabfddabd6e[m
+Author: Aisha Jama <230186794@aston.ac.uk>
+Date:   Fri Feb 13 22:32:28 2026 +0000
+
+    create past order page and link it to view button
+
+[33mcommit 29e21e8fe2a1d2387a76302caeee2e7703643fde[m
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Fri Feb 13 21:03:46 2026 +0000
+
+    added a LOT of products to the website and a new database specs table
+
+[33mcommit 18bfcbaebd87ff8cddb3c2d38047b149bd5ddd8d[m
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Fri Feb 13 19:17:04 2026 +0000
+
+    hopefully fixing the test error
+
+[33mcommit 08103fce7275e95bee9598d8584707e1cc01b813[m
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Fri Feb 13 19:09:42 2026 +0000
+
+    fixed stock related bug
+
+[33mcommit d1ec54fe1b17b4db1e93ebdf2032711ea71f61f2[m
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Fri Feb 13 19:07:32 2026 +0000
+
+    added the link to the items in the basket to their product pages
+
+[33mcommit deb4c4d5f8e8c01e70455cf760c0a2b97e5149aa[m
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Fri Feb 13 17:19:15 2026 +0000
+
+    fixed the basket emptying itself when the product quantity is more than the stock
+
+[33mcommit 28923b766ea9293d8d2394e98e5154bfeab61560[m
+Author: Samuel D'souza <samuel_dsouza@outlook.com>
+Date:   Fri Feb 13 12:13:33 2026 +0000
+
+    install pest v3, to stop github test error
+
+[33mcommit 9c9750cf727e54ea078330ef6ab22a25d7260fe6[m
+Merge: 81daecb 4b65031
+Author: Samdoses <106073273+Samdoses@users.noreply.github.com>
+Date:   Fri Feb 13 12:01:10 2026 +0000
+
+    Merge pull request #16 from Samdoses/database
+    
+    Database
+
+[33mcommit 4b6503123efe120cfd68d54d531ecc09674c51c8[m
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Thu Feb 5 22:58:13 2026 +0000
+
+    validated stock numbers when adding to the basket and for checkout
+
+[33mcommit f7eb79e212fa6af47f932e79feecab6aafb3dc9a[m
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Thu Feb 5 21:14:39 2026 +0000
+
+    added and labelled colour and part columns to the database and changed stock numbers
+
+[33mcommit 81daecb064b202243bdf246623c37606f505c075[m
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Thu Feb 5 20:21:10 2026 +0000
+
+    Added working stock feature on product page
+
+[33mcommit d47d848976227b9b78f12e98c97485a5c54e0266[m[33m ([m[1;31morigin/stock-feature[m[33m)[m
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Thu Feb 5 20:13:38 2026 +0000
+
+    added complete working stock feature
+
+[33mcommit 25c3a24f24fb2681422c5cf901e586d7f5eabb4a[m
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Thu Feb 5 15:49:21 2026 +0000
+
+    syncing fix-login page with stock feature brannch
+
+[33mcommit 217bb54453758157df728c9f3098f366c3338fc5[m
+Merge: 1751d97 d9bdd87
+Author: Samdoses <106073273+Samdoses@users.noreply.github.com>
+Date:   Thu Feb 5 14:29:55 2026 +0000
+
+    Merge pull request #13 from Samdoses/fixed-login-page
+    
+    Aisha fixed the login page btw
+
+[33mcommit d9bdd87128189a17956708ce59ab56d808efeea8[m
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Thu Jan 29 15:32:56 2026 +0000
+
+    only fixed on browser light mode
+
+[33mcommit 1751d979d0fc8d5eb63dc2516b3402066efb0488[m
+Author: Samdoses <samuel_dsouza@outlook.com>
+Date:   Fri Dec 5 13:56:22 2025 +0000
+
+    change tab icon
+
+[33mcommit 7e4bc9a82d15323d8f3a1e7f33a5bedb19706d5a[m
+Merge: 64fc44d d1a79a7
+Author: Jot17 <harjotsingh4167@gmail.com>
+Date:   Fri Dec 5 13:49:22 2025 +0000
+
+    Merge branch 'downgradeCheck'
+
+[33mcommit 64fc44dbbeaefb039523a776d8dce67e94b91e7b[m
+Author: Samdoses <samuel_dsouza@outlook.com>
+Date:   Fri Dec 5 13:26:18 2025 +0000
+
+    ethan is a traitor so I fixed the build guide links
+
+[33mcommit d1a79a7f8ee82d78630a93a2644e51ac8c3819a5[m[33m ([m[1;31morigin/downgradeCheck[m[33m)[m
+Author: Jot17 <harjotsingh4167@gmail.com>
+Date:   Fri Dec 5 13:23:10 2025 +0000
+
+    Fixed not deploying on the server
+
+[33mcommit e4da07ba317951f870ad83d1414579e2fc19bd09[m
+Merge: 0e6cc19 2e7ad73
+Author: Jot17 <harjotsingh4167@gmail.com>
+Date:   Fri Dec 5 13:14:33 2025 +0000
+
+    Merge branch 'main' of https://github.com/Samdoses/CS2TP-Group-Project
+
+[33mcommit 0e6cc196b64f5f6a8f639d1e3e41f8db209ddf48[m
+Author: Jot17 <harjotsingh4167@gmail.com>
+Date:   Fri Dec 5 13:14:30 2025 +0000
+
+    Fixed server not being able to deploy
+
+[33mcommit 2e7ad732b32c30cb74d08ef6c9469fadd35b00bf[m
+Author: Aisha <85460366+aishajama1@users.noreply.github.com>
+Date:   Fri Dec 5 13:03:42 2025 +0000
+
+    Fix formatting issues in README sections
+
+[33mcommit 7fe7142e1865b8666267aab34481aaf93cd5f502[m
+Author: Samdoses <samuel_dsouza@outlook.com>
+Date:   Fri Dec 5 12:47:42 2025 +0000
+
+    added the contents of the build guide
+
+[33mcommit f5c8f7da7a356bc5834d462d34a2aa8d8d622c04[m
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Fri Dec 5 12:31:22 2025 +0000
+
+    tried fixing the login page not displaying properly in dark-mode, light-mode works fine
+
+[33mcommit 40f1de16fb5867b1d9bf4ee6fc8cc3833a831426[m
+Author: Jot17 <harjotsingh4167@gmail.com>
+Date:   Fri Dec 5 11:47:37 2025 +0000
+
+    Changed the name to MerryMouse
+
+[33mcommit 3e7284d0b008a83064763bb626a86d2b0bca787a[m
+Author: Jot17 <harjotsingh4167@gmail.com>
+Date:   Fri Dec 5 10:58:31 2025 +0000
+
+    Changed the slogan to our original slogan
+
+[33mcommit 8858201699cd2af3f6998e7880f8dfb7f1413a69[m
+Author: Samdoses <samuel_dsouza@outlook.com>
+Date:   Fri Dec 5 08:15:09 2025 +0000
+
+    added build guide page + replaced home button with the logo
+
+[33mcommit 399594015a92bc73c1061583c818d570d79bba69[m
+Merge: c33f33a 0439749
+Author: Aishah <anaishahhussain18@gmail.com>
+Date:   Fri Dec 5 02:41:57 2025 +0000
+
+    Merge pull request #12 from Samdoses/redesign
+    
+    Changed the frontend of login and register page
+
+[33mcommit 04397498cf60842924785776a2fed19b46500c4e[m
+Author: Aisha Jama <230186794@aston.ac.uk>
+Date:   Fri Dec 5 02:35:33 2025 +0000
+
+    Changed the frontend of login and register page
+
+[33mcommit c33f33a5d47b87bac193d687fb32a253d3cce95a[m
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Fri Dec 5 02:28:14 2025 +0000
+
+    Changed best sellers and fixed each product description to two lines for consistency.
+
+[33mcommit bdf4fbde5b534b57160cde02745cd52abb2555a5[m
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Fri Dec 5 02:04:40 2025 +0000
+
+    added more items to the products table
+
+[33mcommit 26c62a8378403ea6e2202ae69598086702fecbbd[m
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Fri Dec 5 01:20:01 2025 +0000
+
+    fixed two images not loading
+
+[33mcommit 7ed4e2ce43be85d69611d6f0c007967f126acae1[m
+Merge: f42ce64 19e1259
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Fri Dec 5 01:06:24 2025 +0000
+
+    merge filter branch into main# especially if it merges an updated upstream into a topic branch.
+
+[33mcommit 19e12596eef849b72080be9d753bd06348398569[m[33m ([m[1;31morigin/filter-branch[m[33m)[m
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Fri Dec 5 01:04:32 2025 +0000
+
+    fixed bestsellers on index page and added some animation effects
+
+[33mcommit f42ce64f7f766c68cc54a64c41486878de7b7d82[m
+Merge: 921279a 6fcf85d
+Author: Aishah <anaishahhussain18@gmail.com>
+Date:   Thu Dec 4 23:44:19 2025 +0000
+
+    Merge pull request #11 from Samdoses/filter-branch
+    
+    Filter branch
+
+[33mcommit 6fcf85dac0b46938d9013cf2c382f8c8d342d494[m
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Thu Dec 4 23:42:03 2025 +0000
+
+    push
+
+[33mcommit c7af9efb46e87df5617da4d43548bee90c036453[m
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Thu Dec 4 23:37:48 2025 +0000
+
+    made it so price box stays open
+
+[33mcommit 96711c6578141fa649b643636a153a07909482b3[m
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Thu Dec 4 22:51:05 2025 +0000
+
+    created price filter and moved sort by to the left to avoid overlapping issues
+
+[33mcommit fa2834dd7fb6d0a255ff48943cf636b5e20c6c46[m
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Thu Dec 4 20:26:09 2025 +0000
+
+    category filter works
+
+[33mcommit 921279a510d86cc471cbf684c7a9c7cba1c00cd7[m
+Merge: 273171b c8476db
+Author: Zain Khan <zainkhan24681@gmail.com>
+Date:   Thu Dec 4 23:05:53 2025 +0000
+
+    Merge branch 'main' of https://github.com/Samdoses/CS2TP-Group-Project
+
+[33mcommit 273171b7077b47513ca87c2a3a7b466ab1c2700e[m
+Merge: 9161604 dee01f0
+Author: Zain Khan <zainkhan24681@gmail.com>
+Date:   Thu Dec 4 23:05:44 2025 +0000
+
+    added logo to nav bar
+
+[33mcommit c8476db2428360b14b983f307abd8530e68f12eb[m
+Merge: f3323aa dee01f0
+Author: Jot17 <harjotsingh4167@gmail.com>
+Date:   Thu Dec 4 23:01:24 2025 +0000
+
+    Merge branch 'main' of https://github.com/Samdoses/CS2TP-Group-Project
+
+[33mcommit f3323aa6e7e3d8df3a2659b33cf76524b9afec93[m
+Author: Jot17 <harjotsingh4167@gmail.com>
+Date:   Thu Dec 4 23:01:20 2025 +0000
+
+    Fixed markdown reply from chatbot
+
+[33mcommit 9161604caedc5e68423e3dd7c804909c6351ed7d[m
+Author: Zain Khan <zainkhan24681@gmail.com>
+Date:   Thu Dec 4 22:57:00 2025 +0000
+
+    added logo on navbar
+
+[33mcommit dee01f0d885d9633f159c3ec94ffdefb1cf36361[m
+Author: Samuel D'souza <samuel_dsouza@outlook.com>
+Date:   Thu Dec 4 22:47:03 2025 +0000
+
+    removed excess footer links
+
+[33mcommit a272c831207191076884bc2826b7e804168c9425[m
+Merge: 998e590 d2204a6
+Author: Samuel D'souza <samuel_dsouza@outlook.com>
+Date:   Thu Dec 4 22:28:28 2025 +0000
+
+    Merge branch 'main' of github.com:Samdoses/CS2TP-Group-Project
+
+[33mcommit d2204a69d95a532862f7ec4e239ddeceaaae176e[m
+Merge: 4df9d86 27eee4c
+Author: Jot17 <harjotsingh4167@gmail.com>
+Date:   Thu Dec 4 22:16:42 2025 +0000
+
+    Merge branch 'AIchatbot'
+
+[33mcommit 27eee4c5ecfed30bf6447e156f86ae055d62c759[m[33m ([m[1;31morigin/AIchatbot[m[33m)[m
+Author: Jot17 <harjotsingh4167@gmail.com>
+Date:   Thu Dec 4 22:15:46 2025 +0000
+
+    Implement AI chatbot
+
+[33mcommit 998e590e709bee58edda2eda5330e7c8d1bbefbb[m
+Author: Samuel D'souza <samuel_dsouza@outlook.com>
+Date:   Thu Dec 4 22:05:43 2025 +0000
+
+    removed subscription feature from footer
+
+[33mcommit 4df9d8676c9f65c4f287725c657caf0c05a4f1ef[m
+Merge: 3a0184c 2acde50
+Author: Samdoses <106073273+Samdoses@users.noreply.github.com>
+Date:   Thu Dec 4 22:03:58 2025 +0000
+
+    Merge pull request #9 from Samdoses/new-profile-page
+    
+    profile page changes
+
+[33mcommit 3a0184cad758698ef671031c04f17b408f26c5d0[m
+Author: Samuel D'souza <samuel_dsouza@outlook.com>
+Date:   Thu Dec 4 21:42:23 2025 +0000
+
+    optimised the basket page
+
+[33mcommit 2acde506a0b211e36bcc270dcf92c5a044aa5a39[m[33m ([m[1;31morigin/new-profile-page[m[33m)[m
+Author: Tom Thackham <thackhamt@gmail.com>
+Date:   Thu Dec 4 21:42:08 2025 +0000
+
+    profile page changes
+
+[33mcommit 9732fb433dd3e249848b89cec6186a1e2e5617b0[m
+Author: Zain Khan <zainkhan24681@gmail.com>
+Date:   Thu Dec 4 21:05:10 2025 +0000
+
+    Updated the button logos on the home page
+
+[33mcommit e700c9ff1b6e50fed6123ccd556b3e5c0dd7adfa[m
+Author: Zain Khan <zainkhan24681@gmail.com>
+Date:   Thu Dec 4 19:27:16 2025 +0000
+
+    Did progress on the home page and header
+
+[33mcommit f0e3b2d58263810c9bfa278810c8f73711ff437d[m
+Author: Aisha Jama <230186794@aston.ac.uk>
+Date:   Thu Dec 4 18:23:50 2025 +0000
+
+    fixed product seeder
+
+[33mcommit b94fe6f426cfcd5ed1178403b9703ed17c7ab789[m
+Merge: cbf61d3 48d9887
+Author: Jot17 <harjotsingh4167@gmail.com>
+Date:   Thu Dec 4 17:53:54 2025 +0000
+
+    Log out functionality
+
+[33mcommit cbf61d3df7f2821c96309141a839233848d9b696[m
+Author: Jot17 <harjotsingh4167@gmail.com>
+Date:   Thu Dec 4 17:22:02 2025 +0000
+
+    Fixed single product page not showing
+
+[33mcommit 48d98874f5a7d7e9b1846be56ca65902f1eeda3e[m[33m ([m[1;31morigin/profile[m[33m)[m
+Author: Jot17 <harjotsingh4167@gmail.com>
+Date:   Thu Dec 4 17:04:48 2025 +0000
+
+    Added log out button
+
+[33mcommit bda7ed43fa548a18709908f9823391bc9b6d115b[m
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Thu Dec 4 17:04:11 2025 +0000
+
+    fixed web.php error
+
+[33mcommit 37a91c0a0bf0c9c24bac42787c4d93d037ab235e[m
+Author: Jot17 <harjotsingh4167@gmail.com>
+Date:   Thu Dec 4 16:17:02 2025 +0000
+
+    Fixed duplicate password updates
+
+[33mcommit c5356c391836c250ec8131ff3be8249a74303cc6[m
+Merge: 412349d 24c4a61
+Author: Jot17 <harjotsingh4167@gmail.com>
+Date:   Thu Dec 4 16:09:30 2025 +0000
+
+    Merge branch 'profile'
+
+[33mcommit 412349dea1b5c6cbae34af1d03ed8f758f9df914[m
+Merge: 1599056 c65b65b
+Author: Jot17 <harjotsingh4167@gmail.com>
+Date:   Thu Dec 4 16:07:38 2025 +0000
+
+    Merge branch 'main' of https://github.com/Samdoses/CS2TP-Group-Project
+
+[33mcommit 24c4a6180a6ee3ee7bfb1322918a232ed0782cc9[m
+Author: Jot17 <harjotsingh4167@gmail.com>
+Date:   Thu Dec 4 16:05:46 2025 +0000
+
+    Added profile page for user( update password, change email, and view order history)
+
+[33mcommit c65b65b2df95c6a932dfc7e5aa87777136f1b8c1[m
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Thu Dec 4 15:22:26 2025 +0000
+
+    moved the start now button a bit more up
+
+[33mcommit 993ddaf004053d624900edc0ec32782cd82d7730[m
+Merge: 69509e5 83a16b0
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Thu Dec 4 15:18:40 2025 +0000
+
+    Merge branch 'main' of github.com:Samdoses/CS2TP-Group-Project
+
+[33mcommit 69509e59e4279d03e6caaa1d59408e083df22baf[m
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Thu Dec 4 15:17:03 2025 +0000
+
+    Linked store page with specific product page
+
+[33mcommit 83a16b08e6284321bfe81401b49c8bd4d042374b[m
+Author: Samuel D'souza <samuel_dsouza@outlook.com>
+Date:   Thu Dec 4 14:26:18 2025 +0000
+
+    fixed the year of HH in the footer
+
+[33mcommit 7a28f3411e022bd071ca6bbc871b8545833eb88b[m
+Author: Samuel D'souza <samuel_dsouza@outlook.com>
+Date:   Thu Dec 4 14:18:49 2025 +0000
+
+    fixed the main page's footer
+
+[33mcommit 1a88bcc28a286461320e9a3726eefb50c75f4a6b[m
+Merge: eb13b84 a12d144
+Author: Samuel D'souza <samuel_dsouza@outlook.com>
+Date:   Thu Dec 4 12:51:56 2025 +0000
+
+    Merge branch 'main' of github.com:Samdoses/CS2TP-Group-Project
+
+[33mcommit a12d1444267cbfe4846befb854721a6ae56f88c5[m
+Merge: 42d9b61 5ce1375
+Author: Aishah <anaishahhussain18@gmail.com>
+Date:   Thu Dec 4 12:47:48 2025 +0000
+
+    Merge pull request #7 from Samdoses/checkout
+    
+    Checkout Page added (going to implement saving the orders to a database later)
+
+[33mcommit 1599056788f6e304859ffd7faf0fa86bc0ae0b21[m
+Merge: 42d9b61 5ce1375
+Author: Jot17 <harjotsingh4167@gmail.com>
+Date:   Thu Dec 4 12:45:53 2025 +0000
+
+    Merge branch 'checkout'
+    added checkout function
+
+[33mcommit 5ce137575edcbc8bfb2c279bd141741d6084836d[m[33m ([m[1;31morigin/checkout[m[33m, [m[1;32mcheckout[m[33m)[m
+Author: Jot17 <harjotsingh4167@gmail.com>
+Date:   Thu Dec 4 12:42:45 2025 +0000
+
+    Checkout Page added (going to implement saving the orders to a database later)
+
+[33mcommit eb13b844a95e832e93f7d700a9ac07b60d5ec59d[m
+Author: Samuel D'souza <samuel_dsouza@outlook.com>
+Date:   Thu Dec 4 12:38:51 2025 +0000
+
+    Git told me to, when git switchin
+
+[33mcommit 42d9b61d4d0db40bb51f04e5cbdf7710e649f519[m
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Thu Dec 4 12:33:45 2025 +0000
+
+    fixed product page not loading
+
+[33mcommit a3e857619ccf7545e50145b3f0ea86aa8f4c092a[m[33m ([m[1;31morigin/pages-update[m[33m)[m
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Wed Dec 3 19:42:48 2025 +0000
+
+    fixed adding to basket and searching issues
+
+[33mcommit 7c8181e9aa4ac7153e15bae191f68bebb0adf29d[m
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Wed Dec 3 18:45:27 2025 +0000
+
+    fixed weird basket adding error
+
+[33mcommit f2dba5bb7b57c71d4c4643c39f2902db959498d7[m
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Wed Dec 3 18:34:04 2025 +0000
+
+    temporarily made the 'buy now' button a normal button as submit causes errors with the 'add to basket' button
+
+[33mcommit 8c21fcde144f53e888c5fe078b3e36e4b65e8973[m
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Wed Dec 3 18:32:06 2025 +0000
+
+    fixed all merge issues, moved basket code into new livewire store page
+
+[33mcommit 0fcc428f0a569fc77e2617f259a029e52febb3da[m
+Merge: cbb4def fb9c966
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Wed Dec 3 16:55:07 2025 +0000
+
+    resolving merge issues
+
+[33mcommit cbb4def82bea4878068e1839f01a8f17c48c5cbd[m[33m ([m[1;31morigin/feature/product-listing-search[m[33m)[m
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Wed Dec 3 16:26:09 2025 +0000
+
+    made navbar more consistant
+
+[33mcommit b808b16336fb6ec17e3673d41a254dcfd003bc93[m[33m ([m[1;31morigin/feature/contact-page[m[33m)[m
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Wed Dec 3 15:55:25 2025 +0000
+
+    adding about-us page
+
+[33mcommit fb9c9662bcdb9ba2675ba0b7c685ab9dd8175a1c[m
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Tue Dec 2 12:59:27 2025 +0000
+
+    fixed prices on shop page
+
+[33mcommit 7e048710af8948ccb3d2d2753d610a0674e8af38[m
+Author: Aishah Hussain <anaishahhussain18@gmail.com>
+Date:   Tue Dec 2 12:58:10 2025 +0000
+
+    fixed placeholders
+
+[33mcommit ae9800ed82a1c3d27e6b2c7025229c572041ee4d[m
+Author: Yusuf Saif <yusufsaif4321@gmail.com>
+Date:   Tue Dec 2 12:42:06 2025 +0000
+
+    Fix: Remove duplicate create_users_table migration
+
+[33mcommit ca5b7fd1c54f135db512d4abf2a48a57b03bdea3[m
+Merge: 46aefb6 dfbd209
+Author: Samdoses <samuel_dsouza@outlook.com>
+Date:   Tue Dec 2 12:31:02 2025 +0000
+
+    resolved merge conflicts
+
+[33mcommit bbeb5770be756378948c7d153d65e1e9d7df05ad[m
+Merge: fd8b2be 46aefb6
+Author: Yusuf Saif <yusufsaif4321@gmail.com>
+Date:   Tue Dec 2 11:47:00 2025 +0000
+
+    Merge branch 'main' into feature/contact-page
+
+[33mcommit dfbd209852cf89a6215fd480e3e6693cbff37625[m
+Author: Samdoses <samuel_dsouza@outlook.com>
+Date:   Tue Dec 2 10:51:46 2025 +0000
+
+    parially the database into the product page
+
+[33mcommit 46aefb637cfc45ca51e47ded81319b710ecf3b8c[m[33m ([m[1;31morigin/basketImplementation[m[33m)[m
+Author: Jot17 <harjotsingh4167@gmail.com>
+Date:   Mon Dec 1 22:44:25 2025 +0000
+
+    Added basket functionality so you can add an item from the store and on the basket page you can remove an item or increase or decrease its quantity
+
+[33mcommit 83c106090a414575a1fa4c11e39e533112f1fc84[m
+Author: Jot17 <harjotsingh4167@gmail.com>
+Date:   Mon Dec 1 17:35:30 2025 +0000
+
+    test
+
+[33mcommit 027db4813a083657dbba067ee516da75f22ec127[m
+Author: Jot17 <harjotsingh4167@gmail.com>
+Date:   Mon Dec 1 17:12:51 2025 +0000
+
+    Checking if testing works

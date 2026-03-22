@@ -8,6 +8,8 @@ class Category extends Model
 {
     public $timestamps = false;
 
+    protected $table = 'product_category';
+
     protected $fillable  = ['category_name','category_description'];
 
     //this is for the foreign keys (one to many)

@@ -4,7 +4,7 @@
 
 ---
 
-## ✨ Key Features
+##  Key Features
 
 * **Storefront:** A welcoming homepage that displays current best-sellers.
 * **Dynamic Navigation:** A fixed navigation bar that expands on hover for easy access to all product categories (CPU, GPU, RAM, etc.).
@@ -16,7 +16,7 @@
 
 ---
 
-## 💻 Tech Stack
+##  Tech Stack
 
 * **Backend:** [**Laravel**](https://laravel.com/) - A robust PHP framework used for a secure structure and rapid development.
 * **Frontend:** [**Vue.js**](https://vuejs.org/) - A component-based JavaScript framework for creating a dynamic and maintainable user interface.
@@ -24,7 +24,7 @@
 
 ---
 
-## 🎨 Design & Planning
+##  Design & Planning
 
 The project was planned extensively before development, including a site map, database schema, and full UI mockups.
 
@@ -39,7 +39,7 @@ We created low-fidelity wireframes and high-fidelity Figma mockups to visualize 
 
 ---
 
-## 🛠️ Project Management & Contributing
+##  Project Management & Contributing
 
 This project is managed using the **Kanban (Agile)** methodology, chosen for its flexibility in handling changing requirements.
 
@@ -51,19 +51,19 @@ This project is managed using the **Kanban (Agile)** methodology, chosen for its
 
 ## 👥 The Team (Group 27)
 
-| Name | Role |
-| :--- | :--- |
-| Aisha Jama | Frontend Development  |
-| Aishah Hussain | Backend Development  |
-| Samuel D'Souza | Frontend Development / UI  |
-| Zain Khan | Frontend Development  |
-| Mohamoud Mohamoud | Backend Development  |
-| Harjot Singh | Backend Development / UI  |
-| Thomas Thackham | Frontend Development  |
-| Yusuf Saif | Backend Development  |
+| Username | Name | Role |
+| :--- | :--- | :--- |
+|aishajama1| Aisha Jama | Frontend Development  |
+|happychocolatecake| Aishah Hussain | Backend Development  |
+|Samdoses| Samuel D'Souza | Frontend Development / UI  |
+|ZainKhan-19| Zain Khan | Frontend Development  |
+|mnm-hbtl| Mohamoud Mohamoud | Backend Development  |
+|Jot17| Harjot Singh | Backend Development / UI  |
+|TomThackham| Thomas Thackham | Frontend Development  |
+|yusuf19-saif| Yusuf Saif | Backend Development  |
 
 ---
 
-## ℹ️ Project Context
+##  Project Context
 
 This is a team project for the **CS2TP** module.

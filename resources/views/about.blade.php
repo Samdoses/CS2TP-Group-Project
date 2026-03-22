@@ -1,44 +1,45 @@
 <x-header></x-header>
 <x-layout>
-    <body class="bg-gray-50 text-gray-800 font-sans flex flex-col min-h-screen">
 
+    <div class="relative min-h-screen w-full overflow-hidden bg-gray-200/50 dark:bg-gray-800/50">
+        <x-video-background lightOpacity="opacity-10" darkOpacity="opacity-40" />
 
+    <div class= "relative z-10 text-gray-800 font-sans flex flex-col min-h-screen">
+    <main class="grow pt-8 sm:pt-12 md:pt-16">
 
-    <main class="flex-grow pt-16">
-
-        <div class="bg-white">
-            <div class="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
+        <div class="bg-gray-50">
+            <div class="max-w-7xl mx-auto py-12 px-4 sm:py-16 sm:px-6 lg:px-8">
                 <div class="text-center">
-                    <h1 class="text-4xl font-extrabold text-gray-900 sm:text-5xl sm:tracking-tight lg:text-6xl">
+                    <h1 class="text-3xl font-extrabold text-gray-900 sm:text-5xl sm:tracking-tight lg:text-6xl">
                         Your Dream Build. <span class="text-happy-green">Without the Guesswork.</span>
                     </h1>
-                    <p class="mt-5 max-w-xl mx-auto text-xl text-gray-500">
+                    <p class="mt-5 max-w-xl mx-auto text-base sm:text-lg md:text-xl text-gray-500">
                         Happy Hardware is an e-commerce platform designed for students, professionals, and gamers who seek high performance on a budget.
                     </p>
                 </div>
             </div>
         </div>
 
-        <div class="bg-happy-gray py-16">
+        <div class="relative z-10 bg-happy-gray py-16">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="lg:grid lg:grid-cols-2 lg:gap-16 items-center">
                     <div>
-                        <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+                        <h2 class="text-2xl sm:text-4xl font-extrabold text-gray-900">
                             Why Happy Hardware?
                         </h2>
-                        <p class="mt-4 text-lg text-gray-500">
+                        <p class="mt-4 text-base sm:text-lg text-gray-500">
                             Custom PC building can be intimidating. Complex jargon, compatibility issues, and rising costs make it hard to start.
                         </p>
-                        <p class="mt-4 text-lg text-gray-500">
-                            We differentiate ourselves by providing a <strong>welcoming UI and comprehensive support</strong>. From our intuitive Parts Picker to our AI Chatbot, we ensure you can build your first PC with confidence. [cite: 47]
+                        <p class="mt-4 text-base sm:text-lg text-gray-500">
+                            We differentiate ourselves by providing a <strong>welcoming UI and comprehensive support</strong>. From our intuitive Parts Picker to our AI Chatbot, we ensure you can build your first PC with confidence.
                         </p>
                         <div class="mt-8">
-                            <a href="#" class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gray-800 hover:bg-gray-700">
+                            <a href="/part-picker" class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gray-800 hover:bg-gray-700">
                                 Try the Part Picker
                             </a>
                         </div>
                     </div>
-                    <div class="mt-10 lg:mt-0 flex justify-center">
+                    <div class="mt-8 lg:mt-0 flex justify-center">
                         <div class="h-64 w-full bg-white rounded-lg shadow-lg flex items-center justify-center border-4 border-happy-yellow">
                             <span class="text-gray-400 italic">Image: Happy Hardware Components</span>
                         </div>
@@ -47,11 +48,11 @@
             </div>
         </div>
 
-        <div class="bg-white py-16 border-t border-gray-200">
+        <div class="relative z-10 bg-gray-50 py-16 border-t border-gray-200">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-12">
-                    <h2 class="text-3xl font-extrabold tracking-tight text-gray-900">Meet Team 27</h2>
-                    <p class="mt-4 max-w-2xl text-xl text-gray-500 mx-auto">
+                <div class="text-center mb-10 sm:mb-12">
+                    <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight text-gray-900">Meet Team 27</h2>
+                    <p class="mt-4 max-w-2xl text-base sm:text-xl text-gray-500 mx-auto">
                         The students behind the platform, combining frontend creativity with backend integrity.
                     </p>
                 </div>
@@ -149,6 +150,9 @@
                 </ul>
             </div>
         </div>
+        <br><br>
     </main>
+    </div>
+    </div>
 </x-layout>
 <x-footer></x-footer>
