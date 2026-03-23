@@ -25,7 +25,7 @@ class ProductSeeder extends Seeder
                 'product_description' => 'Supercharge your PC with the NVIDIA® GeForce RTX™ 4080 SUPER and RTX 4080. Bring your games and creative projects to life with accelerated ray tracing and AI-powered graphics. They\'re powered by the ultra-efficient NVIDIA Ada Lovelace architecture and 16GB of super-fast G6X memory.',
                 'product_createdate' => now(),
                 'product_stock' => 15, // Added default stock
-                'product_image' => 'https://pchocasi.com.tr/wp-content/uploads/2022/09/Nvidia-GeForce-RTX-4080-1.jpg'
+                'product_image' => 'https://m.media-amazon.com/images/I/71QoQqPmzvL._AC_SX679_.jpg'
             ],
             [
                 'product_name' => 'Intel i9 14900K',
@@ -125,7 +125,7 @@ class ProductSeeder extends Seeder
             [
                 'product_name' => 'NZXT H710 Case',
                 'product_model' => 'H710 Matte Black',
-                'product_part' => 'PC case',
+                'product_part' => 'Case',
                 'product_colour' => 'Black',
                 'category_id' => 1,
                 'product_price' => 200,
@@ -534,7 +534,7 @@ class ProductSeeder extends Seeder
             [
                 'product_name'=>'Lian Li Lancool 216',
                 'product_model'=>'LANCOOL 216RC-X',
-                'product_part'=>'PC Case',
+                'product_part'=>'Case',
                 'product_colour'=>'Black',
                 'category_id'=>1,
                 'product_price'=>95,
@@ -547,7 +547,7 @@ class ProductSeeder extends Seeder
             [
                 'product_name'=>'Fractal Design Pop Air',
                 'product_model'=>'PopAir',
-                'product_part'=>'PC Case',
+                'product_part'=>'Case',
                 'product_colour'=>'Black',
                 'category_id'=>1,
                 'product_price'=>90,
@@ -607,7 +607,7 @@ class ProductSeeder extends Seeder
                 'product_description'=> 'The definitive standard for those who believe an operating system should be built, not just installed. It offers a minimalist "rolling release" model, providing the latest software as soon as it\'s available. This is the unrivalled desktop experience for the architect who demands absolute system transparency and total ownership.',
                 'product_createdate'=>now(),
                 'product_stock'=>25,
-                'product_image'=>'https://github.com/Samdoses/CS2TP-Group-Project/blob/main/public/images/archusb.png?raw=true'
+                'product_image'=>'https://i.postimg.cc/0yKsVC9B/archusbnew.png'
             ]
         ]);
     }

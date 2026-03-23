@@ -25,10 +25,21 @@ return new class extends Migration
 
             $table->timestamps();
         });
+
+        Schema::create('website_reviews', function (Blueprint $table) {
+            $table->id();
+            $table->foreignId('user_id')->constrained()->onDelete('cascade');
+            $table->integer('rating'); // 1-5
+            $table->text('review_text');
+
+            $table->string('review_status')->default('Pending');
+            $table->timestamps();
+        });
     }
 
     public function down(): void
     {
         Schema::dropIfExists('reviews');
+        Schema::dropIfExists('website_reviews');
     }
 };

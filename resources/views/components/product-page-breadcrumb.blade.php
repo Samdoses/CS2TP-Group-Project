@@ -1,30 +1,26 @@
-<!--The navigation between the different levels of the storepage (WIP)-->
-
 @php
-    $categoryName = match($product->category_id) {
-    1 => 'Computer Components',
-    2 => 'Prebuilt PCs',
-    3 => 'Bundles',
-    default => 'Other'
+    $categoryName = match ($product->category_id) {
+        1 => 'Computer Components',
+        2 => 'Prebuilt PCs',
+        3 => 'Bundles',
+        default => 'Other',
     };
 @endphp
 
-<nav class="flex items-center text-sm mb-10 text-black" aria-label="Breadcrumb">
-    <ol class="flex items-center">
-        <li class="flex items-center">
-            <a href="/" class="hover:underline">Home</a>
-            <svg class="w-4 h-4 mx-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 5l7 7-7 7"></path></svg>
-        </li>
-        <li class="flex items-center">
-            <a href="/store" class="hover:underline">All products</a>
-            <svg class="w-4 h-4 mx-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 5l7 7-7 7"></path></svg>
-        </li>
-        <li class="flex items-center">
-            <a href="/store" class="hover:underline">{{$categoryName}}</a>
-            <svg class="w-4 h-4 mx-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 5l7 7-7 7"></path></svg>
-        </li>
+<nav class="mb-8" aria-label="Breadcrumb">
+    <ol class="flex flex-wrap items-center gap-2 text-sm text-slate-500 dark:text-slate-400">
         <li>
-            <span class="underline underline-offset-4 decoration-1" aria-current="page">{{ $product->product_name }}</span>
+            <a href="/" class="transition hover:text-slate-900 dark:hover:text-white">Home</a>
+        </li>
+        <li aria-hidden="true" class="text-slate-300 dark:text-slate-600">/</li>
+        <li>
+            <a href="/store" class="transition hover:text-slate-900 dark:hover:text-white">Store</a>
+        </li>
+        <li aria-hidden="true" class="text-slate-300 dark:text-slate-600">/</li>
+        <li>
+            <a href="/store?selectedCategories[0]={{ $product->category_id }}" class="transition hover:text-slate-900 dark:hover:text-white">
+                {{ $categoryName }}
+            </a>
         </li>
     </ol>
 </nav>

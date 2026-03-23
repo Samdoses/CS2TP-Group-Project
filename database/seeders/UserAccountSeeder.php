@@ -25,6 +25,18 @@ class UserAccountSeeder extends Seeder
                 'last_name' => 'Forest',
                 'email' => 'malteser@gmail.com',
                 'password'=>'$2y$12$i72J2cDpphmrXcrcAwxkfeBYgM5yeS5wLuArma1H8YV4M0fOfbc6q'
+            ],
+            [
+                'first_name' => 'Gibi',
+                'last_name' => 'Winter',
+                'email' => 'snow@gmail.com',
+                'password'=>'$2y$12$DRVnyw3fMAU6hunVvBeAhu.6BS3WeQICdU6H2jxV5cov2VluhoijO'
+            ],
+            [
+                'first_name' => 'Eddy',
+                'last_name' => 'Fish',
+                'email' => 'fish@gmail.com',
+                'password'=>'$2y$12$DRVnyw3fMAU6hunVvBeAhu.6BS3WeQICdU6H2jxV5cov2VluhoijO'
             ]
         ]);
     }

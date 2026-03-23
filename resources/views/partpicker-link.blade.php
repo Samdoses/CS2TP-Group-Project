@@ -2,7 +2,7 @@
 
 <x-layout>
 
-    @livewire('partpicker')
+    @livewire('PartPicker')
 
 </x-layout>
 

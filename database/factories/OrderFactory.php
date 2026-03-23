@@ -26,7 +26,7 @@ class OrderFactory extends Factory
             'total_price' => 0, //placeholder for the total price calculation
             'delivery_method' => $this->faker->randomElement(['standard','express']),
             'order_date' => $this->faker->dateTimeThisYear(),
-            'order_status' => $this->faker->randomElement(['Placed','Shipped','Delivered']), //add returned later
+            'order_status' => $this->faker->randomElement(['Placed','Shipped','Delivered','Cancelled']),
             'user_id' => $this->faker->randomElement([1, 2]), // only on linda or edwards account
             'created_at' => now(),
             'updated_at' => now(),

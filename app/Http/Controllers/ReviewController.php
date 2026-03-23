@@ -19,7 +19,7 @@ class ReviewController extends Controller
             abort(403, 'This is not your order.'); //send forbidden message 403
         }
 
-        if ($order->order_status !== 'Delivered') {
+        if (!$order->isReviewable()) {
             return redirect()->back()->with('error', 'You can only review delivered items.');
         }
 
@@ -45,14 +45,9 @@ class ReviewController extends Controller
             'review_image' => 'nullable|image|max:2048',
         ]);
 
-        //LATER AFTER JOT DOES THE ADMIN PAGE I WILL SEND REVIEWS THERE TO BE REVIEWED BEFORE POSTED
-        //because of evil cs2tp competitors
-        //saves the new review to the database where it is retrieved on the product page later
-        //i introuduce a new status for reviews here
-
         //double check authorisation again
         $order = Order::findOrFail($request->order_id);
-        if ($order->user_id !== Auth::id() || $order->order_status !== 'Delivered') {
+        if ($order->user_id !== Auth::id() || !$order->isReviewable()) {
             return redirect()->back()->withErrors(['security' => 'Unauthorised review attempt.']);
         }
 
@@ -62,12 +57,13 @@ class ReviewController extends Controller
 
         $review = new Review();
         $review->user_id = Auth::id();
-        $review->review_status = 'Pending';
+        $review->review_status = 'Approved';
         $review->order_id = $request->order_id;
         $review->product_id = $request->product_id;
         $review->rating = $request->rating;
         $review->review_text = $request->review_text;
         $review->created_at = now();
+        $review->updated_at = now();
 
         //image upload onto the github and phpmyadmin database
         if ($request->hasFile('review_image')) {
@@ -83,7 +79,7 @@ class ReviewController extends Controller
 
         $review->save();
 
-        return redirect()->route('profile.orders.show', $request->order_id)->with('success', 'Thank you for your review!');
+        return redirect()->route('profile.orders.show', $request->order_id)->with('success', 'Your review is now live on the product page.');
     }
 
     public function destroy(Review $review)
@@ -93,6 +89,7 @@ class ReviewController extends Controller
             abort(403, 'This is not your review.');
         }
 
+        //we dont really need this
         //deletes the review image from the database (as well as the github) as the review is deleted
         //later i will properly implement this as i still need the images for the seeder
         /*
@@ -103,6 +100,7 @@ class ReviewController extends Controller
             }
         }*/
         //i can delete it from the database because that doesnt affect the github files
+
         $review->delete();
 
         return redirect()->route('profile.reviews')->with('status', 'Review deleted successfully.');
@@ -136,7 +134,7 @@ public function update(Request $request, Review $review)
 
     $review->rating = $request->rating;
     $review->review_text = $request->review_text;
-    $review->review_status = 'Pending';
+    $review->review_status = 'Approved';
 
     if ($request->hasFile('review_image')) {
         //deletes old image if it exists
@@ -155,6 +153,6 @@ public function update(Request $request, Review $review)
 
     $review->save();
 
-    return redirect()->route('profile.reviews')->with('status', 'Review updated and is now pending approval!');
+    return redirect()->route('profile.reviews')->with('status', 'Review updated and published on the product page.');
 }
 }

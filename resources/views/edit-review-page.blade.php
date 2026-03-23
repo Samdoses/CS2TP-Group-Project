@@ -21,17 +21,17 @@
         </div>
     @endif
 
-    <div class="container mx-auto p-6">
-        <h1 class="text-3xl font-bold mb-6">Edit your Review</h1>
+    <div class="container mx-auto p-4 sm:p-6">
+        <h1 class="text-2xl sm:text-3xl font-bold mb-6">Edit your Review</h1>
 
         <div class="bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden">
-            <div class="p-6 md:p-10">
+            <div class="p-5 sm:p-6 md:p-10">
                 <!-- php obtain order details of the item -->
                 @php
                     $itemQuantity = $order->orderDetails->where('product_id', $product->id)->first()->quantity;
                 @endphp
                 <!--product information area -->
-                <div class="flex items-center gap-6 mb-10 p-4 bg-gray-50 rounded-xl border border-gray-100">
+                <div class="flex flex-col sm:flex-row sm:items-center gap-5 sm:gap-6 mb-10 p-4 bg-gray-50 rounded-xl border border-gray-100">
                     <div class="w-20 h-20 bg-white rounded-lg shadow-sm flex-shrink-0 flex items-center justify-center overflow-hidden border">
                         @if($product->product_image)
                             <img src="{{ asset($product->product_image) }}" alt="{{ $product->product_name }}" class="object-cover w-full h-full">
@@ -42,8 +42,8 @@
                         @endif
                     </div>
                     <div>
-                        <a href="/product/{{$review->product->id}}" class="text-2xl font-bold text-gray-800">{{ $product->product_name }}</a>
-                        <div class="flex items-center gap-3 mt-1">
+                        <a href="/product/{{$review->product->id}}" class="text-xl sm:text-2xl font-bold text-gray-800">{{ $product->product_name }}</a>
+                        <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3 mt-1">
                             <p class="text-sm text-gray-500 font-medium">Purchased {{ $itemQuantity }} in Order #{{ $order->id }}</p>
                             <div class="mt-2">
                                 <span class="px-3 py-1 rounded-full text-xs font-semibold {{ $order->getColourStatus() }}">
@@ -124,11 +124,11 @@
                     </div>
 
                     <!-- cancelling and submitting -->
-                    <div class="flex items-center justify-end gap-4 pt-6 border-t border-gray-100">
+                    <div class="flex flex-col-reverse sm:flex-row sm:items-center sm:justify-end gap-3 sm:gap-4 pt-6 border-t border-gray-100">
                         <a href="{{ route('profile.orders') }}" class="text-gray-600 hover:text-gray-900 font-medium transition">
                             Cancel
                         </a>
-                        <button type="submit" class="px-8 py-3 bg-indigo-600 text-white font-bold rounded-md shadow hover:bg-indigo-700 transform transition active:scale-95">
+                        <button type="submit" class="w-full sm:w-auto px-8 py-3 bg-indigo-600 text-white font-bold rounded-md shadow hover:bg-indigo-700 transform transition active:scale-95">
                             Submit Review
                         </button>
                     </div>

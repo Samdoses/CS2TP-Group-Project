@@ -15,16 +15,21 @@ class CreateNewUser implements CreatesNewUsers
     public function create(array $input): User
     {
         Validator::make($input, [
-            'first_name' => ['required', 'string', 'max:255'],
-            'last_name' => ['required', 'string', 'max:255'],
+            // Added min:2, max:50, and regex to ensure names only contain letters, spaces, hyphens, and apostrophes
+            'first_name' => ['required', 'string', 'min:2', 'max:50', 'regex:/^[a-zA-Z\s\-\']+$/'],
+            'last_name' => ['required', 'string', 'min:2', 'max:50', 'regex:/^[a-zA-Z\s\-\']+$/'],
             'email' => [
                 'required',
                 'string',
-                'email',
+                'email:rfc,dns', // Enforces strict RFC standards and checks if the domain actually exists
                 'max:255',
                 Rule::unique(User::class),
             ],
             'password' => $this->passwordRules(),
+        ], [
+            // Custom error messages for the regex validation
+            'first_name.regex' => 'The first name may only contain letters, spaces, hyphens, and apostrophes.',
+            'last_name.regex' => 'The last name may only contain letters, spaces, hyphens, and apostrophes.',
         ])->validate();
 
         return User::create([

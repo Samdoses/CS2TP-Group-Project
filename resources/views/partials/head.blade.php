@@ -3,6 +3,18 @@
 
 <title>{{ $title ?? config('app.name') }}</title>
 
+<script>
+    (function () {
+        try {
+            var storedTheme = localStorage.getItem('theme');
+            var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            document.documentElement.classList.toggle('dark', storedTheme ? storedTheme === 'dark' : prefersDark);
+        } catch (error) {
+            document.documentElement.classList.toggle('dark', window.matchMedia('(prefers-color-scheme: dark)').matches);
+        }
+    })();
+</script>
+
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -12,3 +24,4 @@
 
 @vite(['resources/css/app.css', 'resources/js/app.js'])
 @fluxAppearance
+@include('partials.theme-overrides')

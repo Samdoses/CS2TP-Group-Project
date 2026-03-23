@@ -20,7 +20,7 @@
         </div>
     @endif
 
-    <main class="container mx-auto px-6 py-8 max-w-7xl">
+    <main class="container mx-auto px-4 py-6 sm:px-6 sm:py-8 max-w-7xl">
         <x-product-page-breadcrumb :product="$product"/>
 
 
@@ -30,7 +30,7 @@
             <input type="hidden" name="product_id" value="{{ $product->id }}">
             <input type="hidden" name="quantity" value="1"> <!-- doing 1 for now -->
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 lg:gap-20">
 
                 @php
                     $title = $product->product_name;
@@ -42,6 +42,7 @@
                     $price = number_format($product->product_price, 2);
                     $stock = $product->product_stock;
                     $colour = $product->product_colour;
+                    $pcPart = $product->product_part;
                     //we will only use approved review stats for the products
                     $approvedReviews = $reviews;
 
@@ -53,18 +54,43 @@
 
                 <div class="flex flex-col pt-2">
 
-                    <x-product-page-header :title=$title :brandName=$brandName :avgRating="$avgRating" :totalReviews="$totalReviews" />
-
-                    <p class="text-gray-700 text-lg mb-10">{{ $description }}</p>
+                    <x-product-page-header :title=$title :pcPart=$pcPart :brandName=$brandName :avgRating="$avgRating" :totalReviews="$totalReviews" />
 
                     <x-product-page-variant-selecter :variant1="$colour" />
 
+                    <p class="text-gray-700 text-base sm:text-lg mb-5">{{ $description }}</p>
+
+                    <div class="mt-1 py-3 pb-5 border-t border-gray-800">
+                        <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-6 sm:mb-8 flex items-center gap-2">
+                            Specifications
+                        </h3>
+
+                        @if($specs->isEmpty())
+                            <p class="text-gray-500 italic">No specific technical data available for this model.</p>
+                        @else
+                        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                            @foreach($specs as $spec)
+                                <div class="bg-gray-50/50 border border-gray-800 p-5 rounded-2xl hover:bg-white dark:hover:bg-white/70 hover:shadow-xl hover:shadow-indigo-500/5 transition-all duration-300 group">
+                                    <p class="text-xs font-bold uppercase tracking-wider text-gray-400 dark:text-black mb-1 group-hover:text-indigo-500 transition-colors">
+                                        {{ str_replace('_', ' ', $spec->spec_key) }}
+                                    </p>
+                                    <p class="text-lg font-semibold text-gray-800">
+                                        {{ $spec->spec_value }}
+                                    </p>
+                                </div>
+                            @endforeach
+
+                        </div>
+                        @endif
+                    </div>
+
                     <x-product-page-purchase-actions :stock=$stock :price=$price />
                 </div>
+
             </div>
         </form>
 
-        @if ($approvedReviews->where('review_status', 'Approved')->count() > 0)
+                @if ($approvedReviews->where('review_status', 'Approved')->count() > 0)
             <div class="w-full p-4 border-2 border-grey-500 rounded-lg mt-10">
                 <h3 class="text-lg font-bold mb-4 text-center"> Customer Reviews </h3>
 
@@ -95,36 +121,34 @@
                                             @for ($i = 1; $i <= 5; $i++)
                                                 <span>{{ $i <= $review->rating ? '★' : '☆' }}</span>
                                             @endfor
-                                        </div>
-                                    </div>
-                                    <span class="text-xs text-gray-500">{{ $review->created_at->format('d F Y') }}</span>
-                                </div>
-
-                                @if(strlen($review->review_text) > 150)
-                                        <p class="text-sm text-gray-600 italic"> "{{ \Illuminate\Support\Str::limit($review->review_text, 110, '...') }}" </p>
-                                        <a href="{{ route('reviews.image.show', $review->id) }}"
-                                            class="text-indigo-600 font-medium hover:underline ml-1">
-                                            Read full review
-                                        </a>
-                                @elseif (empty($review->review_text))
-                                        <p class="text-xs text-gray-400 italic">No written comment provided.</p>
-                                @else
-                                    <p class="text-sm text-gray-600 italic">"{{ $review->review_text }}"</p>
-                                        <a href="{{ route('reviews.image.show', $review->id) }}"
-                                        class="text-indigo-600 font-medium hover:underline ml-1">
-                                            Read full review
-                                        </a>
-                                @endif
-
-                                <div class="mt-4 flex items-center gap-3">
-                                    <span class="text-[10px] font-bold uppercase text-green-600 bg-green-50 px-2 py-0.5 rounded border border-green-100">
-                                        Verified Purchase
-                                    </span>
                                 </div>
                             </div>
+                            <span class="text-xs text-gray-500">{{ $review->created_at->format('d F Y') }}</span>
+                        </div>
+
+                        @if(strlen($review->review_text) > 150)
+                            <p class="text-sm text-gray-600 italic">"{{ \Illuminate\Support\Str::limit($review->review_text, 110, '...') }}"</p>
+                        @elseif(empty($review->review_text))
+                            <p class="text-xs text-gray-600 italic">No written comment provided.</p>
+                        @else
+                            <p class="text-sm text-gray-600 italic">"{{ $review->review_text }}"</p>
+                        @endif
+
+                        <div class="mt-4 flex items-center gap-3">
+                            <span class="text-[10px] font-bold uppercase text-green-600 bg-green-50 px-2 py-0.5 rounded border border-green-100">
+                                Verified Purchase
+                            </span>
+                            @if(!empty($review->review_text))
+                                <a href="{{ route('reviews.image.show', $review->id) }}"
+                                   class="text-xs text-gray-800 dark:text-gray-200 border border-gray-300 dark:border-gray-600 rounded-md px-3 py-1 hover:bg-indigo-500 hover:text-white hover:border-indigo-500">
+                                   Read full review
+                                </a>
+                            @endif
                         </div>
                     </div>
-                @endforeach
+                </div>
+            </div>
+        @endforeach
 
                 <!--pagination links-->
                 @if($reviews->hasPages())

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Request;
 use App\Models\Product;
+use Illuminate\Support\Facades\DB;
 class ProductController extends Controller
 {
     public function index()
@@ -15,8 +16,9 @@ class ProductController extends Controller
     public function show(Product $product)
     {
         $reviews = $product->reviews()->where('review_status', 'Approved')->latest()->paginate(3);
+        $specs = DB::table('product_specs')->where('product_id', $product->id)->get();
 
-        return view('product-page', compact('product', 'reviews'));
+        return view('product-page', compact('product','specs', 'reviews'));
     }
 
 }

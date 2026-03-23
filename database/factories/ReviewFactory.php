@@ -48,15 +48,30 @@ class ReviewFactory extends Factory
             $order = $validItem->order;
         }
 
+        //creates some responses so that the reviews seem legit
+        $positives = [
+            'The quality is really good.',
+            'Runs very well!',
+            'Definitely worth the price.',
+            'Really good performance.',
+            'Looks great!'
+        ];
+
+        $negatives = [
+            'A bit on the pricier side, but its performing well.',
+            'Shipping took a while, but it arrived well-packaged.'
+        ];
+        $isPositive = fake()->boolean(80); // 80% chance of a good review
 
         //selects a product from that list
         $productItem = OrderDetail::where('order_id', $order->id)->inRandomOrder()->first();
 
+
         return [
-            'rating' => $this->faker->numberBetween(3, 5), //mostly positive reviews
+            'rating' => $isPositive ? 5 : fake()->numberBetween(3, 4), //mostly positive reviews based on odds
             'review_image' => null,
             'review_status' => $this->faker->randomElement(['Approved', 'Approved', 'Approved', 'Pending', 'Pending', 'Rejected']),
-            'review_text' => $this->faker->paragraph(rand(1, 4)), //generates 50-500 chars
+            'review_text' => $isPositive ? fake()->randomElement($positives) : fake()->randomElement($negatives), //chooses a random positive/negative response (higher odds of positive)
             'review_date' => $order->order_date,
             'user_id' => $order->user_id,
             'order_id' => $order->id,

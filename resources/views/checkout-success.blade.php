@@ -16,15 +16,15 @@
 
             <!--order price -->
             @if(session('order_total'))
-            <p><strong>Total Paid:</strong> £{{ number_format(session('order_total'), 2) }}</p>
+            <p><strong> Total Paid: </strong> £{{ number_format(session('order_total'), 2) }}</p>
             @endif
-        
+
             <br>
 
         <!-- the back to store button -->
          <div class="flex flex-col sm:flex-row justify-center gap-4">
             <a href= "{{route('store.index')}}" class= "rounded-lg border border-gray-300 bg-white px-6 py-3 text-lg font-bold text-grey-700 shadow-sm transition hover:bg-gray-100">
-            Back to Store 
+            Continue Shopping  
         </a>
 
         <!-- the order history button -->

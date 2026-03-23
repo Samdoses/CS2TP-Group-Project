@@ -14,10 +14,8 @@ class User extends Authenticatable
 {
     /** @use HasFactory<\Database\Factories\UserFactory> */
     use HasFactory, Notifiable, TwoFactorAuthenticatable;
-    public $timestamps = false;
 
     protected $fillable = [
-
         'first_name',
         'last_name',
         'email',
@@ -25,14 +23,12 @@ class User extends Authenticatable
         'google_id',
     ];
 
-
     protected $hidden = [
         'password',
         'two_factor_secret',
         'two_factor_recovery_codes',
         'remember_token',
     ];
-
 
     protected function casts(): array
     {
@@ -42,9 +38,6 @@ class User extends Authenticatable
         ];
     }
 
-    /**
-     * Get the user's initials
-     */
     public function initials(): string
     {
         $source = $this->first_name . ' ' . $this->last_name;
@@ -58,7 +51,6 @@ class User extends Authenticatable
 
     public function orders()
     {
-        // A User has many Orders
         return $this->hasMany(Order::class);
     }
 
@@ -70,5 +62,10 @@ class User extends Authenticatable
     public function reviews()
     {
         return $this->hasMany(Review::class);
+    }
+
+    public function contactMessages()
+    {
+        return $this->hasMany(ContactMessage::class);
     }
 }

@@ -2,119 +2,120 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Cache;
-use Illuminate\Support\Facades\Mail;
+use App\Models\ContactMessage;
 use App\Models\Order;
 use App\Models\Review;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Mail;
 
 class ProfileController extends Controller
 {
-
-    // display users details
     public function index()
     {
         $user = Auth::user();
-
         $orders = $user->orders()->latest()->paginate(10);
 
-        return view('profile.edit', [
+        return $this->profileView([
             'user' => $user,
-            'orders' => $orders
+            'orders' => $orders,
         ]);
     }
 
-    // Order page
     public function orders()
     {
-        $orders = Auth::user()->orders()->latest()->paginate(10);
-
-        return view('profile.edit', [
+        return $this->profileView([
             'user' => Auth::user(),
-            'orders' => $orders
+            'orders' => Auth::user()->orders()->latest()->paginate(10),
         ]);
     }
 
-    public function viewOrder($orderId) {
+    public function viewOrder($orderId)
+    {
+        $order = Order::where('user_id', Auth::id())->with('orderDetails.product')->findOrFail($orderId);
+        $returns = $order->returns()->with('product')->latest()->get();
 
-        $order = Order::with('orderDetails.product')->findOrFail($orderId);
-        return view('profile.partials.view-past-order-details', compact('order'));
+        return view('profile.partials.view-past-order-details', compact('order', 'returns'));
     }
 
-    public function reviews() {
-
+    public function reviews()
+    {
         $user = Auth::user();
-
-        //Fetch user reviews with the product relationship so we can show what they reviewed
         $reviews = Review::where('user_id', $user->id)->with('product')->latest()->paginate(4);
 
-        return view('profile.edit', [
+        return $this->profileView([
             'user' => $user,
-            'reviews' => $reviews
-    ]);
+            'reviews' => $reviews,
+        ]);
     }
-
 
     public function security()
     {
-        return view('profile.edit', [
-            'user' => Auth::user()
+        return $this->profileView([
+            'user' => Auth::user(),
         ]);
     }
 
+    public function messages()
+    {
+        $user = Auth::user();
+
+        ContactMessage::query()
+            ->where('user_id', $user->id)
+            ->whereNotNull('admin_reply')
+            ->where('customer_seen_reply', false)
+            ->update(['customer_seen_reply' => true]);
+
+        return $this->profileView([
+            'user' => $user,
+            'messages' => ContactMessage::query()
+                ->where('user_id', $user->id)
+                ->latest()
+                ->paginate(10),
+        ]);
+    }
 
     public function update(Request $request)
     {
         $user = $request->user();
 
-        // 1. Validate Input
         $validated = $request->validate([
             'first_name' => ['required', 'string', 'max:255'],
-            'last_name'  => ['required', 'string', 'max:255'],
-            'email'      => ['required', 'email', 'max:255', 'unique:users,email,' . $user->id],
+            'last_name' => ['required', 'string', 'max:255'],
+            'email' => ['required', 'email', 'max:255', 'unique:users,email,' . $user->id],
         ]);
 
-        // 2. Update Basic Info (Name) immediately
         $user->update([
             'first_name' => $validated['first_name'],
-            'last_name'  => $validated['last_name'],
+            'last_name' => $validated['last_name'],
         ]);
 
-        // 3. Check if Email is being changed
         if ($validated['email'] !== $user->email) {
-
-            // Generate a 6-digit code
             $code = rand(100000, 999999);
 
-            // Store the NEW email and the CODE in Cache for 10 minutes
-            // Key is unique to the user
             Cache::put('email_update_' . $user->id, [
                 'new_email' => $validated['email'],
-                'code' => $code
+                'code' => $code,
             ], 600);
 
-            // Send email to the EXISTING (Current) email
             Mail::raw("Your email update verification code is: $code", function ($message) use ($user) {
                 $message->to($user->email)
-                        ->subject('Verify Email Change');
+                    ->subject('Verify Email Change');
             });
 
-            // Redirect to the verification page
             return redirect()->route('profile.verify-email');
         }
 
         return back()->with('status', 'Profile updated successfully!');
     }
 
-    // Show the OTP Entry Form
     public function verifyEmailPage()
     {
         return view('profile.partials.verify-email');
     }
 
-    // Process the OTP
     public function verifyEmailAction(Request $request)
     {
         $request->validate([
@@ -125,17 +126,14 @@ class ProfileController extends Controller
         $cacheKey = 'email_update_' . $userId;
         $cachedData = Cache::get($cacheKey);
 
-        // Check if code exists and matches
-        if (!$cachedData || $cachedData['code'] != $request->code) {
+        if (! $cachedData || $cachedData['code'] != $request->code) {
             return back()->withErrors(['code' => 'Invalid or expired verification code.']);
         }
 
-        // Update the User's Email
         Auth::user()->update([
-            'email' => $cachedData['new_email']
+            'email' => $cachedData['new_email'],
         ]);
 
-        // Clear the cache
         Cache::forget($cacheKey);
 
         return redirect()->route('profile.security')->with('status', 'Email updated successfully!');
@@ -146,7 +144,6 @@ class ProfileController extends Controller
         return view('profile.change-password');
     }
 
-    //update password
     public function updatePassword(Request $request)
     {
         $validated = $request->validateWithBag('password_update', [
@@ -157,14 +154,23 @@ class ProfileController extends Controller
             'password.confirmed' => 'The new password confirmation does not match.',
         ]);
 
-
         $request->user()->update([
             'password' => Hash::make($validated['password']),
         ]);
 
-
         return back()->with('status', 'password-updated');
     }
 
+    private function profileView(array $data)
+    {
+        $user = $data['user'] ?? Auth::user();
+        $data['unreadReplyCount'] = $user
+            ? $user->contactMessages()
+                ->whereNotNull('admin_reply')
+                ->where('customer_seen_reply', false)
+                ->count()
+            : 0;
 
+        return view('profile.edit', $data);
+    }
 }
