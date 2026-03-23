@@ -1,276 +1,342 @@
 <x-header></x-header>
-
 <x-layout>
-    <div class="grid grid-cols-1 md:grid-cols-2 bg-gray-200 mb-10 md:mb-12">
 
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
 
-        <div class="h-56 overflow-hidden sm:h-72 md:h-auto">
-            <img src="/images/hero_pc.jpg" alt="Cool PC" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
-        </div>
+<div class="min-h-screen bg-orange-50 dark:bg-[#0f0a1e] transition-colors duration-500">
 
-        <div class="p-6 sm:p-8 md:p-12 flex flex-col justify-center">
+    <section class="relative overflow-hidden px-4 pt-16 pb-24 sm:pt-24 sm:pb-32">
 
-            <h1 class="text-2xl sm:text-3xl font-bold mb-4 text-gray-900">
-                "Your Dream Build. Without the Guesswork."
-            </h1>
+        <!-- bubbly background -->
+        <div class="pointer-events-none absolute -top-32 -left-32 w-[500px] h-[500px] rounded-full opacity-30 dark:opacity-20 blur-3xl bg-orange-400 dark:bg-violet-700"></div>
+        <div class="pointer-events-none absolute top-10 -right-24 w-[400px] h-[400px] rounded-full opacity-20 dark:opacity-10 blur-3xl bg-amber-300 dark:bg-purple-600"></div>
 
-            <p class="text-gray-600 mb-6 sm:mb-8">
-                    We offer the best prices on CPUs, GPUs and pre-builts. Better service, better gaming.
-            </p>
+        <div class="relative z-10 max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
 
-            <div class="flex flex-col sm:flex-row gap-3 sm:gap-4">
-                <a href="/store" class="bg-gray-900 text-white px-6 py-3 rounded text-center hover:bg-gray-700">
-                    Shop Now
-                </a>
-                <a href="/build-guide" class="bg-gray-900 text-white px-6 py-3 rounded text-center hover:bg-gray-600">
-                    Build Guide
-                </a>
+            <div class="py-3">
+                <h1 class="text-5xl sm:text-6xl font-black leading-tight tracking-tight mb-6 text-gray-900 dark:text-white">
+                    Your Dream Build,<br>
+                    <span class="text-orange-500 dark:text-violet-400">No Guesswork.</span>
+                </h1>
+
+                <p class="text-lg text-gray-500 dark:text-gray-400 mb-8 leading-relaxed max-w-md">
+                    CPUs, GPUs, pre-builts, and bundles all in one place. We make PC building feel like a joy, not a headache.
+                </p>
+
+                <div class="flex flex-wrap gap-3">
+                    <a href="/store"
+                       class="inline-flex items-center gap-2 px-7 py-3.5 rounded-2xl font-bold text-white bg-orange-500 dark:bg-violet-600 hover:bg-orange-600 dark:hover:bg-violet-700 shadow-lg shadow-orange-300/50 dark:shadow-violet-900/50 transition-all duration-200 hover:scale-105 active:scale-95">
+                        <i data-lucide="shopping-bag" class="w-4 h-4"></i>
+                        Shop Now
+                    </a>
+                    <a href="/build-guide"
+                       class="inline-flex items-center gap-2 px-7 py-3.5 rounded-2xl font-bold border-2 border-orange-200 dark:border-violet-600 text-gray-700 dark:text-gray-200 bg-white dark:bg-violet-950/40 hover:border-orange-400 dark:hover:border-violet-500 transition-all duration-200 hover:scale-105 active:scale-95">
+                        <i data-lucide="book-open" class="w-4 h-4 text-orange-500 dark:text-violet-400"></i>
+                        Build Guide
+                    </a>
+                </div>
+
+                <div class="flex flex-wrap gap-6 mt-10">
+                    <div class="flex items-center gap-2 text-sm font-semibold text-gray-500 dark:text-gray-400">
+                        <i data-lucide="shield-check" class="w-4 h-4 text-orange-500 dark:text-violet-400"></i> 2-Year Warranty
+                    </div>
+                    <div class="flex items-center gap-2 text-sm font-semibold text-gray-500 dark:text-gray-400">
+                        <i data-lucide="truck" class="w-4 h-4 text-orange-500 dark:text-violet-400"></i> Fast Delivery
+                    </div>
+                    <div class="flex items-center gap-2 text-sm font-semibold text-gray-500 dark:text-gray-400">
+                        <i data-lucide="headphones" class="w-4 h-4 text-orange-500 dark:text-violet-400"></i> Expert Support
+                    </div>
+                </div>
+            </div>
+
+            <div class="relative hidden md:block">
+                <div class="absolute inset-0 -m-4 rounded-[2.5rem] blur-2xl opacity-20 bg-gradient-to-br from-orange-400 to-amber-300 dark:from-violet-600 dark:to-purple-400"></div>
+                <div class="relative rounded-[2.5rem] overflow-hidden border-4 border-orange-200 dark:border-violet-700 shadow-2xl">
+                    <img src="/images/hero_pc.jpg" alt="Cool PC" class="w-full h-80 object-cover transition-transform duration-700 hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-orange-900/20 dark:from-violet-900/30 to-transparent"></div>
+                </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-
-            <a href="/store?selectedCategories[0]=1" class="block group">
-                <div class="transform transition duration-300 hover:translate-y-2 hover:shadow-lg">
-                    <div class="h-48 bg-gray-300 rounded-lg mb-3 flex items-center justify-center group-hover:bg-gray-400 transition">
-                        <span class="text-gray-500 font-bold text-xl">Components</span>
-                    </div>
-                </div>
-                <h3 class="text-lg font-semibold">Shop Individual Parts</h3>
-            </a>
-
-            <a href="/store?selectedCategories[0]=2" class="block group">
-                <div class="transform transition duration-300 hover:translate-y-1 hover:shadow-lg">
-                    <div class="h-48 bg-gray-300 rounded-lg mb-3 flex items-center justify-center group-hover:bg-gray-400 transition">
-                        <span class="text-gray-500 font-bold text-xl">Pre-Built</span>
-                    </div>
-                </div>
-
-                <h3 class="text-lg font-semibold">Ready to Game</h3>
-            </a>
-
-            <a href="/store?selectedCategories[0]=3" class="block group">
-                <div class="transform transition duration-300 hover:translate-y-2 hover:shadow-lg">
-                    <div class="h-48 bg-gray-300 rounded-lg mb-3 flex items-center justify-center group-hover:bg-gray-400 transition">
-                        <span class="text-gray-500 font-bold text-xl">Bundles</span>
-                    </div>
-                </div>
-
-                <h3 class="text-lg font-semibold">Save with Bundles</h3>
-            </a>
+    <section class="px-4 py-16 max-w-6xl mx-auto">
+        <div class="text-center mb-10">
+            <h2 class="text-3xl font-black text-gray-900 dark:text-white mb-2">Browse the Shop</h2>
+            <p class="text-gray-500 dark:text-gray-400">Whatever you need, we've got it.</p>
         </div>
 
-    </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
 
-    <div class="bg-gray-100 py-12 mb-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <a href="/store?selectedCategories[0]=1"
+               class="group relative rounded-[1.75rem] overflow-hidden border-2 border-orange-200 dark:border-violet-800 bg-gradient-to-br from-orange-50 to-orange-100 dark:from-[#1a1030] dark:to-[#150d28] transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-orange-200/50 dark:hover:shadow-violet-900/50">
+                <div class="absolute top-0 right-0 w-32 h-32 rounded-full opacity-20 -translate-y-8 translate-x-8 bg-orange-400 dark:bg-violet-600"></div>
+                <div class="p-8">
+                    <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-5 shadow-lg bg-gradient-to-br from-orange-400 to-orange-600 dark:from-violet-500 dark:to-violet-700">
+                        <i data-lucide="cpu" class="w-7 h-7 text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-black text-gray-900 dark:text-gray-100 mb-2">Components</h3>
+                    <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">CPUs, GPUs, RAM, SSDs & more.</p>
+                    <span class="inline-flex items-center gap-1 text-sm font-bold text-orange-600 dark:text-violet-400">
+                        Shop Parts <i data-lucide="arrow-right" class="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1"></i>
+                    </span>
+                </div>
+            </a>
 
-            <h2 class="text-3xl font-bold text-center mb-10">Best Sellers</h2>
+            <a href="/store?selectedCategories[0]=2"
+               class="group relative rounded-[1.75rem] overflow-hidden border-2 border-orange-200 dark:border-violet-800 bg-gradient-to-br from-orange-50 to-orange-100 dark:from-[#1a1030] dark:to-[#150d28] transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-orange-200/50 dark:hover:shadow-violet-900/50">
+                <div class="absolute top-0 right-0 w-32 h-32 rounded-full opacity-20 -translate-y-8 translate-x-8 bg-amber-400 dark:bg-purple-600"></div>
+                <div class="p-8">
+                    <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-5 shadow-lg bg-gradient-to-br from-amber-400 to-orange-500 dark:from-purple-500 dark:to-violet-700">
+                        <i data-lucide="monitor" class="w-7 h-7 text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-black text-gray-900 dark:text-gray-100 mb-2">Pre-Built PCs</h3>
+                    <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">Plug in and play. Ready to game.</p>
+                    <span class="inline-flex items-center gap-1 text-sm font-bold text-orange-600 dark:text-violet-400">
+                        Shop Pre-Builts <i data-lucide="arrow-right" class="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1"></i>
+                    </span>
+                </div>
+            </a>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <a href="/store?selectedCategories[0]=3"
+               class="group relative rounded-[1.75rem] overflow-hidden border-2 border-orange-200 dark:border-violet-800 bg-gradient-to-br from-orange-50 to-orange-100 dark:from-[#1a1030] dark:to-[#150d28] transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-orange-200/50 dark:hover:shadow-violet-900/50">
+                <div class="absolute top-0 right-0 w-32 h-32 rounded-full opacity-20 -translate-y-8 translate-x-8 bg-yellow-400 dark:bg-indigo-600"></div>
+                <div class="p-8">
+                    <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-5 shadow-lg bg-gradient-to-br from-yellow-400 to-orange-500 dark:from-indigo-500 dark:to-violet-700">
+                        <i data-lucide="package" class="w-7 h-7 text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-black text-gray-900 dark:text-gray-100 mb-2">Bundles</h3>
+                    <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">Curated sets. Save more, build more.</p>
+                    <span class="inline-flex items-center gap-1 text-sm font-bold text-orange-600 dark:text-violet-400">
+                        Shop Bundles <i data-lucide="arrow-right" class="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1"></i>
+                    </span>
+                </div>
+            </a>
 
-                @foreach ( $bestSellers as $product )
+        </div>
+    </section>
 
-                    @php
-                        $avgRating = $product->reviews_avg_rating ?? 0;
-                    @endphp
+    <section class="px-4 py-16 bg-gradient-to-b from-orange-50 to-orange-100 dark:from-[#130920] dark:to-[#0f0a1e]">
+        <div class="max-w-6xl mx-auto">
 
+            <div class="flex items-center justify-between mb-10 flex-wrap gap-4">
+                <div>
+                    <h2 class="text-3xl font-black text-gray-900 dark:text-white">Best Sellers 🔥</h2>
+                    <p class="text-gray-500 dark:text-gray-400 mt-1">Our most-loved products right now.</p>
+                </div>
+                <a href="/store"
+                   class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl border-2 border-orange-200 dark:border-violet-700 font-bold text-sm text-orange-600 dark:text-violet-400 bg-white dark:bg-violet-950/40 transition-all duration-200 hover:scale-105">
+                    View All <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </a>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                @foreach($bestSellers as $product)
+                    @php $avgRating = $product->reviews_avg_rating ?? 0; @endphp
                     <form method="POST" action="{{ route('basket.add') }}">
-
-                        <input type="hidden" name="product_id" value="{{$product->id}}">
+                        <input type="hidden" name="product_id" value="{{ $product->id }}">
                         <input type="hidden" name="quantity" value="1">
                         @csrf
-                            <div class="transform transition duration-200 hover:scale-105 hover:shadow-lg">
-                                <a href="{{ route('product.show', $product->id)}}" class="block">
-                                    <x-product-card
-                                        title="{{$product->product_name}}"
-                                       tagline="{{$product->product_tagline}}"
-                                        price="{{$product->product_price}}"
-                                        image="{{$product->product_image}}"
-                                        :avgRating="$avgRating"
-                                        :context="'index'"
-
-                                    />
-                                </a>
-                            </div>
+                        <div class="group rounded-[1.75rem] border-2 border-orange-200 dark:border-violet-800 overflow-hidden bg-white dark:bg-[#1a1030] transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-orange-200/50 dark:hover:shadow-violet-900/50">
+                            <a href="{{ route('product.show', $product->id) }}" class="block">
+                                <x-product-card
+                                    title="{{ $product->product_name }}"
+                                    tagline="{{ $product->product_tagline }}"
+                                    price="{{ $product->product_price }}"
+                                    image="{{ $product->product_image }}"
+                                    :avgRating="$avgRating"
+                                    :context="'index'"
+                                />
+                            </a>
+                        </div>
                     </form>
-
                 @endforeach
-
             </div>
         </div>
-    </div>
+    </section>
 
-    <div class="bg-gray-50 py-16">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="flex items-center w-full justify-center">
-                <div class="hidden md:block -mt-12">
-                    <img src="{{asset('images/reviewmouse.png')}}" class="w-40 h-40 object-scale-down">
+    <section class="px-4 py-20 max-w-6xl mx-auto">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-black text-gray-900 dark:text-white mb-3">Why Happy Hardware?</h2>
+            <p class="text-gray-500 dark:text-gray-400 max-w-md mx-auto">We're not just a shop — we're your building buddy.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+            <div class="text-center p-8 rounded-[1.75rem] border-2 border-orange-200 dark:border-violet-800 bg-orange-50 dark:bg-[#1a1030] transition-all hover:shadow-xl hover:shadow-orange-100 dark:hover:shadow-violet-900/30">
+                <div class="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-5 text-2xl shadow-lg bg-gradient-to-br from-orange-400 to-orange-600 dark:from-violet-500 dark:to-violet-700">
+                    📦
                 </div>
-                <div class="text-center mb-10 md:mb-12">
-                    <h2 class="text-2xl sm:text-3xl font-bold text-gray-900">What Our Users Say</h2>
-                    <p class="text-gray-600 mt-2">Real feedback from our community.</p>
+                <h3 class="text-lg font-black text-gray-900 dark:text-gray-100 mb-2">Expert-Picked Bundles</h3>
+                <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">Our team picks the best compatible parts so you don't have to.</p>
+            </div>
+
+            <div class="text-center p-8 rounded-[1.75rem] border-2 border-orange-200 dark:border-violet-800 bg-orange-50 dark:bg-[#1a1030] transition-all hover:shadow-xl hover:shadow-orange-100 dark:hover:shadow-violet-900/30">
+                <div class="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-5 text-2xl shadow-lg bg-gradient-to-br from-amber-400 to-orange-500 dark:from-purple-500 dark:to-violet-700">
+                    🔧
                 </div>
-                <div class="hidden md:block -mt-12">
-                    <img src="{{asset('images/reviewmouse.png')}}" class="w-40 h-40 object-scale-down -scale-x-100">
+                <h3 class="text-lg font-black text-gray-900 dark:text-gray-100 mb-2">Compatibility Checker</h3>
+                <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">Use our Part Picker to make sure everything works together perfectly.</p>
+            </div>
+
+            <div class="text-center p-8 rounded-[1.75rem] border-2 border-orange-200 dark:border-violet-800 bg-orange-50 dark:bg-[#1a1030] transition-all hover:shadow-xl hover:shadow-orange-100 dark:hover:shadow-violet-900/30">
+                <div class="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-5 text-2xl shadow-lg bg-gradient-to-br from-yellow-400 to-orange-500 dark:from-indigo-500 dark:to-violet-700">
+                    📖
                 </div>
+                <h3 class="text-lg font-black text-gray-900 dark:text-gray-100 mb-2">Step-by-Step Guides</h3>
+                <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">Never built a PC? No worries. Our guides walk you through every step.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="px-4 py-16 bg-gradient-to-b from-orange-50 to-orange-100 dark:from-[#0f0a1e] dark:to-[#130920]">
+        <div class="max-w-6xl mx-auto">
+
+            <div class="flex items-center justify-center gap-4 mb-10 flex-wrap">
+                <img src="{{ asset('images/reviewmouse.png') }}" class="w-16 h-16 object-contain hidden sm:block -scale-x-100">
+                <div class="text-center">
+                    <h2 class="text-3xl font-black text-gray-900 dark:text-white">What People Say 💬</h2>
+                    <p class="text-gray-500 dark:text-gray-400 mt-1">Real reviews from real builders.</p>
+                </div>
+                <img src="{{ asset('images/reviewmouse.png') }}" class="w-16 h-16 object-contain hidden sm:block">
             </div>
 
             @auth
                 @if($userReview)
-                    <div class="max-w-3xl mx-auto mb-12 bg-white p-5 sm:p-6 rounded-2xl border-2 border-indigo-100 shadow-sm">
-                        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-4">
+                    <div class="max-w-2xl mx-auto mb-10 p-6 rounded-[1.75rem] border-2 border-orange-200 dark:border-violet-800 bg-orange-50 dark:bg-[#1a1030]">
+                        <div class="flex items-center justify-between mb-3 flex-wrap gap-3">
                             <div class="flex items-center gap-3">
-                                <div class="w-10 h-10 bg-indigo-600 text-white rounded-full flex items-center justify-center font-bold">
+                                <div class="w-10 h-10 rounded-full flex items-center justify-center font-black text-white text-sm bg-gradient-to-br from-orange-400 to-orange-600 dark:from-violet-500 dark:to-violet-700">
                                     {{ substr($userReview->user->first_name, 0, 1) }}
                                 </div>
                                 <div>
-                                    <h3 class="font-bold text-gray-900">Your Review</h3>
-                                    <span class="text-xs px-2 py-1 rounded-full {{ $userReview->review_status == 'Approved' ? 'bg-green-100 text-green-700' : 'bg-yellow-100 text-yellow-700' }}">
+                                    <p class="font-bold text-gray-900 dark:text-white text-sm">Your Review</p>
+                                    <span class="text-xs px-2 py-0.5 rounded-full font-semibold {{ $userReview->review_status == 'Approved' ? 'bg-green-100 text-green-700' : 'bg-amber-100 text-amber-700' }}">
                                         {{ $userReview->review_status }}
                                     </span>
                                 </div>
                             </div>
-                            <div class="flex gap-4 text-sm">
-                                <a href="{{ route('website-reviews.edit', $userReview) }}" class="text-indigo-600 hover:text-indigo-800 font-medium">Edit</a>
-                                <form action="{{ route('website-reviews.destroy', $userReview->id) }}" method="POST" onsubmit="return confirm('Delete this review?')">
-                                    @csrf @method('DELETE')
-                                    <button class="text-red-600 hover:text-red-800 font-medium">Delete</button>
-                                </form>
-                            </div>
+                            <form action="{{ route('website-reviews.destroy', $userReview->id) }}" method="POST" onsubmit="return confirm('Delete this review?')">
+                                @csrf @method('DELETE')
+                                <button class="text-sm text-red-400 hover:text-red-600 font-semibold">Delete</button>
+                            </form>
                         </div>
-                        <div class="flex text-yellow-400 mb-2">
+                        <div class="flex gap-0.5 mb-2">
                             @for($i=1; $i<=5; $i++)
-                                <span class="text-lg">{{ $i <= $userReview->rating ? '★' : '☆' }}</span>
+                                <span class="text-lg {{ $i <= $userReview->rating ? 'text-orange-500 dark:text-violet-400' : 'text-gray-200 dark:text-gray-700' }}">★</span>
                             @endfor
                         </div>
-                        <p class="text-gray-700 italic">"{{ $userReview->review_text }}"</p>
+                        <p class="text-gray-600 dark:text-gray-300 italic text-sm">"{{ $userReview->review_text }}"</p>
                     </div>
                 @else
-                    <div class="text-center mb-12">
+                    <div class="text-center mb-10">
                         <button onclick="document.getElementById('websiteReviewPopup').classList.remove('hidden')"
-                                class="bg-indigo-600 text-white px-8 py-3 rounded-full font-bold hover:bg-indigo-700 transition shadow-lg">
-                            Write a Website Review
+                                class="inline-flex items-center gap-2 px-7 py-3.5 rounded-2xl font-bold text-white bg-orange-500 dark:bg-violet-600 hover:bg-orange-600 dark:hover:bg-violet-700 shadow-lg shadow-orange-300/50 dark:shadow-violet-900/50 transition-all duration-200 hover:scale-105">
+                            <i data-lucide="pencil" class="w-4 h-4"></i>
+                            Write a Review
                         </button>
-                    </div>
                     </div>
                 @endif
             @endauth
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-            @foreach($websiteReviews as $review)
-                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 flex flex-col justify-between transition-transform hover:scale-[1.02]">
-                    <div>
-                        <div class="flex text-yellow-400 mb-4">
-                            @for($i=1; $i<=5; $i++)
-                                <span>{{ $i <= $review->rating ? '★' : '☆' }}</span>
-                            @endfor
-                        </div>
-                        <p class="text-gray-600 italic leading-relaxed mb-6">"{{ $review->review_text }}"</p>
-                    </div>
-
-                    <div class="flex items-center gap-3 border-t pt-6">
-                        <div class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center font-semibold text-gray-500">
-                            {{ substr($review->user->first_name, 0, 1) }}
-                        </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+                @foreach($websiteReviews as $review)
+                    <div class="bg-white dark:bg-[#1a1030] p-6 rounded-[1.75rem] border-2 border-orange-200 dark:border-violet-800 transition-all hover:scale-[1.01] hover:shadow-xl flex flex-col justify-between">
                         <div>
-                            <p class="text-sm font-bold text-gray-900">{{ $review->user->first_name }} {{ $review->user->last_name }}</p>
-                            <p class="text-xs text-gray-400">{{ $review->created_at ? $review->created_at->format('M d, Y') : 'Recently' }}</p>
+                            <div class="flex gap-0.5 mb-3">
+                                @for($i=1; $i<=5; $i++)
+                                    <span class="text-base {{ $i <= $review->rating ? 'text-orange-500 dark:text-violet-400' : 'text-gray-200 dark:text-gray-700' }}">★</span>
+                                @endfor
+                            </div>
+                            <p class="text-gray-600 dark:text-gray-300 italic text-sm leading-relaxed mb-5">"{{ $review->review_text }}"</p>
+                        </div>
+                        <div class="flex items-center gap-3 border-t border-orange-100 dark:border-violet-900 pt-4">
+                            <div class="w-9 h-9 rounded-full flex items-center justify-center font-bold text-white text-xs shrink-0 bg-gradient-to-br from-orange-400 to-orange-600 dark:from-violet-500 dark:to-violet-700">
+                                {{ substr($review->user->first_name, 0, 1) }}
+                            </div>
+                            <div>
+                                <p class="text-sm font-bold text-gray-900 dark:text-white">{{ $review->user->first_name }} {{ $review->user->last_name }}</p>
+                                <p class="text-xs text-gray-400">{{ $review->created_at ? $review->created_at->format('M d, Y') : 'Recently' }}</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-            @endforeach
+                @endforeach
             </div>
 
-            <div class="mt-12 flex justify-center">
+            <div class="mt-8 flex justify-center">
                 {{ $websiteReviews->links() }}
             </div>
         </div>
-    </div>
-    <br>
+    </section>
 
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20 text-center">
+    <section class="px-4 py-16 max-w-6xl mx-auto">
+        <div class="relative rounded-[2.5rem] overflow-hidden p-10 sm:p-16 text-center text-white bg-gradient-to-br from-orange-400 via-orange-500 to-orange-700 dark:from-violet-700 dark:via-violet-800 dark:to-purple-900">
 
-        <h2 class="text-2xl sm:text-3xl font-bold mb-4">Not sure where to start?</h2>
-        <p class="text-gray-600 mb-10 sm:mb-12">Save your time of researching, and use our resources to configure your computer.</p>
+            <div class="pointer-events-none absolute -top-20 -right-20 w-72 h-72 rounded-full opacity-20 bg-yellow-300 dark:bg-violet-400"></div>
+            <div class="pointer-events-none absolute -bottom-16 -left-16 w-56 h-56 rounded-full opacity-10 bg-white dark:bg-purple-300"></div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-
-        <div class="flex flex-col item-center">
-            <div class="bg-gray-200 p-6 rounded-2xl mb-4 flex items-center justify-center">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-8">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="m7.875 14.25 1.214 1.942a2.25 2.25 0 0 0 1.908 1.058h2.006c.776 0 1.497-.4 1.908-1.058l1.214-1.942M2.41 9h4.636a2.25 2.25 0 0 1 1.872 1.002l.164.246a2.25 2.25 0 0 0 1.872 1.002h2.092a2.25 2.25 0 0 0 1.872-1.002l.164-.246A2.25 2.25 0 0 1 16.954 9h4.636M2.41 9a2.25 2.25 0 0 0-.16.832V12a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 12V9.832c0-.287-.055-.57-.16-.832M2.41 9a2.25 2.25 0 0 1 .382-.632l3.285-3.832a2.25 2.25 0 0 1 1.708-.786h8.43c.657 0 1.281.287 1.709.786l3.284 3.832c.163.19.291.404.382.632M4.5 20.25h15A2.25 2.25 0 0 0 21.75 18v-2.625c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125V18a2.25 2.25 0 0 0 2.25 2.25Z" />
-                </svg>
-
-            </div>
-            <p class="bg-gray-200 p-2 px-4 rounded text-sm">Purchase Bundles, chosen by our experts</p>
-        </div>
-
-        <div class="flex flex-col item-center">
-            <div class="bg-gray-200 p-6 rounded-2xl mb-4 flex items-center justify-center">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-8">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99" />
-                </svg>
-
-            </div>
-            <p class="bg-gray-200 p-2 px-4 rounded text-sm">Configure and check for compactibility to build your dream PC</p>
-        </div>
-
-        <div class="flex flex-col item-center">
-            <div class="bg-gray-200 p-6 rounded-2xl mb-4 flex items-center justify-center">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-8">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607ZM10.5 7.5v6m3-3h-6" />
-                </svg>
-
-            </div>
-            <p class="bg-gray-200 p-2 px-4 rounded text-sm">To learn the essentials of building a PC, read our guides.</p>
-        </div>
-
-        </div>
-
-        <div class="mt-12">
-            <a href="/build-guide" class="bg-gray-900 dark:bg-gray-800 text-white px-8 py-3 rounded hover:bg-gray-700 transition">
-                Start Now
-            </a>
-        </div>
-    </div>
-
-    <div id="websiteReviewPopup" class="hidden fixed inset-0 bg-black bg-opacity-50 p-4 flex items-center justify-center z-50">
-        <div class="bg-white p-6 sm:p-8 rounded-2xl max-w-md w-full max-h-[90vh] overflow-y-auto">
-            <h2 class="text-2xl font-bold mb-4">Write a Review</h2>
-
-            <form action="{{ route('website-reviews.store') }}" method="POST">
-                @csrf
-                <div class="mb-4">
-                    <label class="block text-sm font-bold mb-2">Rating</label>
-                    <select name="rating" class="w-full border rounded-lg p-2">
-                        <option value="5">5 Stars</option>
-                        <option value="4">4 Stars</option>
-                        <option value="3">3 Stars</option>
-                        <option value="2">2 Stars</option>
-                        <option value="1">1 Star</option>
-                    </select>
+            <div class="relative z-10">
+                <div class="text-5xl mb-5">🖥️</div>
+                <h2 class="text-3xl sm:text-4xl font-black mb-4">Not sure where to start?</h2>
+                <p class="text-orange-100 dark:text-violet-200 max-w-md mx-auto mb-8 leading-relaxed">
+                    Use our Part Picker to check compatibility, or read one of our friendly guides — we make it easy.
+                </p>
+                <div class="flex flex-wrap justify-center gap-3">
+                    <a href="{{ route('part-picker') }}"
+                       class="inline-flex items-center gap-2 px-7 py-3.5 rounded-2xl font-bold bg-white text-orange-600 dark:text-violet-700 hover:bg-orange-50 dark:hover:bg-violet-50 transition-all duration-200 hover:scale-105 shadow-lg">
+                        <i data-lucide="sliders" class="w-4 h-4"></i>
+                        Part Picker
+                    </a>
+                    <a href="/build-guide"
+                       class="inline-flex items-center gap-2 px-7 py-3.5 rounded-2xl font-bold border-2 border-white/40 text-white hover:bg-white/10 transition-all duration-200 hover:scale-105">
+                        <i data-lucide="book-open" class="w-4 h-4"></i>
+                        Build Guide
+                    </a>
                 </div>
-
-                <div class="mb-6">
-                    <label class="block text-sm font-bold mb-2">Your Feedback</label>
-                    <textarea name="review_text" rows="4" class="w-full border rounded-lg p-2" placeholder="What did you think of our service?"></textarea>
-                </div>
-
-                <div class="flex flex-col-reverse sm:flex-row justify-end gap-3">
-                    <button type="button" onclick="document.getElementById('websiteReviewPopup').classList.add('hidden')" class="px-4 py-2 text-gray-500">Cancel</button>
-                    <button type="submit" class="bg-indigo-600 text-white px-6 py-2 rounded-lg font-bold">Submit Review</button>
-                </div>
-            </form>
+            </div>
         </div>
-    </div>
+    </section>
 
+</div>
+
+{{-- ===== REVIEW POPUP ===== --}}
+<div id="websiteReviewPopup" class="hidden fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
+    <div class="bg-white dark:bg-[#1a1030] p-8 rounded-[1.75rem] max-w-md w-full shadow-2xl border-2 border-orange-200 dark:border-violet-700">
+        <h2 class="text-2xl font-black mb-1 text-gray-900 dark:text-white">Write a Review</h2>
+        <p class="text-sm text-gray-500 dark:text-gray-400 mb-6">Share your Happy Hardware experience.</p>
+        <form action="{{ route('website-reviews.store') }}" method="POST">
+            @csrf
+            <div class="mb-4">
+                <label class="block text-sm font-bold mb-2 text-gray-700 dark:text-gray-300">Rating</label>
+                <select name="rating" class="w-full border-2 border-orange-200 dark:border-violet-700 rounded-xl p-2.5 text-sm font-semibold bg-white dark:bg-[#130920] text-gray-800 dark:text-gray-200 focus:outline-none">
+                    <option value="5">⭐⭐⭐⭐⭐ — Amazing!</option>
+                    <option value="4">⭐⭐⭐⭐ — Great</option>
+                    <option value="3">⭐⭐⭐ — Good</option>
+                    <option value="2">⭐⭐ — Could be better</option>
+                    <option value="1">⭐ — Not great</option>
+                </select>
+            </div>
+            <div class="mb-6">
+                <label class="block text-sm font-bold mb-2 text-gray-700 dark:text-gray-300">Your Feedback</label>
+                <textarea name="review_text" rows="4"
+                    class="w-full border-2 border-orange-200 dark:border-violet-700 rounded-xl p-3 text-sm bg-white dark:bg-[#130920] text-gray-800 dark:text-gray-200 focus:outline-none resize-none"
+                    placeholder="What did you think of our service?"></textarea>
+            </div>
+            <div class="flex justify-end gap-3">
+                <button type="button" onclick="document.getElementById('websiteReviewPopup').classList.add('hidden')"
+                        class="px-5 py-2 text-sm font-semibold text-gray-500 hover:text-gray-700 dark:hover:text-gray-300">Cancel</button>
+                <button type="submit"
+                        class="px-7 py-2.5 rounded-xl font-bold text-white text-sm bg-orange-500 dark:bg-violet-600 hover:bg-orange-600 dark:hover:bg-violet-700 transition hover:scale-105">
+                    Submit
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script>
+    lucide.createIcons();
+</script>
 
 </x-layout>
-
 <x-footer></x-footer>
-
-
